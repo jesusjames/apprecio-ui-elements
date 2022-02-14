@@ -1,7 +1,13 @@
 {
-  "presets": ["@babel/env", "@babel/preset-react"],
+  "presets": [
+    "@babel/env",
+    "@babel/preset-react"
+  ],
   "plugins": [
-      "babel-plugin-styled-components",
-      "@babel/plugin-proposal-optional-chaining"
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
