@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+./dist
+dist
+.idea
+.npmrc
+
+/styleguide
+styleguide
+
+package-lock.json
+.history
