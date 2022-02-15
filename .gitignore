@@ -25,7 +25,6 @@ yarn-error.log*
 ./dist
 dist
 .idea
-.npmrc
 
 /styleguide
 styleguide
