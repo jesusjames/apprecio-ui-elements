@@ -1,5 +1,5 @@
-## Uso basico Button:
+### Uso basico Button:
 
-```js
+```jsx
 <Alert color="red">warning alert</Alert>
 ```

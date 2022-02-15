@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rollup -c",
+    "build:module": "rollup -c",
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
     "test:complete": "react-scripts test --watchAll=false --collect-coverage -u",
@@ -56,6 +56,10 @@
     "@rollup/plugin-image": "^2.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "@rollup/plugin-commonjs": "^21.0.1",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.8.0"
   }
 }
