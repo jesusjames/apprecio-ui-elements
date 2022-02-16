@@ -1,7 +1,11 @@
 const { version } = require('./package');
+const path = require("path");
 
 module.exports = {
     title: `Apprecio UI Elements`,
+    styleguideComponents: {
+        Wrapper: path.join(__dirname, 'src/lib/utils/guide/StyleGuideWrapper.jsx'),
+    },
     version,
     usageMode: 'expand',
     skipComponentsWithoutExample: true,

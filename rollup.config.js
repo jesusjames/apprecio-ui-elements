@@ -28,7 +28,7 @@ const getCommonConfig = ({ target = '', plugins = [] }) => ({
     babel({
       exclude: 'node_modules/**',
       plugins: ['babel-plugin-styled-components'],
-      presets: ['@babel/preset-env', '@babel/preset-react'],
+      presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
     }),
     ...plugins
   ],
@@ -46,7 +46,6 @@ export default [
     input: {
       index: 'src/components/index.js',
     },
-    experimentalCodeSplitting: true,
     ...getCommonConfig({ target: 'dist/core/'}),
   }
 ];
