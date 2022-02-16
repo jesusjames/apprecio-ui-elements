@@ -1,0 +1,21 @@
+:root{
+    --blackColor: #000000;
+    --mainColor: #FF4860;
+    --lightColor: #FE9920;
+    --darkColor: #133C55;
+    --blueColor: #1FA0B0;
+
+    --grayColorOne: #748A9D;
+    --grayColorTwo: rgba(116, 138, 157, 0.8);
+    --grayColorThree: rgba(116, 138, 157, 0.5);
+    --whiteColorApprecio: #F6F8FD;
+    --whiteColorPure: #FFFFFF;
+    --gradientColorOne: linear-gradient(90deg, #FF4860 0%, rgba(255, 72, 96, 0.5) 100%);
+    --gradientColorTwo: linear-gradient(92.92deg, #FF4860 2.42%, #FE9920 99.32%);
+
+    --grayColorBorder: #E8E8E8;
+    --grayColorComponents: #F9F9FB;
+    --grayColorHover: #F4F4F4;
+    --grayColorDisabled: #BBBBBB;
+    --grayColorText: #696158;
+}

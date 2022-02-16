@@ -1,5 +1,5 @@
 ### Uso basico Button:
 
 ```jsx
-<Alert color="red">warning alert</Alert>
+<Alert color="var(--lightColor)">warning alert</Alert>
 ```
