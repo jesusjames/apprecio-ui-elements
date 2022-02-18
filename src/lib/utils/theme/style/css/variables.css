@@ -1,9 +1,13 @@
 :root{
     --blackColor: #000000;
     --mainColor: #FF4860;
+    --mainColorActive: #ff3751;
     --lightColor: #FE9920;
+    --lightColorActive: #ff9513;
     --darkColor: #133C55;
+    --darkColorActive: #0f3c55;
     --blueColor: #1FA0B0;
+    --blueColorActive: #169faf;
 
     --grayColorOne: #748A9D;
     --grayColorTwo: rgba(116, 138, 157, 0.8);

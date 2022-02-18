@@ -8,7 +8,7 @@ const Button = ({children, onClick, ...rest}) => {
 }
 
 const ButtonStyled = styled.button`
-  background-color: #FF4860;
+  background-color: ${props => props.theme.button.quaternary.mainColor};
   color: white;
 `;
 
