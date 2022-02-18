@@ -2,7 +2,7 @@ const Alert = (props) => {
   const {children, color} = props;
   return(
     <div style={{backgroundColor: color}}>
-      {children}
+      <h1>{children}</h1>
     </div>
   )
 }
