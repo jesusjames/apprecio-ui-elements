@@ -6,6 +6,8 @@ import normalizeCss from '../style/css/normalize.css';
 import fontsCss from '../style/css/fonts.css';
 import resetCss from '../style/css/reset.css';
 import globalCss from '../style/css/global.css';
+import animateCSs from 'animate.css';
+
 import {useTheme} from "../customization/useTheme";
 
 const GlobalStyle = ({children}) => {
@@ -15,6 +17,7 @@ const GlobalStyle = ({children}) => {
     ${fontsCss}
     ${resetCss}
     ${globalCss}
+    ${animateCSs}
   `;
 
   const { theme, themeLoaded } = useTheme();
