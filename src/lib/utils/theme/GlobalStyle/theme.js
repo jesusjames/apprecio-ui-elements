@@ -26,6 +26,11 @@ export const apprecioTheme = {
           color: 'var(--whiteColorPure)',
           mainColor: 'var(--blueColor)',
           activeColor: 'var(--mainColorActive)'
+        },
+        facebook: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--facebookColor)',
+          activeColor: 'var(--facebookColorActive)'
         }
       }
     },

@@ -4,8 +4,8 @@ import postcss from 'rollup-plugin-postcss';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import image from '@rollup/plugin-image';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import copy from 'rollup-plugin-copy';
 import commonjs from '@rollup/plugin-commonjs';
-
 
 const getCommonConfig = ({ target = '', plugins = [] }) => ({
   output: [
@@ -47,5 +47,30 @@ export default [
       index: 'src/components/index.js',
     },
     ...getCommonConfig({ target: 'dist/core/'}),
-  }
+  },
+  // utils for theming
+  {
+    input: {
+      useTheme: 'src/lib/utils/theme/customization/useTheme.jsx',
+      globalStyle: 'src/lib/utils/theme/GlobalStyle/index.jsx',
+      apprecioTheme: 'src/lib/utils/theme/GlobalStyle/theme.js'
+    },
+    ...getCommonConfig( {
+      target: 'dist/utils/theme/',
+      plugins: [
+        copy({
+          targets: [
+            {
+              src: 'src/lib/utils/theme/style/css',
+              dest: 'dist/utils',
+            },
+            {
+              src: 'src/lib/utils/theme/style/fonts/',
+              dest: 'dist/utils',
+            }
+          ],
+        })
+      ]
+    })
+  },
 ];
