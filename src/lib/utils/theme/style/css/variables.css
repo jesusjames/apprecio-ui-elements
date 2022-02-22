@@ -1,15 +1,25 @@
 :root {
     --blackColor: #000000;
+
     --mainColor: #FF4860;
     --mainColorActive: #ff3751;
+    --mainColorActiveOutline: rgba(255, 72, 96, 0.06);
+
     --lightColor: #FE9920;
-    --lightColorActive: #ff9513;
+    --lightColorActive: #f39118;
+    --lightColorActiveOutline: rgba(254, 153, 32, 0.06);
+
     --darkColor: #133C55;
-    --darkColorActive: #0f3c55;
+    --darkColorActive: #0b2c3e;
+    --darkColorActiveOutline: rgba(19, 60, 85, 0.06);
+
     --blueColor: #1FA0B0;
-    --blueColorActive: #169faf;
+    --blueColorActive: #0a96a7;
+    --blueColorActiveOutline: rgba(31, 160, 176, 0.06);
+
     --facebookColor: #1877F2;
     --facebookColorActive: #096dea;
+    --facebookColorActiveOutline: rgba(24, 119, 242, 0.06);
 
     --grayColorOne: #748A9D;
     --grayColorTwo: rgba(116, 138, 157, 0.8);

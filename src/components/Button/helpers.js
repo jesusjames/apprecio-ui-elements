@@ -95,7 +95,7 @@ export const getBaseButtonConfig = (theme) => ({
                 box-shadow: 0px 3px 8px -2.5px ${theme?.mainColor};
             }
             &:active {
-                background-color: ${theme?.activeColor};
+                background-color: ${theme?.activeColorOutline};
             }
             ${commonsColor} 
         `,

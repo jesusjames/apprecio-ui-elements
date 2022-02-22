@@ -1,71 +1,82 @@
 export const apprecioTheme = {
-  themes: {
-    light: {
-      id: 'T_001',
-      name: 'light',
-      body: {
-        background: 'var(--whiteColorApprecio)',
-      },
-      button: {
-        primary: {
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--mainColor)',
-          activeColor: 'var(--mainColorActive)'
+    themes: {
+        light: {
+            id: 'T_001',
+            name: 'light',
+            body: {
+                background: 'var(--whiteColorApprecio)',
+            },
+            button: {
+                primary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--mainColor)',
+                    activeColor: 'var(--mainColorActive)',
+                    activeColorOutline: 'var(--mainColorActiveOutline)'
+                },
+                secondary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--lightColor)',
+                    activeColor: 'var(--lightColorActive)',
+                    activeColorOutline: 'var(--lightColorActiveOutline)'
+                },
+                tertiary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--darkColor)',
+                    activeColor: 'var(--darkColorActive)',
+                    activeColorOutline: 'var(--darkColorActiveOutline)'
+                },
+                quaternary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--blueColor)',
+                    activeColor: 'var(--blueColorActive)',
+                    activeColorOutline: 'var(--blueColorActiveOutline)'
+                },
+                facebook: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--facebookColor)',
+                    activeColor: 'var(--facebookColorActive)',
+                    activeColorOutline: 'var(--facebookColorActiveOutline)'
+                }
+            }
         },
-        secondary: {
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--lightColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        tertiary: {
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--darkColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        quaternary: {
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--blueColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        facebook: {
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--facebookColor)',
-          activeColor: 'var(--facebookColorActive)'
+        dark: {
+            id: 'T_002',
+            name: 'dark',
+            body: {
+                background: 'var(--darkColor)',
+            },
+            button: {
+                primary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--mainColor)',
+                    activeColor: 'var(--mainColorActive)',
+                    activeColorOutline: 'var(--mainColorActiveOutline)'
+                },
+                secondary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--lightColor)',
+                    activeColor: 'var(--lightColorActive)',
+                    activeColorOutline: 'var(--lightColorActiveOutline)'
+                },
+                tertiary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--darkColor)',
+                    activeColor: 'var(--darkColorActive)',
+                    activeColorOutline: 'var(--darkColorActiveOutline)'
+                },
+                quaternary: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--blueColor)',
+                    activeColor: 'var(--blueColorActive)',
+                    activeColorOutline: 'var(--blueColorActiveOutline)'
+                },
+                facebook: {
+                    color: 'var(--whiteColorPure)',
+                    mainColor: 'var(--facebookColor)',
+                    activeColor: 'var(--facebookColorActive)',
+                    activeColorOutline: 'var(--facebookColorActiveOutline)'
+                }
+            }
         }
-      }
-    },
-    dark: {
-      id: 'T_002',
-      name: 'dark',
-      body: {
-        background: 'var(--darkColor)',
-      },
-      colors: {
-        primary: {
-          backgroundColor: 'var(--mainColor)',
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--mainColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        secondary: {
-          backgroundColor: 'var(--mainColor)',
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--mainColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        tertiary: {
-          backgroundColor: 'var(--mainColor)',
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--mainColor)',
-          activeColor: 'var(--mainColorActive)'
-        },
-        quaternary: {
-          backgroundColor: 'var(--mainColor)',
-          color: 'var(--whiteColorPure)',
-          mainColor: 'var(--mainColor)',
-          activeColor: 'var(--mainColorActive)'
-        }
-      }
     }
-  }
 }
