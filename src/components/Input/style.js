@@ -4,8 +4,8 @@ export const InputContainerStyled = styled.div`
 `;
 
 export const InputStyled = styled.input`
-  width: 325px;
-  height: 40px;
+  width: 311px;
+  height: 48px;
 
   background-color: ${props => {
     if (props.disabled) return 'var(--grayColorBorder) !important';
@@ -13,15 +13,15 @@ export const InputStyled = styled.input`
     return 'var(--whiteColorPure)';
   }};
 
-  border-radius: 5px;
-  border-width: 2px;
+  border-radius: 8px;
+  border-width: 1px;
   border-style: solid;
   border-color: ${props => {
     if (props.error) return 'var(--mainColor)';
-    return 'var(--grayColorDisabled)';
+    return 'var(--grayColorOne)';
   }};
   
-  padding: 0 15px;
+  padding: 8px 16px 8px 16px;
 
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
