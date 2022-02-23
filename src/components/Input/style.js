@@ -17,7 +17,7 @@ export const InputStyled = styled.input`
 
   background-color: ${props => {
     if (props.disabled) return 'var(--grayColorBorder) !important';
-    if (props.error && props.value) return '#FF486020';
+    if (props.error && props.value) return '#FF486033';
     return 'var(--whiteColorPure)';
   }};
 
@@ -43,7 +43,7 @@ export const InputStyled = styled.input`
     return 'var(--darkColor)';
   }};
 
-  ::-webkit-input-placeholder,
+  &::-webkit-input-placeholder,
   &::placeholder {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -51,5 +51,17 @@ export const InputStyled = styled.input`
     font-weight: 500;
     color: var(--grayColorDisabled);
     opacity: 1 !important;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${props => {
+      if (props.error) return 'var(--mainColor)';
+      return 'var(--lightColor)';
+    }};
+    box-shadow: ${props => {
+      if (props.error) return '0px 0px 0px 2px #FF486033 !important';
+      return '0px 0px 0px 2px #FE992033 !important';
+    }};
   }
 `;
