@@ -1,4 +1,4 @@
-## Lorem Ipsum
+## Input
 ```jsx
 <Input />
 <br />
