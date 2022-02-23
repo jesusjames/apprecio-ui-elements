@@ -11,4 +11,6 @@
 <Input value="Input text" error />
 <br />
 <Input type="email" />
+<br />
+<Input type="email" value="Input text" error />
 ```

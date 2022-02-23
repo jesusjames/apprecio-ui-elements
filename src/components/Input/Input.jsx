@@ -3,7 +3,9 @@ import {
   InputContainerStyled,
   InputStyled,
 } from './style';
+
 import Email from '../image/Email.svg';
+import EmailError from '../image/EmailError.svg';
 
 const Input = ({
   disabled,
@@ -20,7 +22,7 @@ const Input = ({
         <img
           alt="email-symbol"
           className="email-symbol"
-          src={Email}
+          src={error ? EmailError : Email}
         /> :
         null
       }
