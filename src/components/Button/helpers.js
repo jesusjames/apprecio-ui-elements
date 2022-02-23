@@ -1,39 +1,44 @@
-export const HIERARCHIES = {
-    primary: 'primary',
-    secundary: 'secundary',
-    terciary: 'terciary',
-    quaternary: 'quaternary'
-};
-
 export const getSizeButtonConfig = props => ({
     extraSmall: {
         css: `
             font-size: 0.78125rem;
             min-width: ${props.block ? '100%' : '104px'};
-            padding: ${ props.color === 'primary' ? '5px' : 'calc(5px - 1.8px)' } 32px;
+            padding: 5px 12px;
         `,
         icon: `
             width: 11.8px;
+            svg {
+                width: 11.8px;
+                height: 11.8px;
+            }
         `
     },
     small: {
         css: `
             font-size: 0.875;
             min-width: ${props.block ? '100%' : '111.8px'};
-            padding: ${ props.color === 'primary' ? '6px' : 'calc(6px - 1.8px)' } 32px;
+            padding: 6px 18px;
         `,
         icon: `
             width: 18px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         `
     },
     medium: {
         css:  `
             font-size: 1rem;
             min-width: ${props.block === true ? '100%' : '128px'};
-            padding: ${ props.color === 'primary' ? '11px' : 'calc(11px - 1.8px)' } 32px;
+            padding: 11px 18px;
         `,
         icon: `
             width: 18px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         `
     },
     large: {
@@ -44,6 +49,10 @@ export const getSizeButtonConfig = props => ({
         `,
         icon: `
             width: 24px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
         `
     }
 });
@@ -62,6 +71,7 @@ export const getBaseButtonConfig = (theme) => ({
         css: `
             background-color: ${theme?.mainColor};
             color: ${theme?.color};
+            border: 2px solid ${theme?.mainColor};
             &:hover{
                 box-shadow: 0px 3px 8px -2.5px ${theme?.mainColor};
             }
@@ -73,6 +83,7 @@ export const getBaseButtonConfig = (theme) => ({
         disabled: `
             background: var(--grayColorDisabled);
             color: white;
+            border: 2px solid var(--grayColorDisabled);
             ${disabledCommons}
         `,
         icon: `
@@ -90,7 +101,7 @@ export const getBaseButtonConfig = (theme) => ({
         css: `
             background-color: white;
             color: ${theme?.mainColor};
-            border: 1.8px solid ${theme?.mainColor};
+            border: 2px solid ${theme?.mainColor};
             &:hover{
                 box-shadow: 0px 3px 8px -2.5px ${theme?.mainColor};
             }
@@ -102,13 +113,13 @@ export const getBaseButtonConfig = (theme) => ({
         disabled: `
             background-color: white;
             color: var(--grayColorDisabled);
-            border: 1.8px solid var(--grayColorDisabled);
+            border: 2px solid var(--grayColorDisabled);
             ${disabledCommons}
             opacity: 0.6;
         `,
         icon: `
             svg, path {
-                fill: ${theme?.color};
+                fill: ${theme?.mainColor};
             }
         `,
         iconDisabled: `

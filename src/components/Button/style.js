@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {path, pipe} from "ramda";
 import {getBaseButtonConfig, getSizeButtonConfig} from "./helpers";
 
-export const BaseButtomStyled = styled.button`
+export const BaseButtonStyled = styled.button`
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
@@ -19,5 +19,21 @@ export const BaseButtomStyled = styled.button`
                     props.disabled ? 'disabled' : 'css'
                   ])
           )()
-  }    
+  }
+`;
+
+export const IconWrapperStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${props => path([props.size, 'icon'], getSizeButtonConfig(props))}
+  ${
+          props => pipe(
+                  () => getBaseButtonConfig(path(['theme', 'button', props.color], props)),
+                  path([
+                    props.outline ? 'outline' : 'filled',
+                    props.disabled ? 'iconDisabled' : 'icon'
+                  ])
+          )()
+  }
 `;
