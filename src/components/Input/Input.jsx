@@ -1,9 +1,9 @@
 import PropTypes, { oneOfType } from 'prop-types';
-
 import {
   InputContainerStyled,
   InputStyled,
 } from './style';
+import Email from '../image/Email.svg';
 
 const Input = ({
   disabled,
@@ -15,6 +15,15 @@ const Input = ({
 }) => {
   return (
     <InputContainerStyled>
+      {
+        type === 'email' ?
+        <img
+          alt="email-symbol"
+          className="email-symbol"
+          src={Email}
+        /> :
+        null
+      }
       <InputStyled
         disabled={disabled}
         error={error}

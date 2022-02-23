@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const InputContainerStyled = styled.div`
+  position: relative;
+
+  .email-symbol {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+  }
 `;
 
 export const InputStyled = styled.input`
@@ -21,7 +29,10 @@ export const InputStyled = styled.input`
     return 'var(--grayColorOne)';
   }};
   
-  padding: 8px 16px 8px 16px;
+  padding: ${props => {
+    if (props.type === 'email') return '8px 16px 8px 40px';
+    return '8px 16px 8px 16px';
+  }};
 
   font-family: 'Poppins', sans-serif;
   font-size: 16px;

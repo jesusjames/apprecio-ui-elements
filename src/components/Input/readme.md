@@ -9,4 +9,6 @@
 <Input error />
 <br />
 <Input value="Input text" error />
+<br />
+<Input type="email" />
 ```
