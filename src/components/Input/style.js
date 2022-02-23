@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const InputContainerStyled = styled.div`
+  width: 311px;
+
   position: relative;
 
   .email-symbol {
