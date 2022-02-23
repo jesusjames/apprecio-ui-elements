@@ -9,22 +9,28 @@ export const InputStyled = styled.input`
 
   background-color: ${props => {
     if (props.disabled) return 'var(--grayColorBorder) !important';
-    if (props.error) return 'red';
+    if (props.error && props.value) return '#FF486020';
     return 'var(--whiteColorPure)';
   }};
 
   border-radius: 5px;
-  border-color: var(--grayColorDisabled);
   border-width: 2px;
   border-style: solid;
-
+  border-color: ${props => {
+    if (props.error) return 'var(--mainColor)';
+    return 'var(--grayColorDisabled)';
+  }};
+  
   padding: 0 15px;
 
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 500;
-  color: var(--darkColor);
+  color: ${props => {
+    if (props.error) return 'var(--mainColor)';
+    return 'var(--darkColor)';
+  }};
 
   ::-webkit-input-placeholder,
   &::placeholder {
