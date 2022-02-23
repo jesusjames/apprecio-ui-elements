@@ -1,18 +1,24 @@
 import PropTypes, { oneOfType } from 'prop-types';
 
-import { InputContainerStyled } from './style';
+import {
+  InputContainerStyled,
+  InputStyled,
+} from './style';
 
 const Input = ({
-  type,
+  disabled,
   placeholder,
+  type,
   value,
   ...rest
 }) => {
   return (
     <InputContainerStyled>
-      <input
-        type={type}
+      <InputStyled
+        disabled={disabled}
         placeholder={placeholder}
+        type={type}
+        value={value}
         {...rest}
       />
     </InputContainerStyled>
@@ -20,11 +26,15 @@ const Input = ({
 }
 
 Input.defaultProps = {
-  type: 'text',
+  disabled: false,
   placeholder: 'Input text',
+  type: 'text',
+  value: ''
 };
 
 Input.propTypes = {
+  disabled: PropTypes.bool,
+  placeholder: PropTypes.string,
   type: PropTypes.oneOf([
     'text',
     'password',
@@ -32,7 +42,6 @@ Input.propTypes = {
     // 'number', // ¿Se incluye dentro de los casos de uso?
     'tel'
   ]),
-  placeholder: PropTypes.string,
   value: oneOfType([
     PropTypes.string,
     PropTypes.number
