@@ -7,6 +7,7 @@ import {
 const Input = ({
   error,
   iconLeft,
+  iconRight,
   ...rest
 }) => {
   return (
@@ -25,6 +26,15 @@ const Input = ({
         iconLeft={iconLeft ? true : false}
         {...rest}
       />
+      {
+        iconRight ?
+        <img
+          alt="icon-right"
+          className="icon-right"
+          src={iconRight}
+        /> :
+        null
+      }
     </InputContainerStyled>
   );
 }
@@ -32,11 +42,16 @@ const Input = ({
 Input.defaultProps = {
   error: false,
   iconLeft: '',
+  iconRight: '',
 };
 
 Input.propTypes = {
+  /** Altera el color del campo para representar un error. */
   error: PropTypes.bool,
+  /** Ruta hacia el ícono que se quiere mostrar a la izquierda. */
   iconLeft: PropTypes.string,
+  /** Ruta hacia el ícono que se quiere mostrar a la derecha. */
+  iconRight: PropTypes.string,
 }
 
 export default Input;

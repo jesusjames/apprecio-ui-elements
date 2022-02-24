@@ -12,6 +12,19 @@ export const InputContainerStyled = styled.div`
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
+
+    max-height: 15px;
+    max-width: 15px;
+  }
+
+  .icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+
+    max-height: 15px;
+    max-width: 15px;
   }
 `;
 

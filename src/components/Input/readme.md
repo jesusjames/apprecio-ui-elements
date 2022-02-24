@@ -46,5 +46,23 @@ import EmailErrorSVG from '../image/EmailError.svg';
       </div>
     </div>
   </div>
+
+  <div>
+    <p className="ap-mb-0.5">Icon to the right</p>
+    <div className="ap-flex ap-flex-wrap">
+      <div className="ap-w-full md:ap-w-1/3">
+        <p className="ap-mb-0.5">Normal</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} />
+      </div>
+      <div className="ap-w-full md:ap-w-1/3">
+        <p className="ap-mb-0.5">Disabled</p>
+        <Input placeholder="Input text" disabled iconRight={EmailSVG} />
+      </div>
+      <div className="ap-w-full md:ap-w-1/3">
+        <p className="ap-mb-0.5">Error</p>
+        <Input placeholder="Input text" error iconRight={EmailErrorSVG} />
+      </div>
+    </div>
+  </div>
 </div>
 ```
