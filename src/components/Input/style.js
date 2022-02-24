@@ -5,7 +5,9 @@ export const InputContainerStyled = styled.div`
 
   position: relative;
 
-  .email-symbol {
+  margin-bottom: 20px;
+
+  .icon-left {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -32,7 +34,7 @@ export const InputStyled = styled.input`
   }};
   
   padding: ${props => {
-    if (props.type === 'email') return '8px 16px 8px 40px';
+    if (props.iconLeft) return '8px 16px 8px 40px';
     return '8px 16px 8px 16px';
   }};
 

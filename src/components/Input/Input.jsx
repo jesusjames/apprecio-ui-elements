@@ -1,37 +1,28 @@
-import PropTypes, { oneOfType } from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   InputContainerStyled,
   InputStyled,
 } from './style';
 
-import Email from '../image/Email.svg';
-import EmailError from '../image/EmailError.svg';
-
 const Input = ({
-  disabled,
   error,
-  placeholder,
-  type,
-  value,
+  iconLeft,
   ...rest
 }) => {
   return (
     <InputContainerStyled>
       {
-        type === 'email' ?
+        iconLeft ?
         <img
-          alt="email-symbol"
-          className="email-symbol"
-          src={error ? EmailError : Email}
+          alt="icon-left"
+          className="icon-left"
+          src={iconLeft}
         /> :
         null
       }
       <InputStyled
-        disabled={disabled}
         error={error}
-        placeholder={placeholder}
-        type={type}
-        value={value}
+        iconLeft={iconLeft ? true : false}
         {...rest}
       />
     </InputContainerStyled>
@@ -39,28 +30,13 @@ const Input = ({
 }
 
 Input.defaultProps = {
-  disabled: false,
   error: false,
-  placeholder: 'Input text',
-  type: 'text',
-  value: ''
+  iconLeft: '',
 };
 
 Input.propTypes = {
-  disabled: PropTypes.bool,
   error: PropTypes.bool,
-  placeholder: PropTypes.string,
-  type: PropTypes.oneOf([
-    'text',
-    'password',
-    'email',
-    // 'number', // ¿Se incluye dentro de los casos de uso?
-    'tel'
-  ]),
-  value: oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ])
+  iconLeft: PropTypes.string,
 }
 
 export default Input;
