@@ -1,6 +1,6 @@
 /**
  *
- * Button
+ * LegacyButton
  *
  */
 
@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 
 import { LegacyButtonStyled } from './style';
 
-import Facebook from 'images/facebook.png';
-import WhiteArrowRight from 'images/WhiteArrowRight.svg';
+import Facebook from '../image/facebook.png';
+import WhiteArrowRight from '../image/ArrowRightWhite.svg';
 
-function Button({
+function LegacyButton({
   wedged,
   noRounding,
   borderless,
@@ -100,7 +100,7 @@ function Button({
   );
 }
 
-Button.propTypes = {
+LegacyButton.propTypes = {
   /**
    * By default, component is rounded. This attribute makes the button rectangular.
    */
@@ -227,4 +227,4 @@ Button.propTypes = {
   p5: PropTypes.bool,
 };
 
-export default Button;
+export default LegacyButton;
