@@ -6,7 +6,7 @@
 
 import PropTypes from 'prop-types';
 
-import { BackArrowStyled } from './styled';
+import { BackArrowStyled } from './style';
 
 import RedArrow from '../image/ArrowRightRed.svg';
 import WhiteArrow from '../image/ArrowRightWhite.svg';
