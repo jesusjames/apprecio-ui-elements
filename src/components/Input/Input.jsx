@@ -8,6 +8,7 @@ const Input = ({
   error,
   iconLeft,
   iconRight,
+  variant,
   ...rest
 }) => {
   return (
@@ -24,6 +25,7 @@ const Input = ({
       <InputStyled
         error={error}
         iconLeft={iconLeft ? true : false}
+        iconRight={iconRight ? true : false}
         {...rest}
       />
       {

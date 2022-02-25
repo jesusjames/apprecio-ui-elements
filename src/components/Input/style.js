@@ -46,9 +46,15 @@ export const InputStyled = styled.input`
     return 'var(--grayColorOne)';
   }};
   
-  padding: ${props => {
-    if (props.iconLeft) return '8px 16px 8px 40px';
-    return '8px 16px 8px 16px';
+  padding-top: 8px;
+  padding-right: ${props => {
+    if (props.iconRight) return '40px';
+    return '16px';
+  }};
+  padding-bottom: 8px;
+  padding-left: ${props => {
+    if (props.iconLeft) return '40px';
+    return '16px';
   }};
 
   font-family: 'Poppins', sans-serif;
