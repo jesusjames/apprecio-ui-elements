@@ -1,5 +1,5 @@
 export const GenerateIcon = ({icon, orientation}) => {
-  if (icon === null || icon === undefined) return null;
+  if (!icon) return null;
 
   switch (typeof icon) {
     case 'function':

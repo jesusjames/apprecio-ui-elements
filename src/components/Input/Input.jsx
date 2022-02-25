@@ -14,11 +14,7 @@ const Input = ({
 }) => {
   return (
     <InputContainerStyled>
-      {
-        iconLeft ?
-        <GenerateIcon icon={iconLeft} orientation="left" /> :
-        null
-      }
+      <GenerateIcon icon={iconLeft} orientation="left" />
       <InputStyled
         error={error}
         iconLeft={iconLeft ? true : false}
@@ -26,11 +22,7 @@ const Input = ({
         variant={variant}
         {...rest}
       />
-      {
-        iconRight ?
-        <GenerateIcon icon={iconRight} orientation="right" /> :
-        null
-      }
+      <GenerateIcon icon={iconRight} orientation="right" />
     </InputContainerStyled>
   );
 }
