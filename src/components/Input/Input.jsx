@@ -3,6 +3,7 @@ import {
   InputContainerStyled,
   InputStyled,
 } from './style';
+import { GenerateIcon } from './helpers';
 
 const Input = ({
   error,
@@ -15,11 +16,7 @@ const Input = ({
     <InputContainerStyled>
       {
         iconLeft ?
-        <img
-          alt="icon-left"
-          className="icon-left"
-          src={iconLeft}
-        /> :
+        <GenerateIcon icon={iconLeft} orientation="left" /> :
         null
       }
       <InputStyled
@@ -31,11 +28,7 @@ const Input = ({
       />
       {
         iconRight ?
-        <img
-          alt="icon-right"
-          className="icon-right"
-          src={iconRight}
-        /> :
+        <GenerateIcon icon={iconRight} orientation="right" /> :
         null
       }
     </InputContainerStyled>
