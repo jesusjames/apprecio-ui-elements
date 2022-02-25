@@ -34,4 +34,9 @@
     --grayColorHover: #F4F4F4;
     --grayColorDisabled: #BBBBBB;
     --grayColorText: #696158;
+
+    --errorColorBackground: #FF486033;
+    --errorColorBorder: #FF4860;
+    --errorColorShadow: #FF486033;
+    --errorColorText: #FF4860;
 }
