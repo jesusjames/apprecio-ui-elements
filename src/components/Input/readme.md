@@ -64,5 +64,29 @@ import EmailErrorSVG from '../image/EmailError.svg';
       </div>
     </div>
   </div>
+
+  <div>
+    <p className="ap-mb-0.5">Theme variants (enfoca para ver)</p>
+    <div className="ap-flex ap-flex-wrap">
+      <div className="ap-w-full md:ap-w-1/2">
+        <p className="ap-mb-0.5">Primary</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} variant="primary" />
+      </div>
+      <div className="ap-w-full md:ap-w-1/2">
+        <p className="ap-mb-0.5">Secondary</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} variant="secondary" />
+      </div>
+    </div>
+    <div className="ap-flex ap-flex-wrap">
+      <div className="ap-w-full md:ap-w-1/2">
+        <p className="ap-mb-0.5">Tertiary</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} variant="tertiary" />
+      </div>
+      <div className="ap-w-full md:ap-w-1/2">
+        <p className="ap-mb-0.5">Quaternary</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} variant="quaternary" />
+      </div>
+    </div>
+  </div>
 </div>
 ```
