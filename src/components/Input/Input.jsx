@@ -1,66 +1,48 @@
-import PropTypes, { oneOfType } from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   InputContainerStyled,
   InputStyled,
 } from './style';
-
-import Email from '../image/Email.svg';
-import EmailError from '../image/EmailError.svg';
+import { GenerateIcon } from './helpers';
 
 const Input = ({
-  disabled,
   error,
-  placeholder,
-  type,
-  value,
+  iconLeft,
+  iconRight,
+  variant,
   ...rest
 }) => {
   return (
     <InputContainerStyled>
-      {
-        type === 'email' ?
-        <img
-          alt="email-symbol"
-          className="email-symbol"
-          src={error ? EmailError : Email}
-        /> :
-        null
-      }
+      <GenerateIcon icon={iconLeft} orientation="left" />
       <InputStyled
-        disabled={disabled}
         error={error}
-        placeholder={placeholder}
-        type={type}
-        value={value}
+        iconLeft={iconLeft ? true : false}
+        iconRight={iconRight ? true : false}
+        variant={variant}
         {...rest}
       />
+      <GenerateIcon icon={iconRight} orientation="right" />
     </InputContainerStyled>
   );
 }
 
 Input.defaultProps = {
-  disabled: false,
   error: false,
-  placeholder: 'Input text',
-  type: 'text',
-  value: ''
+  iconLeft: '',
+  iconRight: '',
+  variant: 'secondary',
 };
 
 Input.propTypes = {
-  disabled: PropTypes.bool,
+  /** Altera el color del campo para representar un error. */
   error: PropTypes.bool,
-  placeholder: PropTypes.string,
-  type: PropTypes.oneOf([
-    'text',
-    'password',
-    'email',
-    // 'number', // ¿Se incluye dentro de los casos de uso?
-    'tel'
-  ]),
-  value: oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ])
+  /** Ruta hacia el ícono que se quiere mostrar a la izquierda. */
+  iconLeft: PropTypes.string,
+  /** Ruta hacia el ícono que se quiere mostrar a la derecha. */
+  iconRight: PropTypes.string,
+  /** El color de la paleta que se usará para el componente. */
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
 }
 
 export default Input;

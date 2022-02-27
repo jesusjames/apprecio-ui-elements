@@ -37,6 +37,36 @@ export const apprecioTheme = {
                     activeColor: 'var(--facebookColorActive)',
                     activeColorOutline: 'var(--facebookColorActiveOutline)'
                 }
+            },
+            input: {
+                primary: {
+                    color: 'var(--darkColor)',
+                    backgroundColor: 'var(--whiteColorPure)',
+                    mainColor: 'var(--mainColor)',
+                    activeColor: 'var(--mainColorActive)',
+                    activeColorOutline: 'var(--mainColorActiveOutline)'
+                },
+                secondary: {
+                    color: 'var(--darkColor)',
+                    backgroundColor: 'var(--whiteColorPure)',
+                    mainColor: 'var(--lightColor)',
+                    activeColor: 'var(--lightColorActive)',
+                    activeColorOutline: 'var(--lightColorActiveOutline)'
+                },
+                tertiary: {
+                    color: 'var(--darkColor)',
+                    backgroundColor: 'var(--whiteColorPure)',
+                    mainColor: 'var(--darkColor)',
+                    activeColor: 'var(--darkColorActive)',
+                    activeColorOutline: 'var(--darkColorActiveOutline)'
+                },
+                quaternary: {
+                    color: 'var(--darkColor)',
+                    backgroundColor: 'var(--whiteColorPure)',
+                    mainColor: 'var(--blueColor)',
+                    activeColor: 'var(--blueColorActive)',
+                    activeColorOutline: 'var(--blueColorActiveOutline)'
+                }
             }
         },
         dark: {
