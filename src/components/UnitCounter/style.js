@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-import theme from 'utils/theme';
-
 export const UnitCounterStyled = styled.div`
   border: 1px solid #103c54;
-  border-radius: ${theme.rounding.wedged};
+  border-radius: 10px;
 
   width: ${props => (props.mini ? '94px' : '144px')};
   height: 40px;
@@ -32,12 +30,12 @@ export const UnitCounterStyled = styled.div`
     z-index: ${props => props.baseZIndex + 1};
 
     border: none;
-    border-radius: ${theme.rounding.wedged};
+    border-radius: 10px;
 
-    background-color: ${theme.palette.primary};
+    background-color: var(--mainColor);
 
-    color: ${theme.palette.text.offWhite};
-    font-family: ${theme.typeface.default};
+    color: var(--whiteColorApprecio);
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0px;
@@ -46,45 +44,40 @@ export const UnitCounterStyled = styled.div`
     padding-right: 40px;
 
     img {
-      background-color: ${theme.palette.primary};
+      background-color: var(--mainColor);
     }
   }
 
   *:not(#deletion-button) {
     border-style: none;
-    background-color: ${theme.palette.background.white};
+    background-color: var(--whiteColorPure);
 
     height: 100%;
 
     text-align: center;
 
-    color: ${theme.palette.secondary} !important;
-    -webkit-text-fill-color: ${theme.palette.secondary};
+    color: var(--lightColor) !important;
+    -webkit-text-fill-color: var(--lightColor);
     opacity: 1 !important;
-    font-family: ${theme.typeface.default};
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 23px;
 
-    border-radius: ${theme.rounding.wedged};
+    border-radius: 10px;
 
     transition: all 0.2s ease-in-out;
   }
 
   input:not(#deletion-button) {
     width: ${props => (props.showDeletionButton ? '40px' : '100%')};
-
     position: absolute;
-
     right: 0;
-
     z-index: ${props => props.baseZIndex + 2};
   }
 
   button:not(#deletion-button) {
     width: 40px;
-
     position: absolute;
-
     z-index: ${props => props.baseZIndex + 3};
   }
 
