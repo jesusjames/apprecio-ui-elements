@@ -11,7 +11,7 @@ import {
   WrapperStyled
 } from './style'
 
-function Wrapper({
+const Wrapper = ({
   children,
   flex,
   padding,
@@ -19,7 +19,7 @@ function Wrapper({
   paddingTop,
   variant,
   ...rest
-}) {
+}) => {
   return (
     <WrapperStyled
     flex={flex}
@@ -33,6 +33,19 @@ function Wrapper({
     </WrapperStyled>
   );
 }
+
+Wrapper.defaultProps = {
+  children: null,
+  flex: {
+    direction: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  padding: '1',
+  paddingBottom: '',
+  paddingTop: '',
+  variant: 'apprecio-white',
+};
 
 Wrapper.propTypes = {
   children: PropTypes.oneOfType([
