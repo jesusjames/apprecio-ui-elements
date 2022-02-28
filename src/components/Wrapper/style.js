@@ -15,7 +15,7 @@ export const WrapperStyled = styled.div`
   flex-direction: ${props => props.flex?.direction || 'column'};
   min-height: 100vh;
   justify-content: ${props => props.flex?.justifyContent || 'center'};
-  padding: ${props => {spacingMapping(props.padding)}};
+  padding: ${props => spacingMapping(props.padding)};
   padding-top: ${props =>
     props.paddingTop
       ? spacingMapping(props.paddingTop)

@@ -4,7 +4,6 @@
  *
  */
 
-import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -22,7 +21,7 @@ const Wrapper = ({
 }) => {
   return (
     <WrapperStyled
-    flex={flex}
+      flex={flex}
       padding={padding}
       paddingBottom={paddingBottom}
       paddingTop={paddingTop}
@@ -38,25 +37,43 @@ Wrapper.defaultProps = {
   children: null,
   flex: null,
   padding: '1',
-  paddingBottom: '',
-  paddingTop: '',
+  paddingBottom: null,
+  paddingTop: null,
   variant: 'apprecio-white',
 };
 
 Wrapper.propTypes = {
+  /**
+   * Arreglo de nodos hijos.
+   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  /**
+   * Reglas para el atributo 'flex' que rige dentro del complemento.
+   */
   flex: PropTypes.shape({
     direction: PropTypes.oneOf(['row', 'column', 'row-reverse', 'column-reverse']),
     alignItems: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-    justifyContent: (['start', 'end', 'center', 'space-between', 'space-around'])
+    justifyContent: PropTypes.oneOf(['start', 'end', 'center', 'space-between', 'space-around'])
   }),
+  /**
+   * Espacio entre los bordes del Wrapper y el contenido.
+   */
   padding: PropTypes.oneOf(['1', '2', '3', '4', '5']),
+  /**
+   * Sobreescribe padding para el espacio inferior.
+   */
   paddingBottom: PropTypes.oneOf(['1', '2', '3', '4', '5']),
+  /**
+   * Sobreeescribe padding para el espacio superior.
+   */
   paddingTop: PropTypes.oneOf(['1', '2', '3', '4', '5']),
-  variant: PropTypes.oneOF(['dark', 'apprecio-white', 'pure-white']),
+  /**
+   * El color que se usará como fondo del componente.
+   */
+  variant: PropTypes.oneOf(['dark', 'apprecio-white', 'pure-white']),
 };
 
 export default Wrapper;
