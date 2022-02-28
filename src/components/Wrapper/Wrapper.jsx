@@ -36,11 +36,7 @@ const Wrapper = ({
 
 Wrapper.defaultProps = {
   children: null,
-  flex: {
-    direction: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  flex: null,
   padding: '1',
   paddingBottom: '',
   paddingTop: '',
