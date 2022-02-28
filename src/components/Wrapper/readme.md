@@ -1,3 +1,5 @@
+## Wrapper
+
 **Wrapper** es un componente diseñado para encapsular distintos componentes y, así, estandarizar la apariencia de los distintos containers.
 
 **Uso básico**
