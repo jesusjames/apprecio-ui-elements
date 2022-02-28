@@ -8,3 +8,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 15/02/2022
 ### add
 - configuration project with styleguidist, rollup and cra4
+- Add Button Component

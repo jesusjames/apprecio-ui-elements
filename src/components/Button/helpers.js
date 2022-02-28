@@ -1,60 +1,60 @@
-export const getSizeButtonConfig = props => ({
-    extraSmall: {
-        css: `
+export const getSizeButtonConfig = (props) => ({
+  extraSmall: {
+    css: `
             font-size: 0.78125rem;
             min-width: ${props.block ? '100%' : '104px'};
             padding: 5px 12px;
         `,
-        icon: `
+    icon: `
             width: 11.8px;
             svg {
                 width: 11.8px;
                 height: 11.8px;
             }
-        `
-    },
-    small: {
-        css: `
+        `,
+  },
+  small: {
+    css: `
             font-size: 0.875;
             min-width: ${props.block ? '100%' : '111.8px'};
             padding: 6px 18px;
         `,
-        icon: `
+    icon: `
             width: 18px;
             svg {
                 width: 18px;
                 height: 18px;
             }
-        `
-    },
-    medium: {
-        css:  `
+        `,
+  },
+  medium: {
+    css: `
             font-size: 1rem;
             min-width: ${props.block === true ? '100%' : '128px'};
             padding: 11px 18px;
         `,
-        icon: `
+    icon: `
             width: 18px;
             svg {
                 width: 18px;
                 height: 18px;
             }
-        `
-    },
-    large: {
-        css:  `
+        `,
+  },
+  large: {
+    css: `
             font-size: 18px;
             min-width: ${props.block ? '100%' : '140px'};
-            padding: ${ props.color === 'primary' ? '14px' : 'calc(14px - 1.8px)' } 32px;
+            padding: ${props.color === 'primary' ? '14px' : 'calc(14px - 1.8px)'} 32px;
         `,
-        icon: `
+    icon: `
             width: 24px;
             svg {
                 width: 24px;
                 height: 24px;
             }
-        `
-    }
+        `,
+  },
 });
 
 const commonsColor = `
@@ -67,8 +67,8 @@ const disabledCommons = `
 `;
 
 export const getBaseButtonConfig = (theme) => ({
-    filled: {
-        css: `
+  filled: {
+    css: `
             background-color: ${theme?.mainColor};
             color: ${theme?.color};
             border: 2px solid ${theme?.mainColor};
@@ -80,25 +80,25 @@ export const getBaseButtonConfig = (theme) => ({
             }
             ${commonsColor} 
         `,
-        disabled: `
+    disabled: `
             background: var(--grayColorDisabled);
             color: white;
             border: 2px solid var(--grayColorDisabled);
             ${disabledCommons}
         `,
-        icon: `
+    icon: `
             svg, path {
                 fill: ${theme?.color};
             }
         `,
-        iconDisabled: `
+    iconDisabled: `
             svg, path {
                 fill: white;
             }
-        `
-    },
-    outline: {
-        css: `
+        `,
+  },
+  outline: {
+    css: `
             background-color: white;
             color: ${theme?.mainColor};
             border: 2px solid ${theme?.mainColor};
@@ -110,22 +110,22 @@ export const getBaseButtonConfig = (theme) => ({
             }
             ${commonsColor} 
         `,
-        disabled: `
+    disabled: `
             background-color: white;
             color: var(--grayColorDisabled);
             border: 2px solid var(--grayColorDisabled);
             ${disabledCommons}
             opacity: 0.6;
         `,
-        icon: `
+    icon: `
             svg, path {
                 fill: ${theme?.mainColor};
             }
         `,
-        iconDisabled: `
+    iconDisabled: `
             svg, path {
                  fill: var(--grayColorDisabled)
             }
-        `
-    },
+        `,
+  },
 });

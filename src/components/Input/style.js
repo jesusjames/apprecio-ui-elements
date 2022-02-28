@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InputContainerStyled = styled.div`
   width: 311px;
@@ -32,7 +32,7 @@ export const InputStyled = styled.input`
   width: 311px;
   height: 48px;
 
-  background-color: ${props => {
+  background-color: ${(props) => {
     if (props.disabled) return 'var(--grayColorBorder) !important';
     if (props.error) return 'var(--errorColorBackground)';
     return props.theme?.input?.[props.variant]?.backgroundColor || 'var(--whiteColorPure)';
@@ -41,18 +41,18 @@ export const InputStyled = styled.input`
   border-radius: 8px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${props => {
+  border-color: ${(props) => {
     if (props.error) return 'var(--errorColorBorder)';
     return 'var(--grayColorOne)';
   }};
   
   padding-top: 8px;
-  padding-right: ${props => {
+  padding-right: ${(props) => {
     if (props.iconRight) return '40px';
     return '16px';
   }};
   padding-bottom: 8px;
-  padding-left: ${props => {
+  padding-left: ${(props) => {
     if (props.iconLeft) return '40px';
     return '16px';
   }};
@@ -61,7 +61,7 @@ export const InputStyled = styled.input`
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 500;
-  color: ${props => {
+  color: ${(props) => {
     if (props.error) return 'var(--errorColorText)';
     return props.theme?.input?.[props.variant]?.color || 'var(--darkColor)';
   }};
@@ -78,13 +78,13 @@ export const InputStyled = styled.input`
 
   &:focus {
     outline: none;
-    border-color: ${props => {
-      if (props.error) return 'var(--errorColorBorder)';
-      return props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)';
-    }};
-    box-shadow: ${props => {
-      if (props.error) return '0px 0px 0px 2px var(--errorColorShadow) !important';
-      return `0px 0px 5px 1px ${props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)'} !important`;
-    }};
+    border-color: ${(props) => {
+    if (props.error) return 'var(--errorColorBorder)';
+    return props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)';
+  }};
+    box-shadow: ${(props) => {
+    if (props.error) return '0px 0px 0px 2px var(--errorColorShadow) !important';
+    return `0px 0px 5px 1px ${props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)'} !important`;
+  }};
   }
 `;

@@ -1,15 +1,20 @@
-export const GenerateIcon = ({icon, orientation}) => {
-  if (!icon) return null;
+export const GenerateIcon = ({ icon: Icon, orientation }) => {
+  if (!Icon) return null;
 
-  switch (typeof icon) {
+  switch (typeof Icon) {
     case 'function':
-      return <icon />;
+      // eslint-disable-next-line react/jsx-filename-extension
+      return <Icon />;
     case 'string':
-      return <img
-        alt={`icon-${orientation}`}
-        className={`icon-${orientation}`}
-        src={icon}
-      />
+      return (
+        <img
+          alt={`icon-${orientation}`}
+          className={`icon-${orientation}`}
+          src={Icon}
+        />
+      );
     default: return null;
   }
 };
+
+export default GenerateIcon;
