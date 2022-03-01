@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Input /> Should render and match the snapshot 1`] = `
-<input
-  class="Input__Container-sc-19txxuq-0 hwBZji"
-  type="text"
-/>
-`;
