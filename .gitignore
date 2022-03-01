@@ -31,3 +31,6 @@ styleguide
 
 package-lock.json
 .history
+
+# legacy components
+/src/components/legacy-components
