@@ -4,7 +4,7 @@ export const UnitCounterStyled = styled.div`
   border: 1px solid #103c54;
   border-radius: 10px;
 
-  width: ${props => (props.mini ? '94px' : '144px')};
+  width: ${(props) => (props.mini ? '94px' : '144px')};
   height: 40px;
 
   display: flex;
@@ -15,7 +15,7 @@ export const UnitCounterStyled = styled.div`
 
   position: relative;
 
-  z-index: ${props => props.baseZIndex};
+  z-index: ${(props) => props.baseZIndex};
 
   overflow-x: hidden;
 
@@ -27,7 +27,7 @@ export const UnitCounterStyled = styled.div`
 
     margin: 0;
 
-    z-index: ${props => props.baseZIndex + 1};
+    z-index: ${(props) => props.baseZIndex + 1};
 
     border: none;
     border-radius: 10px;
@@ -69,23 +69,27 @@ export const UnitCounterStyled = styled.div`
   }
 
   input:not(#deletion-button) {
-    width: ${props => (props.showDeletionButton ? '40px' : '100%')};
+    width: ${(props) => (props.showDeletionButton ? '40px' : '100%')};
     position: absolute;
     right: 0;
-    z-index: ${props => props.baseZIndex + 2};
+    z-index: ${(props) => props.baseZIndex + 2};
   }
 
   button:not(#deletion-button) {
     width: 40px;
     position: absolute;
-    z-index: ${props => props.baseZIndex + 3};
+    z-index: ${(props) => props.baseZIndex + 3};
   }
 
   #decrease-value-button {
-    right: ${props => (props.showDeletionButton ? '0px' : 'calc(100% - 40px)')};
+    right: ${(props) => (props.showDeletionButton ? '0px' : 'calc(100% - 40px)')};
   }
 
   #increase-value-button {
     right: 0;
   }
 `;
+
+export default {
+  UnitCounterStyled,
+};

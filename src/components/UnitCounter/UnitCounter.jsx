@@ -7,10 +7,10 @@
 import { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import Trash from 'images/Trash.svg';
 import { UnitCounterStyled } from './style';
 
 // Assets
-import Trash from 'images/Trash.svg';
 
 const UnitCounter = ({
   mini,
@@ -57,10 +57,10 @@ const UnitCounter = ({
         id="decrease-value-button"
         type="button"
         onTouchStart={() => {
-          decreaseButtonRef.current.style.transform = `scale(0.9)`;
+          decreaseButtonRef.current.style.transform = 'scale(0.9)';
         }}
         onTouchEnd={() => {
-          decreaseButtonRef.current.style.transform = `scale(1)`;
+          decreaseButtonRef.current.style.transform = 'scale(1)';
           window.navigator.vibrate(50);
         }}
         onClick={() => unitsSetter(units - 1)}
@@ -70,7 +70,7 @@ const UnitCounter = ({
       <input
         id="value-input"
         value={units}
-        onChange={e => unitsSetter(e.target.value)}
+        onChange={(e) => unitsSetter(e.target.value)}
         size="1"
         disabled
         type="number"
@@ -81,10 +81,10 @@ const UnitCounter = ({
         id="increase-value-button"
         type="button"
         onTouchStart={() => {
-          increaseButtonRef.current.style.transform = `scale(0.9)`;
+          increaseButtonRef.current.style.transform = 'scale(0.9)';
         }}
         onTouchEnd={() => {
-          increaseButtonRef.current.style.transform = `scale(1)`;
+          increaseButtonRef.current.style.transform = 'scale(1)';
           window.navigator.vibrate(50);
         }}
         onClick={() => {
@@ -95,7 +95,7 @@ const UnitCounter = ({
       </button>
     </UnitCounterStyled>
   );
-}
+};
 
 UnitCounter.propTypes = {
   mini: PropTypes.bool,

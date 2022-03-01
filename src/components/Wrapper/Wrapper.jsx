@@ -7,8 +7,8 @@
 import PropTypes from 'prop-types';
 
 import {
-  WrapperStyled
-} from './style'
+  WrapperStyled,
+} from './style';
 
 const Wrapper = ({
   children,
@@ -18,20 +18,18 @@ const Wrapper = ({
   paddingTop,
   variant,
   ...rest
-}) => {
-  return (
-    <WrapperStyled
-      flex={flex}
-      padding={padding}
-      paddingBottom={paddingBottom}
-      paddingTop={paddingTop}
-      variant={variant}
-      {...rest}
-    >
-      {children}
-    </WrapperStyled>
-  );
-}
+}) => (
+  <WrapperStyled
+    flex={flex}
+    padding={padding}
+    paddingBottom={paddingBottom}
+    paddingTop={paddingTop}
+    variant={variant}
+    {...rest}
+  >
+    {children}
+  </WrapperStyled>
+);
 
 Wrapper.defaultProps = {
   children: null,
@@ -56,7 +54,7 @@ Wrapper.propTypes = {
   flex: PropTypes.shape({
     direction: PropTypes.oneOf(['row', 'column', 'row-reverse', 'column-reverse']),
     alignItems: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-    justifyContent: PropTypes.oneOf(['start', 'end', 'center', 'space-between', 'space-around'])
+    justifyContent: PropTypes.oneOf(['start', 'end', 'center', 'space-between', 'space-around']),
   }),
   /**
    * Espacio entre los bordes del Wrapper y el contenido.
