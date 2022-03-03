@@ -192,11 +192,11 @@ UnitSelectionInterface.propTypes = {
    */
   unitsSetter: PropTypes.func.isRequired,
   /**
-   * Variable que almacena el valor mostrado en el Display.
+   * Variable que almacena el valor de cada unidad en la transacción.
    */
   value: PropTypes.number.isRequired,
   /**
-   * Función que altera el valor mostrado en el Display.
+   * Función que altera el valor de cada unidad en la transacción.
    */
   valueSetter: PropTypes.func.isRequired,
 };
