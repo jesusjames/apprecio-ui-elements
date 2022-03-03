@@ -10,21 +10,21 @@ const [counter2, setCounter2] = useState(1);
 
 <div className="ap-flex ap-flex-wrap">
   <div className="ap-w-full md:ap-w-1/2">
+    <p className="ap-mb-0.5">Normal</p>
+    <UnitCounter
+      drawerSetter={() => alert('Esta función cierra el drawer.')}
+      units={counter}
+      unitsSetter={setCounter}
+      valueSetter={() => alert('Esta función cambia el valor del Display a 0.')}
+    />
+  </div>
+  <div className="ap-w-full md:ap-w-1/2">
     <p className="ap-mb-0.5">Mini</p>
     <UnitCounter
       drawerSetter={() => alert('Esta función cierra el drawer.')}
       mini
       units={counter2}
       unitsSetter={setCounter2}
-      valueSetter={() => alert('Esta función cambia el valor del Display a 0.')}
-    />
-  </div>
-  <div className="ap-w-full md:ap-w-1/2">
-    <p className="ap-mb-0.5">Normal</p>
-    <UnitCounter
-      drawerSetter={() => alert('Esta función cierra el drawer.')}
-      units={counter}
-      unitsSetter={setCounter}
       valueSetter={() => alert('Esta función cambia el valor del Display a 0.')}
     />
   </div>
