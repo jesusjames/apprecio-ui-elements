@@ -24,6 +24,7 @@ export const UnitCounterStyled = styled.div`
 
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
     margin: 0;
 
@@ -56,8 +57,8 @@ export const UnitCounterStyled = styled.div`
 
     text-align: center;
 
-    color: var(--lightColor) !important;
-    -webkit-text-fill-color: var(--lightColor);
+    color: var(--darkColor) !important;
+    -webkit-text-fill-color: var(--darkColor);
     opacity: 1 !important;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -73,6 +74,7 @@ export const UnitCounterStyled = styled.div`
     position: absolute;
     right: 0;
     z-index: ${(props) => props.baseZIndex + 2};
+    padding-left: 14px;
   }
 
   button:not(#deletion-button) {

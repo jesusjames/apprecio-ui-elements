@@ -7,18 +7,18 @@
 import { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Trash from 'images/Trash.svg';
+import Trash from '../image/Trash.svg';
 import { UnitCounterStyled } from './style';
 
 // Assets
 
 const UnitCounter = ({
+  baseZIndex,
+  drawerSetter,
   mini,
   units,
   unitsSetter,
-  baseZIndex = 0,
   valueSetter,
-  drawerSetter,
 }) => {
   const decreaseButtonRef = useRef(null);
   const increaseButtonRef = useRef(null);
@@ -97,13 +97,36 @@ const UnitCounter = ({
   );
 };
 
+UnitCounter.defaultProps = {
+  baseZIndex: 0,
+  mini: false,
+};
+
 UnitCounter.propTypes = {
-  mini: PropTypes.bool,
-  units: PropTypes.number.isRequired,
-  unitsSetter: PropTypes.func.isRequired,
+  /**
+   * El valor de z-index inicial, útil cuando se manejan varios Drawers.
+   */
   baseZIndex: PropTypes.number,
-  valueSetter: PropTypes.func.isRequired,
+  /**
+   * Función que cierra el Drawer cuando se hace click en el botón de eliminar.
+   */
   drawerSetter: PropTypes.func.isRequired,
+  /**
+   * Una versión reducioda del componente, usada en el reporte.
+   */
+  mini: PropTypes.bool,
+  /**
+   * La cantidad de unidades que se tienen.
+   */
+  units: PropTypes.number.isRequired,
+  /**
+   * Función que modifica la cantidad de unidades.
+   */
+  unitsSetter: PropTypes.func.isRequired,
+  /**
+   * Función que modifica el valor del Display de la caja registradora.
+   */
+  valueSetter: PropTypes.func.isRequired,
 };
 
 export default UnitCounter;

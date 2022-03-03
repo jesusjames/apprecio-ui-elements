@@ -1,5 +1,3 @@
-## Input
-
 Lista de campos de texto según guía de estilos.
 
 **Uso básico**
