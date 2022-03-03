@@ -4,8 +4,6 @@ Lista de campos de texto según guía de estilos.
 
 A continuación se listan las variantes del componente. Además, acepta cualquier otro tipo de prop nativo de un elemento \<input\/\>.
 
-## Input
-
 ```jsx
 import EmailSVG from '../image/Email.svg';
 import EmailErrorSVG from '../image/EmailError.svg';
