@@ -121,13 +121,37 @@ UnitSelectionInterface.defaultProps = {
 };
 
 UnitSelectionInterface.propTypes = {
+  /**
+   * El valor de z-index inicial, útil cuando se manejan varios Drawers.
+   */
   baseZIndex: PropTypes.number,
+  /**
+   * Función que cierra el Drawer cuando se hace click en el botón de eliminar.
+   */
   drawerSetter: PropTypes.func.isRequired,
+  /**
+   * Selecciona qué interface de la caja registradora se está mostrando.
+   */
   interfaceShowing: PropTypes.number,
-  mode: PropTypes.string,
+  /**
+   * Determina si se está tratando con ingresos o gastos.
+   */
+  mode: PropTypes.oneOf(['expense', 'income']),
+  /**
+   * Variable que almacena el valor de la nota.
+   */
   note: PropTypes.string.isRequired,
+  /**
+   * Función que altera el valor de la nota.
+   */
   noteSetter: PropTypes.func.isRequired,
+  /**
+   * Función que envía los gastos a la API.
+   */
   postExpensesArray: PropTypes.func,
+  /**
+   * Objeto que contiene la información del producto.
+   */
   productInfo: PropTypes.shape({
     id: PropTypes.number,
     brand: PropTypes.shape({
@@ -149,6 +173,9 @@ UnitSelectionInterface.propTypes = {
     price_count: PropTypes.number,
     last_sale_price: PropTypes.number,
   }),
+  /**
+   * Arreglo que contiene las transacciones.
+   */
   transactionsArray: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.number.isRequired,
@@ -156,9 +183,21 @@ UnitSelectionInterface.propTypes = {
       note: PropTypes.string,
     }),
   ).isRequired,
+  /**
+   * Variable que almacena el número de unidades en la transacción.
+   */
   units: PropTypes.number.isRequired,
+  /**
+   * Función que altera el número de unidades en la transacción.
+   */
   unitsSetter: PropTypes.func.isRequired,
+  /**
+   * Variable que almacena el valor mostrado en el Display.
+   */
   value: PropTypes.number.isRequired,
+  /**
+   * Función que altera el valor mostrado en el Display.
+   */
   valueSetter: PropTypes.func.isRequired,
 };
 
