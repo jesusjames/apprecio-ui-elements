@@ -6,3 +6,4 @@ export { default as Input } from './Input/Input';
 
 export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
 export { default as UnitCounter } from './UnitCounter/UnitCounter';
+export { default as UnitSelectionInterface } from './UnitSelectionInterface/UnitSelectionInterface';

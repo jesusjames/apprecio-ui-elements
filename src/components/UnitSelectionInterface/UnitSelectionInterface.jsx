@@ -14,14 +14,14 @@ import UnitCounter from '../UnitCounter/UnitCounter';
 import NoteTakingInput from '../NoteTakingInput/NoteTakingInput';
 
 const UnitSelectionInterface = ({
-  baseZIndex = 0,
+  baseZIndex,
   drawerSetter,
-  interfaceShowing = 0,
-  mode = 'income',
-  note = '',
+  interfaceShowing,
+  mode,
+  note,
   noteSetter,
   postExpensesArray,
-  productInfo = {},
+  productInfo,
   transactionsArray,
   units,
   unitsSetter,
@@ -112,12 +112,20 @@ const UnitSelectionInterface = ({
   );
 };
 
+UnitSelectionInterface.defaultProps = {
+  baseZIndex: 0,
+  interfaceShowing: 0,
+  mode: 'income',
+  postExpensesArray: () => {},
+  productInfo: {},
+};
+
 UnitSelectionInterface.propTypes = {
   baseZIndex: PropTypes.number,
   drawerSetter: PropTypes.func.isRequired,
   interfaceShowing: PropTypes.number,
   mode: PropTypes.string,
-  note: PropTypes.string,
+  note: PropTypes.string.isRequired,
   noteSetter: PropTypes.func.isRequired,
   postExpensesArray: PropTypes.func,
   productInfo: PropTypes.shape({
