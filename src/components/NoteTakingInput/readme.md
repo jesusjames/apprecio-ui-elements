@@ -1,3 +1,5 @@
+NoteTakingInput es un componente diseñado para su uso en conjunto con el resto de los componentes de la pantalla CashRegister. Su función es proveer a los tenderos de una manera dinámica e intuitiva para llenar campos de texto.
+
 **Uso básico**
 
 ```jsx
