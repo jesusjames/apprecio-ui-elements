@@ -1,3 +1,5 @@
+UnitSelectionInterface es un componente que aglomera la información pertienente a cada transaction, v.g., cuántas unidades se vendieron, el valor por unidad y alguna nota que se guste agregar.
+
 **Uso básico**
 
 ```jsx
