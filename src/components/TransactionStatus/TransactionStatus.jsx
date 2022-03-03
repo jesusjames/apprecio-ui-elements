@@ -61,7 +61,7 @@ const TransactionStatus = ({
   );
 };
 
-TransactionStatus.dafaultProps = {
+TransactionStatus.defaultProps = {
   amount: 0,
   itemCount: 0,
   setShowReceiptDrawer: () => {},
@@ -69,9 +69,21 @@ TransactionStatus.dafaultProps = {
 };
 
 TransactionStatus.propTypes = {
+  /**
+   * La suma del valor de todas las transacciones.
+   */
   amount: PropTypes.number,
+  /**
+   * El número de unidades totales (v.g., transacciones * unidades-por-transacción).
+   */
   itemCount: PropTypes.number,
+  /**
+   * Alterna los copies respectivos para cada caso.
+   */
   mode: PropTypes.oneOf(['expense', 'income']),
+  /**
+   * Función que abre el drawer de recibo.
+   */
   setShowReceiptDrawer: PropTypes.func,
 };
 

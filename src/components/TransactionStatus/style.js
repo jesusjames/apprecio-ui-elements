@@ -5,6 +5,7 @@ export const TransactionStatusStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   .header {
     display: flex;
@@ -34,15 +35,15 @@ export const TransactionStatusStyled = styled.div`
       position: absolute;
       left: ${(props) => {
     if (props.itemCount === 1) {
-      return '13px';
+      return '14px';
     }
     if (props.itemCount < 10) {
-      return '11px';
+      return '12px';
     }
     if (props.itemCount < 20) {
-      return '10px';
+      return '11px';
     }
-    return '8px';
+    return '9px';
   }};
       top: 3px;
 
