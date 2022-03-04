@@ -13,7 +13,7 @@ import { ReceiptItemStyled } from './style';
 import UnitCounter from '../UnitCounter/UnitCounter';
 
 const ReceiptItem = ({
-  displayValueSetter,
+  deleteItem,
   message,
   mode,
   title,
@@ -49,7 +49,7 @@ const ReceiptItem = ({
           mini
           units={units}
           unitsSetter={unitsSetter}
-          valueSetter={displayValueSetter}
+          valueSetter={deleteItem}
           drawerSetter={setShowUnitCounter}
         />
       </div>
@@ -63,9 +63,9 @@ ReceiptItem.defaultProps = {
 
 ReceiptItem.propTypes = {
   /**
-   * Función que modifica el valor del Display de la caja registradora.
+   * Función que elimina el item cuando se encuentra dentro de ReceiptDrawerContent.
    */
-  displayValueSetter: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired,
   /**
    * Mensaje de la transacción.
    */

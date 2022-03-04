@@ -11,7 +11,7 @@ const [counter, setCounter] = useState(1);
   <div className="ap-w-full md:ap-w-1/2">
     <div style={{ width: 325 }}>
       <ReceiptItem
-        displayValueSetter={() => alert('Esta función cambia el valor del Display a 0.')}
+        deleteItem={() => {}}
         message=""
         title="Ejemplo"
         units={counter}

@@ -182,16 +182,34 @@ ReceiptDrawerContent.defaultProps = {
 };
 
 ReceiptDrawerContent.propTypes = {
+  /**
+   * Define el color y los copies del componente
+   */
   mode: PropTypes.oneOf(['income', 'expense']),
+  /**
+   * Función que muestra la pantalla de checkout.
+   */
   setShowCheckoutScreen: PropTypes.func.isRequired,
+  /**
+   * Función que cierra el Drawer que contiene el resumen de la compra.
+   */
   setShowReceiptDrawer: PropTypes.func.isRequired,
+  /**
+   * Arreglo de las transacciones.
+   */
   transactionsArray: PropTypes.arrayOf(
     PropTypes.shape({
-      value: PropTypes.number.isRequired,
+      productId: PropTypes.number,
       units: PropTypes.number.isRequired,
       note: PropTypes.string,
+      value: PropTypes.number.isRequired,
+      title: PropTypes.string,
+      message: PropTypes.string,
     }),
   ).isRequired,
+  /**
+   * Función que altera el arreglo de transacciones.
+   */
   transactionsArraySetter: PropTypes.func.isRequired,
 };
 
