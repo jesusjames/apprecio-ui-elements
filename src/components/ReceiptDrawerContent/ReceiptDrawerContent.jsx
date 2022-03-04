@@ -17,11 +17,11 @@ import GreyArrowDown from '../image/GreyArrowDown.svg';
 import GreyArrowUp from '../image/GreyArrowUp.svg';
 
 const ReceiptDrawerContent = ({
+  mode,
+  setShowCheckoutScreen,
+  setShowReceiptDrawer,
   transactionsArray,
   transactionsArraySetter,
-  variant = 'income',
-  setShowReceiptDrawer,
-  setShowCheckoutScreen,
 }) => {
   const containerRef = useRef(null);
   const scrollToTopScrollsTo = useRef(null);
@@ -58,18 +58,18 @@ const ReceiptDrawerContent = ({
   };
 
   return (
-    <ReceiptDrawerContentStyled ref={containerRef} variant={variant}>
+    <ReceiptDrawerContentStyled ref={containerRef} mode={mode}>
       <p
         ref={scrollToTopScrollsTo}
         className="receipt-drawer-title"
       >
-        {`Total a ${variant === 'income' ? 'cobrar' : 'registrar'}`}
+        {`Total a ${mode === 'income' ? 'cobrar' : 'registrar'}`}
       </p>
       <p className="product-count-message">
         {`${transactionsArray.reduce(
           (prev, curr) => prev + curr.units,
           0,
-        )} ${variant === 'income' ? 'productos' : 'transacciones'}`}
+        )} ${mode === 'income' ? 'productos' : 'transacciones'}`}
       </p>
       <p className="checkout-total">
         $
@@ -88,7 +88,7 @@ const ReceiptDrawerContent = ({
         }}
       >
         <span className="button-message">
-          {variant === 'income' ? 'Pasar al cobro' : 'Registrar gastos'}
+          {mode === 'income' ? 'Pasar al cobro' : 'Registrar gastos'}
         </span>
         <span className="dollar-sign">$</span>
       </button>
@@ -103,7 +103,7 @@ const ReceiptDrawerContent = ({
             });
           }}
         >
-          {variant === 'income' ? 'Resumen de la venta' : 'Listado de gastos'}
+          {mode === 'income' ? 'Resumen de la venta' : 'Listado de gastos'}
           <img src={GreyArrowDown} alt="v" />
         </button>
         <p className="date-info-1">
@@ -130,6 +130,7 @@ const ReceiptDrawerContent = ({
         <ul className="receipt-items-list">
           {transactionsArray.map((transaction) => (
             <ReceiptItem
+              // This key needs revision
               key={`${transaction.title} ${transaction.message} ${transaction.value}`}
               title={transaction.title}
               units={transaction.units}
@@ -150,7 +151,7 @@ const ReceiptDrawerContent = ({
               }}
               value={transaction.value}
               message={transaction.message}
-              variant={variant}
+              mode={mode}
             />
           ))}
         </ul>
@@ -176,7 +177,14 @@ const ReceiptDrawerContent = ({
   );
 };
 
+ReceiptDrawerContent.defaultProps = {
+  mode: 'income',
+};
+
 ReceiptDrawerContent.propTypes = {
+  mode: PropTypes.oneOf(['income', 'expense']),
+  setShowCheckoutScreen: PropTypes.func.isRequired,
+  setShowReceiptDrawer: PropTypes.func.isRequired,
   transactionsArray: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.number.isRequired,
@@ -185,9 +193,6 @@ ReceiptDrawerContent.propTypes = {
     }),
   ).isRequired,
   transactionsArraySetter: PropTypes.func.isRequired,
-  variant: PropTypes.oneOf(['income', 'expense']),
-  setShowReceiptDrawer: PropTypes.func.isRequired,
-  setShowCheckoutScreen: PropTypes.func.isRequired,
 };
 
 export default ReceiptDrawerContent;

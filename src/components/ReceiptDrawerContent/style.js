@@ -9,7 +9,7 @@ export const ReceiptDrawerContentStyled = styled.div`
   margin-bottom: 100px;
 
   .receipt-drawer-title {
-    color: ${(props) => (props.variant === 'expense'
+    color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
     text-align: center;
@@ -29,7 +29,7 @@ export const ReceiptDrawerContentStyled = styled.div`
   }
 
   .checkout-total {
-    color: ${(props) => (props.variant === 'expense'
+    color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
     text-align: center;
@@ -44,7 +44,7 @@ export const ReceiptDrawerContentStyled = styled.div`
     justify-content: center;
     align-items: center;
 
-    background-color: ${(props) => (props.variant === 'expense'
+    background-color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
     border: none;
@@ -72,7 +72,7 @@ export const ReceiptDrawerContentStyled = styled.div`
 
       border-radius: 10px;
 
-      color: ${(props) => (props.variant === 'expense'
+      color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
       font: normal normal bold 16px/30px 'Poppins', sans-serif;
@@ -126,7 +126,7 @@ export const ReceiptDrawerContentStyled = styled.div`
   }
 
   .small-checkout-total {
-    color: ${(props) => (props.variant === 'expense'
+    color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
     text-align: center;
