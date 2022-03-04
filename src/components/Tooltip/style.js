@@ -17,6 +17,8 @@ export const TooltipStyled = styled.div`
   background-color: var(--blueColor);
   border-radius: 30px;
 
+  cursor: pointer;
+
   &::before {
     content: '';
 
