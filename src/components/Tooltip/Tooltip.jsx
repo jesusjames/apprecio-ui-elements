@@ -20,8 +20,17 @@ Tooltip.defaultProps = {
 };
 
 Tooltip.propTypes = {
+  /**
+   * El mensaje a mostrar en el tooltip.
+   */
   message: PropTypes.string.isRequired,
+  /**
+   * Variable que determina si se mueve el tooltip o no.
+   */
   showOn: PropTypes.bool.isRequired,
+  /**
+   * Función a ejecutar al hacer click en el tooltip.
+   */
   onClick: PropTypes.func,
 };
 
