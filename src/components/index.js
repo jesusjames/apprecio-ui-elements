@@ -5,6 +5,7 @@ export { default as Input } from './Input/Input';
 // Legacy components
 
 export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
+export { default as Spinner } from './Spinner/Spinner';
 export { default as Tooltip } from './Tooltip/Tooltip';
 export { default as TransactionStatus } from './TransactionStatus/TransactionStatus';
 export { default as UnitCounter } from './UnitCounter/UnitCounter';
