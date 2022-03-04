@@ -8,10 +8,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import theme from '../../utils/theme';
-
-import RedArrow from '../../images/RedArrowRight.svg';
-import WhiteArrow from '../../images/WhiteArrowRight.svg';
+import RedArrow from '../image/RedArrowRight.svg';
+import WhiteArrow from '../image/WhiteArrowRight.svg';
 
 const Container = styled.button`
   left: 0;
@@ -33,13 +31,11 @@ const Container = styled.button`
   }
 `;
 
-function BackArrow({ onClick, white }) {
-  return (
-    <Container type="button" onClick={onClick}>
-      <img src={white ? WhiteArrow : RedArrow} alt="<" />
-    </Container>
-  );
-}
+const BackArrow = ({ onClick, white }) => (
+  <Container type="button" onClick={onClick}>
+    <img src={white ? WhiteArrow : RedArrow} alt="<" />
+  </Container>
+);
 
 BackArrow.propTypes = {
   /**
