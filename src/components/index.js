@@ -4,6 +4,7 @@ export { default as Input } from './Input/Input';
 
 // Legacy components
 
+export { default as BackArrow } from './BackArrow/BackArrow';
 export { default as NavigationEaveButton } from './NavigationEaveButton/NavigationEaveButton';
 export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
 export { default as ReceiptDrawerContent } from './ReceiptDrawerContent/ReceiptDrawerContent';

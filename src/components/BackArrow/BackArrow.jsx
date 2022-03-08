@@ -6,44 +6,26 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
+import { BackArrowStyled } from './style';
+
+// Assets
 import RedArrow from '../image/RedArrowRight.svg';
 import WhiteArrow from '../image/WhiteArrowRight.svg';
 
-const Container = styled.button`
-  left: 0;
-  top: 0;
-  position: absolute;
-  cursor: pointer;
-  padding: 0;
-  padding-right: ${theme.spacing[2]};
-  padding-bottom: ${theme.spacing[2]};
-  transform: rotate(180deg);
-  z-index: 20;
-  background-color: transparent;
-  border: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-
-  &:focus {
-    outline: none;
-  }
-`;
-
 const BackArrow = ({ onClick, white }) => (
-  <Container type="button" onClick={onClick}>
+  <BackArrowStyled type="button" onClick={onClick}>
     <img src={white ? WhiteArrow : RedArrow} alt="<" />
-  </Container>
+  </BackArrowStyled>
 );
 
 BackArrow.propTypes = {
   /**
-   * Callback function which executes whenever the component is clicked on.
+   * Función que se ejecuta cuando se hace click en el botón.
    */
   onClick: PropTypes.func,
   /**
-   * Whether the arrow is white or red.
+   * Dictamina si el botón debe ser blanco o rojo.
    */
   white: PropTypes.bool,
 };
