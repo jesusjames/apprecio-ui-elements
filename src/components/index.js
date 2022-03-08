@@ -5,6 +5,7 @@ export { default as Input } from './Input/Input';
 // Legacy components
 
 export { default as BackArrow } from './BackArrow/BackArrow';
+export { default as MemberPicture } from './MemberPicture/MemberPicture';
 export { default as Message } from './Message/Message';
 export { default as MiniImagePicker } from './MiniImagePicker/MiniImagePicker';
 export { default as MiniInput } from './MiniInput/MiniInput';
