@@ -6,34 +6,23 @@
 
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import Message from 'components/Message';
+import { MiniImagePickerStyled } from './style';
 
-import ImageIcon from 'images/ImageIcon.svg';
+// Components
+import Message from '../Message/Message';
 
-const ImagePickerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+// Assets
+import ImageIcon from '../image/ImageIcon.svg';
 
-  & > input[type='file'] {
-    display: none;
-  }
-
-  & > .buttonContainer {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-`;
-
-const MiniImagePicker = ({ src, setter }) => {
+const MiniImagePicker = ({
+  setter,
+  src,
+}) => {
   const input = useRef(null);
 
   return (
-    <ImagePickerContainer>
+    <MiniImagePickerStyled>
       <input
         ref={input}
         type="file"
@@ -56,19 +45,23 @@ const MiniImagePicker = ({ src, setter }) => {
           ¡Sube una foto de tu tiendita como portador!
         </Message>
       )}
-    </ImagePickerContainer>
+    </MiniImagePickerStyled>
   );
+};
+
+MiniImagePicker.defaultProps = {
+  src: '',
 };
 
 MiniImagePicker.propTypes = {
   /**
-   * Route to the image.
-   */
-  src: PropTypes.string,
-  /**
-   * Image setter.
+   * Función que establece la imagen.
    */
   setter: PropTypes.func.isRequired,
+  /**
+   * Ruta hacia la imagen
+   */
+  src: PropTypes.string,
 };
 
 export default MiniImagePicker;
