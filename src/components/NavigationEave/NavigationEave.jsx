@@ -13,14 +13,14 @@ import { NavigationEaveStyled } from './style';
 import BackArrow from '../BackArrow/BackArrow';
 
 const NavigationEave = ({
-  variant = 'offWhite',
-  icon,
-  name,
   children,
   goBackFunction,
+  icon,
   mode,
+  name,
   page,
-  shortened = false,
+  shortened,
+  variant,
 }) => {
   const slider = useRef(null);
 
@@ -45,19 +45,17 @@ const NavigationEave = ({
   );
 };
 
+NavigationEave.defaultProps = {
+  children: null,
+  goBackFunction: () => {},
+  icon: '',
+  name: '',
+  page: 0,
+  shortened: false,
+  variant: 'offWhite',
+};
+
 NavigationEave.propTypes = {
-  /**
-   * El color usado en la pestaña de navegación.
-   */
-  variant: PropTypes.oneOf(['primary', 'offWhite', 'transparent']),
-  /**
-   * El ícono usado en la pestaña de navegación.
-   */
-  icon: PropTypes.string,
-  /**
-   * Nombre mostrado cuando el ícono no puede ser mostrado.
-   */
-  name: PropTypes.string,
   /**
    * Nodos hijo.
    */
@@ -70,9 +68,17 @@ NavigationEave.propTypes = {
    */
   goBackFunction: PropTypes.func,
   /**
+   * El ícono usado en la pestaña de navegación.
+   */
+  icon: PropTypes.string,
+  /**
    * Cambia el estilo para dejar el escáner al descubierto.
    */
-  mode: PropTypes.string.isRequired,
+  mode: PropTypes.oneOf(['scanner', 'calculator']).isRequired,
+  /**
+   * Nombre mostrado cuando el ícono no puede ser mostrado.
+   */
+  name: PropTypes.string,
   /**
    * Determina qué botón ha sido seleccionado.
    */
@@ -81,6 +87,10 @@ NavigationEave.propTypes = {
    * Determina si la pestaña de navegación está reducida.
    */
   shortened: PropTypes.bool,
+  /**
+   * El color usado en la pestaña de navegación.
+   */
+  variant: PropTypes.oneOf(['primary', 'offWhite', 'transparent']),
 };
 
 export default NavigationEave;
