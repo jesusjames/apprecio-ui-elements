@@ -4,6 +4,7 @@
     --mainColor: #FF4860;
     --mainColorActive: #ff3751;
     --mainColorActiveOutline: rgba(255, 72, 96, 0.06);
+    --mainColorSemiTransparent: #FF486050;
 
     --lightColor: #FE9920;
     --lightColorActive: #f39118;
