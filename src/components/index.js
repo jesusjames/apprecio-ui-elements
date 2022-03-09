@@ -6,6 +6,7 @@ export { default as Input } from './Input/Input';
 
 export { default as Autocomplete } from './Autocomplete/Autocomplete';
 export { default as BackArrow } from './BackArrow/BackArrow';
+export { default as Drawer } from './Drawer/Drawer';
 export { default as Footer } from './Footer/Footer';
 export { default as HalfDrawer } from './HalfDrawer/HalfDrawer';
 export { default as Header } from './Header/Header';
