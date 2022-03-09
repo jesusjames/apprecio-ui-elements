@@ -7,6 +7,7 @@ export { default as Input } from './Input/Input';
 export { default as Autocomplete } from './Autocomplete/Autocomplete';
 export { default as BackArrow } from './BackArrow/BackArrow';
 export { default as Header } from './Header/Header';
+export { default as ImagePicker } from './ImagePicker/ImagePicker';
 export { default as MemberPicture } from './MemberPicture/MemberPicture';
 export { default as Message } from './Message/Message';
 export { default as MiniImagePicker } from './MiniImagePicker/MiniImagePicker';

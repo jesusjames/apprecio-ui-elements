@@ -14,13 +14,16 @@ import Header from '../Header/Header';
 import Message from '../Message/Message';
 
 // Assets
-import Camera from '../../images/Camera.svg';
+import Camera from '../image/Camera.svg';
 
-const ImagePicker = ({ src, setter }) => {
+const ImagePicker = ({
+  setter,
+  src,
+}) => {
   const input = useRef(null);
 
   return (
-    <ImagePickerContainer>
+    <ImagePickerStyled>
       <input
         ref={input}
         type="file"
@@ -43,21 +46,21 @@ const ImagePicker = ({ src, setter }) => {
           Cambiar mi foto de perfil
         </Message>
       ) : (
-        <Header mt2 mb4 message="Tu foto de perfil *" variant="h4" />
+        <Header message="Tu foto de perfil *" variant="h4" textAlign="center" />
       )}
-    </ImagePickerContainer>
+    </ImagePickerStyled>
   );
 };
 
 ImagePicker.propTypes = {
   /**
-   * Route to the image.
-   */
-  src: PropTypes.string,
-  /**
-   * Setter for the image.
+   * Función setter de la imagen.
    */
   setter: PropTypes.func.isRequired,
+  /**
+   * Ruta hacia la imagen.
+   */
+  src: PropTypes.string,
 };
 
 export default ImagePicker;
