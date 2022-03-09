@@ -4,6 +4,7 @@ export { default as Input } from './Input/Input';
 
 // Legacy components
 
+export { default as Autocomplete } from './Autocomplete/Autocomplete';
 export { default as BackArrow } from './BackArrow/BackArrow';
 export { default as MemberPicture } from './MemberPicture/MemberPicture';
 export { default as Message } from './Message/Message';
