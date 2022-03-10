@@ -19,6 +19,7 @@ export const FooterStyled = styled.footer`
   width: 100%;
   position: ${(props) => props.position};
   z-index: 20;
+  padding: 20px 0;
 `;
 
 export default {
