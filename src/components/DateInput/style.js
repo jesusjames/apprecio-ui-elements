@@ -14,7 +14,7 @@ export const DateInputStyled = styled.div`
   }};
 
   & > p {
-    color: #A68CD0;
+    color: #A6BCD0;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     letter-spacing: -0.14px;
@@ -48,7 +48,7 @@ export const DateInputStyled = styled.div`
       box-sizing: border-box;
 
       &::placeholder {
-        color: #A68CD0;
+        color: #A6BCD0;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
         letter-spacing: -0.14px;
