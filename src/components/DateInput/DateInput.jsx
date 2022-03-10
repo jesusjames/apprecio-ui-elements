@@ -14,12 +14,9 @@ import PropTypes from 'prop-types';
 import { DateInputStyled } from './style';
 
 const DateInput = ({
-  margin,
-  marginTop,
-  marginBottom,
+  onChange,
   placeholder,
   value,
-  onChange,
 }) => {
   // let yearInput = useRef(null);
   // let monthInput = useRef(null);
@@ -36,12 +33,8 @@ const DateInput = ({
   }, [value]);
 
   return (
-    <DateInputStyled
-      margin={margin}
-      marginTop={marginTop}
-      marginBottom={marginBottom}
-    >
-      <label>{placeholder}</label>
+    <DateInputStyled>
+      <p>{placeholder}</p>
       <div className="inputContainer">
         <input
           // ref={e => {
@@ -97,29 +90,17 @@ const DateInput = ({
 
 DateInput.propTypes = {
   /**
-   * Steps, as defined in utils/theme.js, to be used for margin.
+   * Función que se ejecuta cuando el valor cambia.
    */
-  margin: PropTypes.string,
+  onChange: PropTypes.func,
   /**
-   * Steps, as defined in utils/theme.js, to be used for margin-top. Overrides margin.
-   */
-  marginTop: PropTypes.string,
-  /**
-   * Steps, as defined in utils/theme.js, to be used for margin-bottom. Overrides margin.
-   */
-  marginBottom: PropTypes.string,
-  /**
-   * Value of the placeholder.
+   * Valor del placeholder.
    */
   placeholder: PropTypes.string,
   /**
-   * Stores the value of the input.
+   * El valor del input.
    */
   value: PropTypes.string,
-  /**
-   * Callback function to be called when the input value changes.
-   */
-  onChange: PropTypes.func,
 };
 
 export default DateInput;

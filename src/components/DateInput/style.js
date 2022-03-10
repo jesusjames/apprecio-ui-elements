@@ -13,7 +13,7 @@ export const DateInputStyled = styled.div`
     }
   }};
 
-  & > label {
+  & > p {
     color: #A68CD0;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -53,7 +53,6 @@ export const DateInputStyled = styled.div`
         font-weight: 600;
         letter-spacing: -0.14px;
         opacity: 1;
-        text-align: center;
       }
 
       &:focus {

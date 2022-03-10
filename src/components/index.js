@@ -6,6 +6,7 @@ export { default as Input } from './Input/Input';
 
 export { default as Autocomplete } from './Autocomplete/Autocomplete';
 export { default as BackArrow } from './BackArrow/BackArrow';
+export { default as DateInput } from './DateInput/DateInput';
 export { default as Dialog } from './Dialog/Dialog';
 export { default as Drawer } from './Drawer/Drawer';
 export { default as Footer } from './Footer/Footer';
