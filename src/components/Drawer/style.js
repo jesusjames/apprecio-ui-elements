@@ -21,7 +21,7 @@ export const DrawerStyled = styled.div`
   & > .drawerContent {
     width: 100%;
     height: ${(props) => (props.showOn ? '85vh' : '0vh')};
-    background-color: var(--whiteColoryApprecio);
+    background-color: var(--whiteColorApprecio);
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
@@ -35,24 +35,21 @@ export const DrawerStyled = styled.div`
     & > .closeButton {
       padding: 0;
       margin: 1rem 2rem;
-      background-color: transparent;
       border: none;
       cursor: pointer;
 
-      & > * {
-        display: inline;
-      }
+      display: flex;
+      align-items: center;
 
       & > img {
         transform: rotate(180deg);
       }
 
       & > p {
-        color: ${(props) => (props.variant === 'primary'
-    ? 'var(--mainColor)'
-    : 'var(--lightColor)')};
+        color: ${(props) => (props.variant === 'primary' ? 'var(--mainColor)' : 'var(--lightColor)')};
         font: normal normal 500 17px/17px 'Poppins', sans-serif;
         letter-spacing: -0.17px;
+        margin-top: 3px;
       }
     }
 
