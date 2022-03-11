@@ -35,11 +35,18 @@ const Summary = ({
   </SummaryStyled>
 );
 
+Summary.defaultProps = {
+  count: 0,
+  date: 'Hoy',
+  expenseTotal: 0,
+  incomeTotal: 0,
+};
+
 Summary.propTypes = {
-  count: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
-  expenseTotal: PropTypes.number.isRequired,
-  incomeTotal: PropTypes.number.isRequired,
+  count: PropTypes.number,
+  date: PropTypes.string,
+  expenseTotal: PropTypes.number,
+  incomeTotal: PropTypes.number,
 };
 
 export default Summary;
