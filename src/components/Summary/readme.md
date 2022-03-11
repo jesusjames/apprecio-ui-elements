@@ -7,7 +7,11 @@ const [show, setShow] = useState(false);
 
 <div className="ap-flex ap-flex-wrap">
   <div className="ap-w-full md:ap-w-1/3">
-    <div style={{ position: 'relative' }}>
+    <div style={{
+      position: 'relative',
+      backgroundColor: '#F6F8FD',
+      padding: '10px',
+    }}>
       <Summary />
     </div>
   </div>
