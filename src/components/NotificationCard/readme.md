@@ -17,7 +17,7 @@ import BoxSVG from '../image/Box.svg';
         imageOrientation: "left"
       },
       {
-        body: "Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever",
+        body: "Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever.",
         image: BoxSVG,
         imageOrientation: "right"
       }

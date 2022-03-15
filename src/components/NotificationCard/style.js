@@ -50,6 +50,17 @@ export const CardBodyStyled = styled.div`
   max-height: 104px;
 
   overflow-y: hidden;
+
+  padding: 10px;
+
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  color: ${(props) => props.theme?.notificationCard?.[props.variant]?.textColor};
 `;
 
 export default {
