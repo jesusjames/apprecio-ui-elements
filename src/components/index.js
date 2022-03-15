@@ -6,6 +6,7 @@ export { default as Input } from './Input/Input';
 
 export { default as NavigationEaveButton } from './NavigationEaveButton/NavigationEaveButton';
 export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
+export { default as NotificationCard } from './NotificationCard/NotificationCard';
 export { default as ReceiptDrawerContent } from './ReceiptDrawerContent/ReceiptDrawerContent';
 export { default as ReceiptItem } from './ReceiptItem/ReceiptItem';
 export { default as Spinner } from './Spinner/Spinner';
