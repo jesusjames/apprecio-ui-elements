@@ -11,13 +11,15 @@ const CardBody = ({
   <CardBodyStyled>
     {image && imageOrientation === 'left' ? (
       <GenerateIcon
+        className="image"
         icon={image}
         orientation="left"
       />
     ) : null}
-    <p>{body}</p>
+    <p className="body">{body}</p>
     {image && imageOrientation === 'right' ? (
       <GenerateIcon
+        className="image"
         icon={image}
         orientation="right"
       />

@@ -6,18 +6,18 @@ import BoxSVG from '../image/Box.svg';
 <>
   <NotificationCard
     messages={
-      { body: "Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever" }
+      { body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim eu, turpis non sed quisque id sed nisl." }
     }
   />
   <NotificationCard
     messages={[
       {
-        body: "Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim eu, turpis non sed quisque id sed nisl.",
         image: BoxSVG,
         imageOrientation: "left"
       },
       {
-        body: "Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever. Lorem ipsum something you know whatever.",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim eu, turpis non sed quisque id sed nisl",
         image: BoxSVG,
         imageOrientation: "right"
       }

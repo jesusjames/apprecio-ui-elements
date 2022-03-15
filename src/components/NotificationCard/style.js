@@ -46,21 +46,31 @@ export const NavigationBarStyled = styled.div`
 export const CardBodyStyled = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
+  min-height: 80px;
   max-height: 104px;
 
   overflow-y: hidden;
 
   padding: 10px;
 
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
+  .body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
 
-  color: ${(props) => props.theme?.notificationCard?.[props.variant]?.textColor};
+    // todo: pass theme prop
+    color: var(--whiteColorApprecio);
+  }
+
+  .image {
+    margin: 5px;
+  }
 `;
 
 export default {
