@@ -8,6 +8,7 @@ export { default as NavigationEaveButton } from './NavigationEaveButton/Navigati
 export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
 export { default as ReceiptDrawerContent } from './ReceiptDrawerContent/ReceiptDrawerContent';
 export { default as ReceiptItem } from './ReceiptItem/ReceiptItem';
+export { default as Result } from './Result/Result';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Tooltip } from './Tooltip/Tooltip';
 export { default as TransactionStatus } from './TransactionStatus/TransactionStatus';
