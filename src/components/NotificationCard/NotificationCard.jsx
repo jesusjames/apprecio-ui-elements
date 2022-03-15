@@ -1,10 +1,34 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { NotificationCardStyled, NavigationBarStyled } from './style';
+import { NotificationCardStyled, NavigationBarStyled, CardBodyStyled } from './style';
+import { GenerateIcon } from './helpers';
+
+const CardBody = ({
+  body,
+  image,
+  imageOrientation,
+}) => (
+  <CardBodyStyled>
+    {image && imageOrientation === 'left' ? (
+      <GenerateIcon
+        icon={image}
+        orientation="left"
+      />
+    ) : null}
+    <p>{body}</p>
+    {image && imageOrientation === 'right' ? (
+      <GenerateIcon
+        icon={image}
+        orientation="right"
+      />
+    ) : null}
+  </CardBodyStyled>
+);
 
 const NotificationCard = ({
   messages,
   variant,
+  ...rest
 }) => {
   const isArray = Array.isArray(messages);
 
@@ -13,7 +37,11 @@ const NotificationCard = ({
 
     return (
       <NotificationCardStyled variant={variant}>
-        <p>{onlyElement.body}</p>
+        <CardBody
+          body={onlyElement.body}
+          image={onlyElement.image}
+          imageOrientation={onlyElement.imageOrientation}
+        />
       </NotificationCardStyled>
     );
   }
@@ -21,8 +49,12 @@ const NotificationCard = ({
   const [currentMessage, setCurrentMessage] = useState(0);
 
   return (
-    <NotificationCardStyled variant={variant}>
-      <p>n</p>
+    <NotificationCardStyled variant={variant} {...rest}>
+      <CardBody
+        body={messages[currentMessage].body}
+        image={messages[currentMessage].image}
+        imageOrientation={messages[currentMessage].imageOrientation}
+      />
       <NavigationBarStyled>
         {messages.map((msg, index) => (
           <button

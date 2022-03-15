@@ -7,13 +7,10 @@ export const NotificationCardStyled = styled.div`
   
   width: 311px;
   min-height: 104px;
-  max-height: 104px;
 
   padding: 5px 15px 10px 15px;
 
   background-color: ${(props) => props.theme?.notificationCard?.[props.variant]?.mainColor};
-
-  overflow-y: hidden;
 `;
 
 export const NavigationBarStyled = styled.div`
@@ -26,6 +23,8 @@ export const NavigationBarStyled = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  z-index: 1;
 
   .selector {
     width: 24px;
@@ -44,7 +43,17 @@ export const NavigationBarStyled = styled.div`
   }
 `;
 
+export const CardBodyStyled = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  max-height: 104px;
+
+  overflow-y: hidden;
+`;
+
 export default {
   NotificationCardStyled,
   NavigationBarStyled,
+  CardBodyStyled,
 };
