@@ -66,10 +66,20 @@ export const CardBodyStyled = styled.div`
 
     // todo: pass theme prop
     color: var(--whiteColorApprecio);
+
+    user-select: none;
   }
 
   .image {
-    margin: 5px;
+    user-select: none;
+  }
+
+  .image.left {
+    margin-right: 5px;
+  }
+
+  .image.right {
+    margin-left: 5px;
   }
 `;
 
