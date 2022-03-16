@@ -95,6 +95,42 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--blueColorActiveOutline)',
         },
       },
+      notificationCard: {
+        default: {
+          backgroundColor: 'var(--whiteColorPure)',
+        },
+        primary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
+      },
+      result: {
+        default: {
+          textColor: 'var(--darkColor)',
+          softTextColor: 'var(--grayColorOne)',
+          backgroundColor: 'var(--whiteColorPure)',
+        },
+      },
     },
     dark: {
       id: 'T_002',
