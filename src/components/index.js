@@ -27,6 +27,7 @@ export { default as NoteTakingInput } from './NoteTakingInput/NoteTakingInput';
 export { default as NotificationCard } from './NotificationCard/NotificationCard';
 export { default as ReceiptDrawerContent } from './ReceiptDrawerContent/ReceiptDrawerContent';
 export { default as ReceiptItem } from './ReceiptItem/ReceiptItem';
+export { default as Result } from './Result/Result';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Summary } from './Summary/Summary';
 export { default as Tooltip } from './Tooltip/Tooltip';

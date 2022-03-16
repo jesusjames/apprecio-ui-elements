@@ -124,6 +124,13 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--blueColorActiveOutline)',
         },
       },
+      result: {
+        default: {
+          textColor: 'var(--darkColor)',
+          softTextColor: 'var(--grayColorOne)',
+          backgroundColor: 'var(--whiteColorPure)',
+        },
+      },
     },
     dark: {
       id: 'T_002',
