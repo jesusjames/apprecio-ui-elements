@@ -1,6 +1,6 @@
 {
   "name": "@apprecio/apprecio-ui-elements",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": false,
   "files": [
     "dist"
@@ -34,7 +34,9 @@
     "styleguide:build": "npx styleguidist build",
     "test:complete": "react-scripts test --watchAll=false --collect-coverage -u",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tailwind:dev": "npx tailwindcss -i ./src/tailwind.css -o ./src/css/styles.css --watch",
+    "tailwind:prod": "npx tailwindcss -i ./src/tailwind.css -o ./src/css/styles.css --minify"
   },
   "eslintConfig": {
     "extends": [
@@ -55,7 +57,6 @@
     ]
   },
   "devDependencies": {
-    "@apprecio/apprecio-tailwindcss-utils": "^1.0.0",
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.2",
     "@babel/eslint-parser": "^7.17.0",
@@ -85,10 +86,10 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "tailwindcss": "^3.0.23"
   },
   "peerDependencies": {
-    "@apprecio/apprecio-tailwindcss-utils": "^1.0.0",
     "classnames": "^2.3.1",
     "prop-types": "^15.8.0",
     "ramda": "^0.28.0",

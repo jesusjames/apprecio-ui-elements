@@ -1,4 +1,4 @@
-import '@apprecio/apprecio-tailwindcss-utils/dist/tailwind-customized.css';
+import '../../../css/styles.css';
 import GlobalStyle from '../theme/GlobalStyle';
 
 const StyleGuideWrapper = ({ children }) => (
