@@ -28,7 +28,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "rollup -c -w",
     "build:module": "rollup -c",
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
@@ -86,7 +85,7 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "tailwindcss": "^3.0.23"
   },
   "peerDependencies": {
@@ -96,6 +95,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-svg": "^14.1.12",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.5"
   }
 }
