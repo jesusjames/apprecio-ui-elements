@@ -98,7 +98,7 @@ export const SelectWrapper = styled.div`
     padding-bottom: 18px;
 
     .rc-select-selection-placeholder {
-        opacity: ${(props) => ((!props.hasValue) ? '1' : '0')};
+        opacity: ${(props) => ((!props.isFocused && !props.hasValue) ? '1' : '0')};
         top: 14px;
         color: #B4B4B4;
         top: 36px;
