@@ -40,6 +40,7 @@ export const apprecioTheme = {
       },
       input: {
         primary: {
+          outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
           mainColor: 'var(--mainColor)',
@@ -47,6 +48,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--mainColorActiveOutline)',
         },
         secondary: {
+          outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
           mainColor: 'var(--lightColor)',
@@ -54,6 +56,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--lightColorActiveOutline)',
         },
         tertiary: {
+          outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
           mainColor: 'var(--darkColor)',
@@ -61,6 +64,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--darkColorActiveOutline)',
         },
         quaternary: {
+          outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
           mainColor: 'var(--blueColor)',
@@ -168,6 +172,103 @@ export const apprecioTheme = {
           mainColor: 'var(--facebookColor)',
           activeColor: 'var(--facebookColorActive)',
           activeColorOutline: 'var(--facebookColorActiveOutline)',
+        },
+      },
+      input: {
+        primary: {
+          outlineColor: 'var(--grayColorOne)',
+          color: 'var(--darkColor)',
+          backgroundColor: 'var(--whiteColorPure)',
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          outlineColor: 'var(--grayColorOne)',
+          color: 'var(--darkColor)',
+          backgroundColor: 'var(--whiteColorPure)',
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          outlineColor: 'var(--grayColorOne)',
+          color: 'var(--darkColor)',
+          backgroundColor: 'var(--whiteColorPure)',
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          outlineColor: 'var(--grayColorOne)',
+          color: 'var(--darkColor)',
+          backgroundColor: 'var(--whiteColorPure)',
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
+      },
+      summary: {
+        default: {
+          textColor: 'var(--darkColor)',
+          backgroundColor: 'var(--whiteColorPure)',
+          disabledTextColor: 'var(--grayColorOne)',
+        },
+        primary: {
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
+      },
+      notificationCard: {
+        default: {
+          backgroundColor: 'var(--whiteColorPure)',
+        },
+        primary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          textColor: 'var(--whiteColorApprecio)',
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
+      },
+      result: {
+        default: {
+          textColor: 'var(--darkColor)',
+          softTextColor: 'var(--grayColorOne)',
+          backgroundColor: 'var(--whiteColorPure)',
         },
       },
     },
