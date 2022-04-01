@@ -6,6 +6,7 @@ Based from <a href="https://www.npmjs.com/package/rc-select" style="color: #4d24
 ```jsx
 import React from 'react';
 import Select, {Option} from './Select';
+import LeftIcon from './assets/Left_Icon.svg';
 
 const [selectValue, setSelectValue] = React.useState('');
 const [selectFilterValue, setSelectFilterValue] = React.useState('');
@@ -108,6 +109,7 @@ const NotFoundContent = () => <div style={{textAlign: 'center', margin: '5px'}}>
       onChange={val => setSelectValueFifth(val)}
       placeholder={'placeholder content'}
       defaultValue={'jack'}
+      icon={LeftIcon}
     >
       <Option value="jack">jack</Option>
       <Option value="lucy">lucy lorem inpsum lorem ipsum lucy lorem inpsum lorem ipsum</Option>

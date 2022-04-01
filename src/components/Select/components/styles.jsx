@@ -12,7 +12,7 @@ export const RcSelectStyled = styled(Select)`
   : path(['input', color, 'outlineColor'], theme))};
     box-sizing: border-box;
     border-radius: 8px;
-    padding: 10px 40px 10px 16px;
+    padding: ${({ icon }) => (isEmpty(icon) ? '10px 40px 10px 16px' : '10px 40px 10px 40px')};
     text-align: left;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     transition: border .2s;
@@ -60,7 +60,7 @@ export const RcSelectStyled = styled(Select)`
     overflow: hidden;
     text-overflow: ellipsis;
     right: 0;
-    color: ${(props) => (props.disabled ? '#AAA9A9' : '#696158')};
+    color: ${(props) => (props.disabled ? '#AAA9A9' : 'var(--darkColor)')};
   }
   .rc-select-arrow {
     position: absolute;
@@ -122,5 +122,20 @@ export const SelectWrapper = styled.div`
     bottom: 0px;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  .select-icon {
+    position: absolute;
+    top: 53%;
+    left: 11px;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    transform: rotate(0deg);
+    transition: transform .4s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
