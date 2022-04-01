@@ -490,6 +490,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
+.ap-mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .ap-flex {
   display: flex;
 }
@@ -508,6 +512,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-flex-wrap {
   flex-wrap: wrap;
+}
+
+.ap-px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 @media (min-width: 768px) {

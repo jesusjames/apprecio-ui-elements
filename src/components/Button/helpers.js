@@ -99,7 +99,7 @@ export const getBaseButtonConfig = (theme) => ({
   },
   outline: {
     css: `
-            background-color: white;
+            background-color: transparent;
             color: ${theme?.mainColor};
             border: 2px solid ${theme?.mainColor};
             &:hover{
@@ -111,7 +111,7 @@ export const getBaseButtonConfig = (theme) => ({
             ${commonsColor} 
         `,
     disabled: `
-            background-color: white;
+            background-color: transparent;
             color: var(--grayColorDisabled);
             border: 2px solid var(--grayColorDisabled);
             ${disabledCommons}
