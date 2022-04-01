@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { isEmpty, isNil, path } from 'ramda';
 import PropTypes from 'prop-types';
+import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
 import { RcSelectStyled, SelectWrapper } from './components/styles';
 import './assets/select.global.css';
@@ -22,7 +23,7 @@ const ArrowDownIcon = styled.span`
 
 const Select = ({
   children, value, onChange, onBlur, defaultValue,
-  disabled, error, className, color,
+  disabled, error, className, color, icon,
   borderSize, placeholder, name, ...restProps
 }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -56,10 +57,12 @@ const Select = ({
         error={error}
         name={name}
         color={color}
+        icon={icon}
         {...restProps}
       >
         { children }
       </RcSelectStyled>
+      { icon && <span className="select-icon"><ReactSVG src={icon} /></span>}
       { (placeholder && !hasValue) && <span data-testid="placeholder-id" className="rc-select-selection-placeholder">{placeholder}</span> }
       { error && <span className="select-error-message">{ error }</span>}
     </SelectWrapper>
@@ -71,6 +74,7 @@ Select.defaultProps = {
   onBlur: () => {},
   color: 'primary',
   error: '',
+  icon: '',
 };
 
 Select.propTypes = {
@@ -81,13 +85,15 @@ Select.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   defaultValue: PropTypes.any,
   disabled: PropTypes.bool,
-  /** error message or component * */
+  /** error message or component */
   // eslint-disable-next-line react/forbid-prop-types
   error: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.string,
   placeholder: PropTypes.string,
   borderSize: PropTypes.string,
+  /** import svg path icon */
+  icon: PropTypes.string,
 };
 
 export { default as Option } from './components/Option';
