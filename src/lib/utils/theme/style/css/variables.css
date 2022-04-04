@@ -5,22 +5,27 @@
     --mainColorActive: #ff3751;
     --mainColorActiveOutline: rgba(255, 72, 96, 0.06);
     --mainColorSemiTransparent: #FF486050;
+    --mainColorBoxShadow: rgba(255, 72, 96, 0.2);
 
     --lightColor: #FE9920;
     --lightColorActive: #f39118;
     --lightColorActiveOutline: rgba(254, 153, 32, 0.06);
+    --lightColorBoxShadow: rgba(254, 153, 32, 0.2);
 
     --darkColor: #133C55;
     --darkColorActive: #0b2c3e;
     --darkColorActiveOutline: rgba(19, 60, 85, 0.06);
+    --darkColorBoxShadow: rgba(19, 60, 85, 0.2);
 
     --blueColor: #1FA0B0;
     --blueColorActive: #0a96a7;
     --blueColorActiveOutline: rgba(31, 160, 176, 0.06);
+    --blueColorBoxShadow: rgba(31, 160, 176, 0.2);
 
     --facebookColor: #1877F2;
     --facebookColorActive: #096dea;
     --facebookColorActiveOutline: rgba(24, 119, 242, 0.06);
+    --facebookColorBoxShadow: rgba(24, 119, 242, 0.2);
 
     --grayColorOne: #748A9D;
     --grayColorTwo: rgba(116, 138, 157, 0.8);

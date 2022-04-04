@@ -9,16 +9,18 @@ const Input = ({
   error,
   iconLeft,
   iconRight,
-  variant,
+  color,
+  block,
   ...rest
 }) => (
-  <InputContainerStyled>
+  <InputContainerStyled block={block}>
     <GenerateIcon icon={iconLeft} orientation="left" />
     <InputStyled
       error={error}
       iconLeft={!!iconLeft}
       iconRight={!!iconRight}
-      variant={variant}
+      color={color}
+      block={block}
       {...rest}
     />
     <GenerateIcon icon={iconRight} orientation="right" />
@@ -29,7 +31,8 @@ Input.defaultProps = {
   error: false,
   iconLeft: '',
   iconRight: '',
-  variant: 'secondary',
+  color: 'secondary',
+  block: false,
 };
 
 Input.propTypes = {
@@ -40,7 +43,11 @@ Input.propTypes = {
   /** Ruta hacia el ícono que se quiere mostrar a la derecha. */
   iconRight: PropTypes.string,
   /** El color de la paleta que se usará para el componente. */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  /** Toma el ancho del contenedor */
+  block: PropTypes.bool,
+  /** valor para el input */
+  value: PropTypes.string,
 };
 
 export default Input;

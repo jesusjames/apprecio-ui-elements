@@ -10,7 +10,6 @@ export const RcSelectStyled = styled(Select)`
     border: ${({ borderSize }) => borderSize || '1px'} solid ${({ theme, color, error }) => (!isEmpty(error)
   ? 'var(--mainColorActive)'
   : path(['input', color, 'outlineColor'], theme))};
-    box-sizing: border-box;
     border-radius: 8px;
     padding: ${({ icon }) => (isEmpty(icon) ? '10px 40px 10px 16px' : '10px 40px 10px 40px')};
     text-align: left;
@@ -29,14 +28,14 @@ export const RcSelectStyled = styled(Select)`
   }
   
   .rc-select-selection-search-input {
+    width: 100%;
     position: absolute;
     height: 48px;
-    width: 85%;
     caret-color: transparent;
     top: 0;
     left: 0;
     margin: 0;
-    padding: 6px 13px 10px;
+    padding: 10px 35px 10px 10px;
     background: 0 0;
     border: none;
     outline: none;
@@ -87,6 +86,7 @@ export const RcSelectStyled = styled(Select)`
   &.rc-select-focused {
     .rc-select-selector {
       border: ${({ borderSize }) => borderSize || '1px'} solid ${(props) => path(['input', props.color, 'mainColor'], props.theme)};
+      box-shadow: 0px 0px 0px 2px ${(props) => path(['input', props.color, 'boxShadow'], props.theme)};
     }
   }
 `;

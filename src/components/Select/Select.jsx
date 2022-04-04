@@ -47,7 +47,7 @@ const Select = ({
       <RcSelectStyled
         borderSize={borderSize}
         inputIcon={<ArrowDownIcon color={color} />}
-        onFocus={() => setIsFocused(true)}
+        onFocus={() => { setIsFocused(true); }}
         onBlur={() => { setIsFocused(false); onBlur(); }}
         getPopupContainer={(trigger) => trigger.parentNode}
         value={value}
