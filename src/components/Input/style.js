@@ -84,7 +84,7 @@ export const InputStyled = styled.input`
   }};
     box-shadow: ${(props) => {
     if (props.error) return '0px 0px 0px 2px var(--errorColorShadow) !important';
-    return `0px 0px 5px 1px ${props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)'} !important`;
+    return `0px 0px 0px 2px ${props.theme?.input?.[props.variant]?.boxShadow || 'var(--lightColor)'} !important`;
   }};
   }
 `;

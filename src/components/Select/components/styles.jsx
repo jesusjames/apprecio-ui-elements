@@ -28,14 +28,14 @@ export const RcSelectStyled = styled(Select)`
   }
   
   .rc-select-selection-search-input {
+    width: 100%;
     position: absolute;
     height: 48px;
-    width: 85%;
     caret-color: transparent;
     top: 0;
     left: 0;
     margin: 0;
-    padding: 6px 13px 10px;
+    padding: 10px 35px 10px 10px;
     background: 0 0;
     border: none;
     outline: none;
