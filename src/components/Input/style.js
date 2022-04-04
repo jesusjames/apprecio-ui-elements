@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InputContainerStyled = styled.div`
-  width: 311px;
+  width: ${({ block }) => (!block ? '311px' : '100%')};
 
   position: relative;
 
@@ -29,13 +29,13 @@ export const InputContainerStyled = styled.div`
 `;
 
 export const InputStyled = styled.input`
-  width: 311px;
+  width: ${({ block }) => (!block ? '311px' : '100%')};
   height: 48px;
 
   background-color: ${(props) => {
     if (props.disabled) return 'var(--grayColorBorder) !important';
     if (props.error) return 'var(--errorColorBackground)';
-    return props.theme?.input?.[props.variant]?.backgroundColor || 'var(--whiteColorPure)';
+    return props.theme?.input?.[props.color]?.backgroundColor || 'var(--whiteColorPure)';
   }};
 
   border-radius: 8px;
@@ -63,7 +63,7 @@ export const InputStyled = styled.input`
   font-weight: 500;
   color: ${(props) => {
     if (props.error) return 'var(--errorColorText)';
-    return props.theme?.input?.[props.variant]?.color || 'var(--darkColor)';
+    return props.theme?.input?.[props.color]?.color || 'var(--darkColor)';
   }};
 
   &::-webkit-input-placeholder,
@@ -80,11 +80,11 @@ export const InputStyled = styled.input`
     outline: none;
     border-color: ${(props) => {
     if (props.error) return 'var(--errorColorBorder)';
-    return props.theme?.input?.[props.variant]?.mainColor || 'var(--lightColor)';
+    return props.theme?.input?.[props.color]?.mainColor || 'var(--lightColor)';
   }};
     box-shadow: ${(props) => {
     if (props.error) return '0px 0px 0px 2px var(--errorColorShadow) !important';
-    return `0px 0px 0px 2px ${props.theme?.input?.[props.variant]?.boxShadow || 'var(--lightColor)'} !important`;
+    return `0px 0px 0px 2px ${props.theme?.input?.[props.color]?.boxShadow || 'var(--lightColor)'} !important`;
   }};
   }
 `;

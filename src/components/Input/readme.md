@@ -85,6 +85,12 @@ import EmailErrorSVG from '../image/EmailError.svg';
         <Input placeholder="Input text" iconRight={EmailSVG} variant="quaternary" />
       </div>
     </div>
+    <div className="ap-flex ap-flex-wrap">
+      <div className="ap-w-full md:ap-w-1/3">
+        <p className="ap-mb-0.5">Block</p>
+        <Input placeholder="Input text" iconRight={EmailSVG} variant="tertiary" block/>
+      </div>
+    </div>
   </div>
 </div>
 ```

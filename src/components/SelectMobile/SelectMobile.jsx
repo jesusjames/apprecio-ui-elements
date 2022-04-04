@@ -15,28 +15,24 @@ const SelectMobile = ({
 
   return (
     <div className="ap-flex ap-w-full">
-      <div>
-        <SelectStyled
-          value={countryCode}
-          onChange={(val, options) => console.log(val, options)}
-          placeholder="placeholder content"
-        >
-          {map((country) => {
-            const { code, icon } = country;
-            return (
-              <Option key={code} value={code}>
-                <div className="ap-flex ap-space-x-1 ap-items-center">
-                  <ReactSVG src={icon} />
-                  <span className="ap-pt-0.5">{` ${code}`}</span>
-                </div>
-              </Option>
-            );
-          }, countrysCodes)}
-        </SelectStyled>
-      </div>
-      <div>
-        <InputStyled placeholder="Input text" />
-      </div>
+      <SelectStyled
+        value={countryCode}
+        onChange={(val, options) => console.log(val, options)}
+        placeholder="placeholder content"
+      >
+        {map((country) => {
+          const { code, icon } = country;
+          return (
+            <Option key={code} value={code}>
+              <div className="ap-flex ap-space-x-1 ap-items-center">
+                <ReactSVG src={icon} />
+                <span className="ap-pt-0.5">{` ${code}`}</span>
+              </div>
+            </Option>
+          );
+        }, countrysCodes)}
+      </SelectStyled>
+      <InputStyled placeholder="Input text" />
     </div>
   );
 };
