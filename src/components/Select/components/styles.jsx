@@ -10,7 +10,6 @@ export const RcSelectStyled = styled(Select)`
     border: ${({ borderSize }) => borderSize || '1px'} solid ${({ theme, color, error }) => (!isEmpty(error)
   ? 'var(--mainColorActive)'
   : path(['input', color, 'outlineColor'], theme))};
-    box-sizing: border-box;
     border-radius: 8px;
     padding: ${({ icon }) => (isEmpty(icon) ? '10px 40px 10px 16px' : '10px 40px 10px 40px')};
     text-align: left;
@@ -87,6 +86,7 @@ export const RcSelectStyled = styled(Select)`
   &.rc-select-focused {
     .rc-select-selector {
       border: ${({ borderSize }) => borderSize || '1px'} solid ${(props) => path(['input', props.color, 'mainColor'], props.theme)};
+      box-shadow: 0px 0px 0px 2px ${(props) => path(['input', props.color, 'boxShadow'], props.theme)};
     }
   }
 `;

@@ -40,6 +40,7 @@ export const apprecioTheme = {
       },
       input: {
         primary: {
+          boxShadow: 'var(--mainColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -48,6 +49,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--mainColorActiveOutline)',
         },
         secondary: {
+          boxShadow: 'var(--lightColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -56,6 +58,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--lightColorActiveOutline)',
         },
         tertiary: {
+          boxShadow: 'var(--darkColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -64,6 +67,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--darkColorActiveOutline)',
         },
         quaternary: {
+          boxShadow: 'var(--blueColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -176,6 +180,7 @@ export const apprecioTheme = {
       },
       input: {
         primary: {
+          boxShadow: 'var(--mainColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -184,6 +189,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--mainColorActiveOutline)',
         },
         secondary: {
+          boxShadow: 'var(--lightColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -192,6 +198,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--lightColorActiveOutline)',
         },
         tertiary: {
+          boxShadow: 'var(--darkColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
@@ -200,6 +207,7 @@ export const apprecioTheme = {
           activeColorOutline: 'var(--darkColorActiveOutline)',
         },
         quaternary: {
+          boxShadow: 'var(--blueColorBoxShadow)',
           outlineColor: 'var(--grayColorOne)',
           color: 'var(--darkColor)',
           backgroundColor: 'var(--whiteColorPure)',
