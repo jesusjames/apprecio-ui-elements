@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.0] - 01/04/2022
 ### Add
 - Add Select Component
-- Add SelectPhone Component
+- Add SelectMobile Component
 - Add Spinner Component
 
 ## [0.2.1] - 25/03/2022

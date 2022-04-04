@@ -46,6 +46,8 @@ Input.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   /** Toma el ancho del contenedor */
   block: PropTypes.bool,
+  /** valor para el input */
+  value: PropTypes.string,
 };
 
 export default Input;

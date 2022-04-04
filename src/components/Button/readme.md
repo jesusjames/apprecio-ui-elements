@@ -2,7 +2,7 @@ Lista de botones según guía de estilos
 
 **Uso básico**
 
-Tamaños y temas. Acepta cualquier otro tipo de props nativas de un elemento tipo <button/> (onClick, onChange, etc)
+Tamaños y temas. Acepta cualquier otro tipo de props nativas de un elemento tipo button (onClick, onChange, etc)
 
 ```jsx
 <div>
