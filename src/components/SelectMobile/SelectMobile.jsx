@@ -50,12 +50,13 @@ const SelectMobile = ({
         color={color}
       >
         {map((country) => {
-          const { code, icon } = country;
+          const { code, icon, name } = country;
           return (
             <Option key={code} value={code}>
               <div className="ap-flex ap-space-x-1 ap-items-center">
                 <ReactSVGStyled src={icon} />
                 <span className="ap-pt-0.5">{` ${code}`}</span>
+                <span className="ap-pt-0.5">{` ${name}`}</span>
               </div>
             </Option>
           );

@@ -29,6 +29,12 @@ export const SelectStyled = styled(Select)`
     border-radius: 8px 0px 0px 8px;
     border-right: none;
   }
+  
+  .rc-select-selection-item {
+    > div > span:last-child {
+      display: none;
+    }
+  }
 `;
 
 export const InputContainer = styled.div`
