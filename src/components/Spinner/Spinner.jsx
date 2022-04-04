@@ -13,7 +13,7 @@ import {
 } from './style';
 
 const skChildProps = [
-  {},
+  { rotation: 0, size: 1.2 },
   { rotation: 30, delay: 1.1 },
   { rotation: 60, delay: 1 },
   { rotation: 90, delay: 0.9 },
