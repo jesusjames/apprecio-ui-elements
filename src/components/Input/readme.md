@@ -2,7 +2,7 @@ Lista de campos de texto según guía de estilos.
 
 **Uso básico**
 
-A continuación se listan las variantes del componente. Además, acepta cualquier otro tipo de prop nativo de un elemento \<input\/\>.
+A continuación se listan las colores del componente. Además, acepta cualquier otro tipo de prop nativo de un elemento \<input\/\>.
 
 ```jsx
 import EmailSVG from '../image/Email.svg';
@@ -64,31 +64,31 @@ import EmailErrorSVG from '../image/EmailError.svg';
   </div>
 
   <div>
-    <p className="ap-mb-0.5">Theme variants (enfoca para ver)</p>
+    <p className="ap-mb-0.5">Theme Colors (enfoca para ver)</p>
     <div className="ap-flex ap-flex-wrap">
       <div className="ap-w-full md:ap-w-1/2">
         <p className="ap-mb-0.5">Primary</p>
-        <Input placeholder="Input text" iconRight={EmailSVG} variant="primary" />
+        <Input placeholder="Input text" iconRight={EmailSVG} color="primary" />
       </div>
       <div className="ap-w-full md:ap-w-1/2">
         <p className="ap-mb-0.5">Secondary</p>
-        <Input placeholder="Input text" iconRight={EmailSVG} variant="secondary" />
+        <Input placeholder="Input text" iconRight={EmailSVG} color="secondary" />
       </div>
     </div>
     <div className="ap-flex ap-flex-wrap">
       <div className="ap-w-full md:ap-w-1/2">
         <p className="ap-mb-0.5">Tertiary</p>
-        <Input placeholder="Input text" iconRight={EmailSVG} variant="tertiary" />
+        <Input placeholder="Input text" iconRight={EmailSVG} color="tertiary" />
       </div>
       <div className="ap-w-full md:ap-w-1/2">
         <p className="ap-mb-0.5">Quaternary</p>
-        <Input placeholder="Input text" iconRight={EmailSVG} variant="quaternary" />
+        <Input placeholder="Input text" iconRight={EmailSVG} color="quaternary" />
       </div>
     </div>
     <div className="ap-flex ap-flex-wrap">
       <div className="ap-w-full md:ap-w-1/3">
         <p className="ap-mb-0.5">Block</p>
-        <Input placeholder="Input text" iconRight={EmailSVG} variant="tertiary" block/>
+        <Input placeholder="Input text" iconRight={EmailSVG} color="tertiary" block/>
       </div>
     </div>
   </div>
