@@ -31,7 +31,7 @@ MiniInput.propTypes = {
   /**
    * Hook de referencia hacia el input.
    */
-  inputRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  inputRef: PropTypes.func,
   /**
    * La máxima longitud del input.
    */

@@ -93,7 +93,7 @@ const Header = ({
 };
 
 Header.defaultProps = {
-  color: '',
+  color: 'yellow',
   message: '',
   mini: false,
   textAlign: 'left',

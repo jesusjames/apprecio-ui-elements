@@ -89,7 +89,10 @@ ReceiptItem.propTypes = {
   /**
    * Valor de la transacción por unidad.
    */
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
 };
 
 export default ReceiptItem;

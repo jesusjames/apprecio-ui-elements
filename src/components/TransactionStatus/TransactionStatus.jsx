@@ -48,7 +48,7 @@ const TransactionStatus = ({
       <span className="header">
         <p className="item-count-container">
           <img src={ItemCountContainer} alt="Counter" />
-          <p>{itemCount}</p>
+          <span>{itemCount}</span>
         </p>
         <p className="header-container">{header}</p>
       </span>

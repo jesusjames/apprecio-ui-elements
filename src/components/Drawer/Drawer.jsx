@@ -17,7 +17,7 @@ const Drawer = ({
   children,
   showOn,
   showSetter,
-  variant = 'quinary',
+  variant,
 }) => {
   const drawerRef = useRef(null);
 
@@ -57,7 +57,7 @@ const Drawer = ({
 
 Drawer.defaultProps = {
   children: null,
-  variant: '',
+  variant: 'quinary',
 };
 
 Drawer.propTypes = {
