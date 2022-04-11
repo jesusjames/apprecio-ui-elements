@@ -45,7 +45,7 @@ const Select = ({
       color={color}
     >
       <RcSelectStyled
-        borderSize={borderSize}
+        bordersize={borderSize}
         inputIcon={<ArrowDownIcon color={color} />}
         onFocus={() => { setIsFocused(true); }}
         onBlur={() => { setIsFocused(false); onBlur(); }}

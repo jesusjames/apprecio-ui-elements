@@ -13,7 +13,6 @@ const [mobile3, setMobile3] = React.useState('');
 const [mobile4, setMobile4] = React.useState('');
 
 const onChangeMobile1 = useCallback((code, mobile) => {
-  console.log(code, mobile);
   setMobile1(mobile);
 }, []);
 

@@ -5,15 +5,15 @@ Un campo de texto que muestra opciones que pueden seleccionarse.
 ```jsx
 const sug = [
   {
-    id: 1,
+    id: '1',
     label: 'Manzanas',
   },
   {
-    id: 2,
+    id: '2',
     label: 'Bananas',
   },
   {
-    id: 3,
+    id: '3',
     label: 'Limones',
   }
 ];

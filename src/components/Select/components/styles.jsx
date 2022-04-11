@@ -7,7 +7,7 @@ export const RcSelectStyled = styled(Select)`
   .rc-select-selector {
     height: 48px;
     background: ${(props) => (props.disabled ? '#ECECEC' : '#FFFFFF')};
-    border: ${({ borderSize }) => borderSize || '1px'} solid ${({ theme, color, error }) => (!isEmpty(error)
+    border: ${({ bordersize }) => bordersize || '1px'} solid ${({ theme, color, error }) => (!isEmpty(error)
   ? 'var(--mainColorActive)'
   : path(['input', color, 'outlineColor'], theme))};
     border-radius: 8px;
@@ -80,12 +80,12 @@ export const RcSelectStyled = styled(Select)`
       transform: rotate(180deg) !important;
     }
     .rc-select-dropdown {
-      border: ${({ borderSize }) => borderSize || '1px'} solid rgba(105,97,88,0.4);
+      border: ${({ bordersize }) => bordersize || '1px'} solid rgba(105,97,88,0.4);
     }
   }
   &.rc-select-focused {
     .rc-select-selector {
-      border: ${({ borderSize }) => borderSize || '1px'} solid ${(props) => path(['input', props.color, 'mainColor'], props.theme)};
+      border: ${({ bordersize }) => bordersize || '1px'} solid ${(props) => path(['input', props.color, 'mainColor'], props.theme)};
       box-shadow: 0px 0px 0px 2px ${(props) => path(['input', props.color, 'boxShadow'], props.theme)};
     }
   }
