@@ -18,6 +18,10 @@
   ],
   "author": "Apprecio",
   "license": "ISC",
+  "engines": {
+    "node": ">=16.14.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
