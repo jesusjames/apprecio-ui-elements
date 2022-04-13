@@ -3,7 +3,7 @@ import { isEmpty, isNil, path } from 'ramda';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
-import { RcSelectStyled, SelectWrapper } from './components/styles';
+import { RcSelectStyled, SelectWrapper } from './styles';
 import './assets/select.global.css';
 
 const hasValidValue = (value) => !isEmpty(value) && !isNil(value);
@@ -75,11 +75,17 @@ Select.defaultProps = {
   color: 'primary',
   error: '',
   icon: '',
+  borderSize: '1px',
+  placeholder: '',
+  className: '',
+  disabled: false,
+  defaultValue: '',
+  value: '',
 };
 
 Select.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
+  value: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   // eslint-disable-next-line react/forbid-prop-types
@@ -96,5 +102,5 @@ Select.propTypes = {
   icon: PropTypes.string,
 };
 
-export { default as Option } from './components/Option';
+export { Option } from 'rc-select';
 export default Select;
