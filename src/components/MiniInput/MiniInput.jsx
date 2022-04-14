@@ -13,17 +13,15 @@ const MiniInput = ({
   inputRef,
   maxLength,
   onChange,
-  placeholder,
   type,
-  variant,
+  color,
 }) => (
   <MiniInputStyled
     maxLength={maxLength || 1}
     type={type || 'text'}
-    placeholder={placeholder}
     onChange={onChange}
     ref={inputRef}
-    variant={variant}
+    color={color}
   />
 );
 
@@ -41,17 +39,11 @@ MiniInput.propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * El placeholder del input.
-   */
-  placeholder: PropTypes.string,
-  /**
    * El tipo del input.
    */
   type: PropTypes.string,
-  /**
-   * La variante del input.
-   */
-  variant: PropTypes.oneOf(['big']),
+  /** El color de la paleta que se usará para el componente. */
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
 };
 
 export default MiniInput;
