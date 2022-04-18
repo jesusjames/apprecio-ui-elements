@@ -1,22 +1,54 @@
 import styled from 'styled-components';
 
 export const MiniInputStyled = styled.input`
-  background-color: #F0F4F8;
-  border-radius: 10px;
-  border-style: none;
-  padding: 1rem;
-  height: ${(props) => (props.variant === 'big' ? '70px' : 'auto')};
-  width: ${(props) => (props.variant === 'big' ? '70px' : '60px')};
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  text-align: center;
-  font-size: 14px;
+  width: 47px;
+  height: 47px;
 
+  background-color: ${(props) => {
+    if (props.disabled) return 'var(--grayColorBorder) !important';
+    if (props.error) return 'var(--errorColorBackground)';
+    return props.theme?.input?.[props.color]?.backgroundColor || 'var(--whiteColorPure)';
+  }};
+
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => {
+    if (props.error) return 'var(--errorColorBorder)';
+    return 'var(--grayColorOne)';
+  }};
+  
+  padding: 18px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: ${(props) => {
+    if (props.error) return 'var(--errorColorText)';
+    return props.theme?.input?.[props.color]?.color || 'var(--darkColor)';
+  }};
+
+  &::-webkit-input-placeholder,
   &::placeholder {
-    color: #A6BCD0;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.14px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--grayColorDisabled);
+    opacity: 1 !important;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${(props) => {
+    if (props.error) return 'var(--errorColorBorder)';
+    return props.theme?.input?.[props.color]?.mainColor || 'var(--lightColor)';
+  }};
+    box-shadow: ${(props) => {
+    if (props.error) return '0px 0px 0px 2px var(--errorColorShadow) !important';
+    return `0px 0px 0px 2px ${props.theme?.input?.[props.color]?.boxShadow || 'var(--lightColor)'} !important`;
+  }};
   }
 
   &::-webkit-outer-spin-button,

@@ -14,7 +14,7 @@ let codeInputRef3 = useRef(null);
   <div className="ap-w-full md:ap-w-1/2">
     <div style={{
       height: 80,
-      width: 350,
+      width: 250,
       display: 'flex',
       justifyContent: 'space-around',
     }}>
@@ -23,48 +23,44 @@ let codeInputRef3 = useRef(null);
           codeInputRef0 = e;
           return 0;
         }}
-        placeholder="-"
         onChange={e => (e.target.value.length ? codeInputRef1.focus() : null)}
-        variant="big"
         type="number"
+        color="primary"
       />
       <MiniInput
         inputRef={e => {
           codeInputRef1 = e;
           return 0;
         }}
-        placeholder="-"
         onChange={e =>
           e.target.value.length
             ? codeInputRef2.focus()
             : codeInputRef0.focus()
         }
-        variant="big"
         type="number"
+        color="secondary"
       />
       <MiniInput
         inputRef={e => {
           codeInputRef2 = e;
           return 0;
         }}
-        placeholder="-"
         onChange={e =>
           e.target.value.length
             ? codeInputRef3.focus()
             : codeInputRef1.focus()
         }
-        variant="big"
         type="number"
+        color="tertiary"
       />
       <MiniInput
         inputRef={e => {
           codeInputRef3 = e;
           return 0;
         }}
-        placeholder="-"
         onChange={e => (e.target.value.length ? null : codeInputRef2.focus())}
-        variant="big"
         type="number"
+        color="quaternary"
       />
     </div>
   </div>
