@@ -18,12 +18,14 @@ export const MiniInputStyled = styled.input`
     return 'var(--grayColorOne)';
   }};
   
-  padding: 18px;
-
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+
+  text-align: center;
+
   color: ${(props) => {
     if (props.error) return 'var(--errorColorText)';
     return props.theme?.input?.[props.color]?.color || 'var(--darkColor)';
