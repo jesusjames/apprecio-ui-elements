@@ -4,12 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.3.3] - -/04/2022
+### updates
+- minimal changes MiniInput component
+
 ## [0.3.2] - 13/04/2022
-### update
+### updates
 - fix Select component
+- minimal changes MiniInput component
 
 ## [0.3.1] - 05/04/2022
-### update
+### updates
 - show code country only when country code is set
 - fix warning Spinner component
 
@@ -26,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.0] - 24/03/2022
 ### Add
 - Add Input Component
-### Update
+### Updates
 - Tailwind css v3
 ### Delete
 - @apprecio/apprecio-tailwindcss-util library (deprecated)

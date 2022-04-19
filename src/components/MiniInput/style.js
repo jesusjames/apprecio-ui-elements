@@ -10,7 +10,7 @@ export const MiniInputStyled = styled.input`
     return props.theme?.input?.[props.color]?.backgroundColor || 'var(--whiteColorPure)';
   }};
 
-  border-radius: 8px;
+  border-radius: 12px;
   border-width: 1px;
   border-style: solid;
   border-color: ${(props) => {
