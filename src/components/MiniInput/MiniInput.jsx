@@ -15,6 +15,7 @@ const MiniInput = ({
   onChange,
   type,
   color,
+  ...rest
 }) => (
   <MiniInputStyled
     maxLength={maxLength || 1}
@@ -22,6 +23,7 @@ const MiniInput = ({
     onChange={onChange}
     ref={inputRef}
     color={color}
+    {...rest}
   />
 );
 
@@ -29,7 +31,10 @@ MiniInput.propTypes = {
   /**
    * Hook de referencia hacia el input.
    */
-  inputRef: PropTypes.func,
+  inputRef: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.func,
+  ]),
   /**
    * La máxima longitud del input.
    */
