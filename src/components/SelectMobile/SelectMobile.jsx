@@ -14,7 +14,7 @@ import {
 } from './styles';
 
 const SelectMobile = ({
-  countrysCodes, countryCodeDefaultValue, color, onChange, value, ...rest
+  countrysCodes, countryCodeDefaultValue, color, onChange, value, error, ...rest
 }) => {
   const parentElement = useRef();
   const [countryCode, setCountryCode] = useState(countryCodeDefaultValue);
@@ -48,6 +48,7 @@ const SelectMobile = ({
         placeholder="placeholder content"
         dropdownMatchSelectWidth={widthDropdown}
         color={color}
+        error={error}
       >
         {map((country) => {
           const { code, icon, name } = country;
@@ -69,6 +70,7 @@ const SelectMobile = ({
           onChange={handleChangeMobile}
           block
           color={color}
+          error={error}
         />
       </InputContainer>
     </SelectMobileStyled>
@@ -88,6 +90,7 @@ SelectMobile.defaultProps = {
   color: 'secondary',
   onChange: () => {},
   value: '',
+  error: '',
 };
 
 SelectMobile.propTypes = {
@@ -96,17 +99,14 @@ SelectMobile.propTypes = {
   countrysCodes: PropTypes.array,
   /** Value default of country code */
   countryCodeDefaultValue: PropTypes.string,
-  /** El color de la paleta que se usará para el componente. */
+  /** Theme color */
   color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  /** Function callback, receives as parameter. (code, mobile) => {}. */
   onChange: PropTypes.func,
+  /** Mobile number */
   value: PropTypes.string,
+  /** Error message */
+  error: PropTypes.string,
 };
 
-const areEqual = (prevProps, nextProps) => (
-  prevProps.countryCodeDefaultValue === nextProps.countryCodeDefaultValue
-  && prevProps.color === nextProps.color
-  && prevProps.value === nextProps.value
-  && prevProps.countrysCodes === nextProps.countrysCodes
-);
-
-export default memo(SelectMobile, areEqual);
+export default memo(SelectMobile);

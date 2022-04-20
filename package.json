@@ -1,6 +1,6 @@
 {
   "name": "@apprecio/apprecio-ui-elements",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": false,
   "files": [
     "dist"

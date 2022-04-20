@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { path } from 'ramda';
+import styled, { css } from 'styled-components';
+import { isEmpty, path } from 'ramda';
 import { ReactSVG } from 'react-svg';
 import Select from '../Select/Select';
 import Input from '../Input/Input';
@@ -26,6 +26,8 @@ export const SelectStyled = styled(Select)`
   padding-top: 0;
   width: 120px;
   .rc-select-selector{
+    background-color: ${(props) => (!isEmpty(props.error) && css`var(--errorColorBackground)`)};
+    border: 1px solid ${(props) => (!isEmpty(props.error) && css`var(--mainColorActive)`)};
     border-radius: 8px 0px 0px 8px;
     border-right: none;
   }
@@ -42,6 +44,7 @@ export const InputContainer = styled.div`
 `;
 
 export const InputStyled = styled(Input)`
+  border: 1px solid ${(props) => (!isEmpty(props.error) && css`var(--mainColorActive)`)};
   border-radius: 0px 8px 8px 0px !important;
   border-left: none;
 `;
