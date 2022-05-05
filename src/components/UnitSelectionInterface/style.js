@@ -38,7 +38,7 @@ export const UnitSelectionInterfaceStyled = styled.div`
 
     span:first-child {
       color: var(--darkColor);
-      font-family: 'Poppins', sans;
+      font-family: 'Poppins', sans-serif;
       font-size: 27px;
       font-weight: 700;
       letter-spacing: 0px;
@@ -49,7 +49,7 @@ export const UnitSelectionInterfaceStyled = styled.div`
 
     span:last-child {
       color: var(--grayColorOne);
-      font-family: 'Poppins', sans;
+      font-family: 'Poppins', sans-serif;
       font-size: 14px;
       font-weight: 300;
       letter-spacing: 0px;
@@ -67,7 +67,7 @@ export const UnitSelectionInterfaceStyled = styled.div`
     width: 140px;
 
     color: var(--whiteColorPure);
-    font-family: 'Poppins', sans;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0px;
@@ -76,13 +76,13 @@ export const UnitSelectionInterfaceStyled = styled.div`
 
   .product-name {
     color: var(--darkColor);
-    font: normal normal 600 18px/27px 'Poppins', sans;
+    font: normal normal 600 18px/27px 'Poppins', sans-serif;
     margin-bottom: 0;
   }
 
   .product-brand {
     color: var(--darkColor);
-    font: normal normal 600 16px/25px 'Poppins', sans;
+    font: normal normal 600 16px/25px 'Poppins', sans-serif;
     margin-bottom: 1rem;
   }
 `;
