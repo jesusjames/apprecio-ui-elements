@@ -37,7 +37,7 @@ export const NoteTakingInputStyled = styled.div`
     border-radius: 10px;
 
     color: var(--grayColorOne);
-    font-family: 'Poppons', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.16px;
