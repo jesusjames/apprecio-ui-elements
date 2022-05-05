@@ -5,6 +5,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "./",
   "rollup": {
     "browser": true
   },

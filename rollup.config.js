@@ -12,15 +12,16 @@ const getCommonConfig = ({ target = '', plugins = [] }) => ({
     {
       dir: target,
       format: 'es',
-    }
+    },
   ],
   plugins: [
-    del({ targets: [target + '*'] }),
+    del({ targets: [`${target}*`] }),
     peerDepsExternal(),
     commonjs({
       include: 'node_modules/**',
     }),
     nodeResolve({
+      // eslint-disable-next-line no-use-before-define
       extensions,
     }),
     image(),
@@ -28,15 +29,15 @@ const getCommonConfig = ({ target = '', plugins = [] }) => ({
     babel({
       exclude: 'node_modules/**',
       plugins: ['babel-plugin-styled-components'],
-      presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
+      presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }]],
     }),
-    ...plugins
+    ...plugins,
   ],
   global: {
     'styled-components': 'styled',
     classnames: 'classNames',
     'prop-types': 'PropTypes',
-  }
+  },
 });
 
 const extensions = ['.js', '.jsx', '.css'];
@@ -46,31 +47,31 @@ export default [
     input: {
       index: 'src/components/index.js',
     },
-    ...getCommonConfig({ target: 'dist/core/'}),
+    ...getCommonConfig({ target: 'dist/core/' }),
   },
   // utils for theming
   {
     input: {
       useTheme: 'src/lib/utils/theme/customization/useTheme.jsx',
       globalStyle: 'src/lib/utils/theme/GlobalStyle/index.jsx',
-      apprecioTheme: 'src/lib/utils/theme/GlobalStyle/theme.js'
+      apprecioTheme: 'src/lib/utils/theme/GlobalStyle/theme.js',
     },
-    ...getCommonConfig( {
+    ...getCommonConfig({
       target: 'dist/utils/theme/',
       plugins: [
         copy({
           targets: [
             {
               src: 'src/lib/utils/theme/style/css',
-              dest: 'dist/utils',
+              dest: 'dist/utils/style',
             },
             {
               src: 'src/lib/utils/theme/style/fonts/',
               dest: 'dist/utils',
-            }
+            },
           ],
-        })
-      ]
-    })
+        }),
+      ],
+    }),
   },
 ];
