@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import {
+  forwardRef,
   memo, useEffect, useRef, useState,
 } from 'react';
-import { map } from 'ramda';
+import { isEmpty, map } from 'ramda';
 import { Option } from '../Select/Select';
 
 import MexicoSVG from './assets/images/mexico.svg';
@@ -13,9 +14,10 @@ import {
   InputContainer, InputStyled, ReactSVGStyled, SelectMobileStyled, SelectStyled,
 } from './styles';
 
-const SelectMobile = ({
+// eslint-disable-next-line react/display-name
+const SelectMobile = forwardRef(({
   countrysCodes, countryCodeDefaultValue, color, onChange, value, error, ...rest
-}) => {
+}, ref) => {
   const parentElement = useRef();
   const [countryCode, setCountryCode] = useState(countryCodeDefaultValue);
   const [widthDropdown, setWidthDropdown] = useState(0);
@@ -70,12 +72,13 @@ const SelectMobile = ({
           onChange={handleChangeMobile}
           block
           color={color}
-          error={error}
+          error={!isEmpty(error)}
+          ref={ref}
         />
       </InputContainer>
     </SelectMobileStyled>
   );
-};
+});
 
 const countrys = [
   { code: '+52', name: 'México', icon: MexicoSVG },

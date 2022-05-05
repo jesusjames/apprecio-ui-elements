@@ -553,4 +553,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:ap-w-1\/4 {
     width: 25%;
   }
+
+  .md\:ap-w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:ap-w-2\/4 {
+    width: 50%;
+  }
 }

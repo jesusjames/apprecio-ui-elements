@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 import {
   InputContainerStyled,
   InputStyled,
 } from './style';
 import { GenerateIcon } from './helpers';
 
-const Input = ({
+// eslint-disable-next-line react/display-name
+const Input = forwardRef(({
   error,
   iconLeft,
   iconRight,
   color,
   block,
   ...rest
-}) => (
+}, ref) => (
   <InputContainerStyled block={block}>
     <GenerateIcon icon={iconLeft} orientation="left" />
     <InputStyled
@@ -21,11 +23,12 @@ const Input = ({
       iconRight={!!iconRight}
       color={color}
       block={block}
+      ref={ref}
       {...rest}
     />
     <GenerateIcon icon={iconRight} orientation="right" />
   </InputContainerStyled>
-);
+));
 
 Input.defaultProps = {
   error: false,

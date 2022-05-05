@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.5] - 20/04/2022
 ### fixed
 - Fonts Poppins
+- Fix error SelectMobile component
+- Rest props MiniInput
+- forwarRed form components
 
 ## [0.3.4] - 20/04/2022
 ### fixed

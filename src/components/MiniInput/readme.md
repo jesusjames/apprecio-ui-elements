@@ -26,6 +26,7 @@ let codeInputRef3 = useRef(null);
         onChange={e => (e.target.value.length ? codeInputRef1.focus() : null)}
         type="number"
         color="primary"
+        data-index="0"
       />
       <MiniInput
         inputRef={e => {

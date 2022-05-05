@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const MiniInputStyled = styled.input`
   width: 47px;
   height: 47px;
+  padding: 5px;
 
   background-color: ${(props) => {
     if (props.disabled) return 'var(--grayColorBorder) !important';

@@ -34,6 +34,10 @@ export const SelectStyled = styled(Select)`
     border-right: none;
   }
   
+  .select-error-message {
+    width: ${({ dropdownMatchSelectWidth }) => `${dropdownMatchSelectWidth}px` || '100%'};
+  }
+  
   .rc-select-selection-item {
     > div > span:last-child {
       display: none;
@@ -46,7 +50,7 @@ export const InputContainer = styled.div`
 `;
 
 export const InputStyled = styled(Input)`
-  ${(props) => !isEmpty(props.error) && css`
+  ${(props) => props?.error && css`
       border: 1px solid var(--mainColorActive);
   `}
   border-radius: 0px 8px 8px 0px !important;

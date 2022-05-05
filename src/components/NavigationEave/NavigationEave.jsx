@@ -39,8 +39,10 @@ const NavigationEave = ({
         onClick={goBackFunction}
       />
       <img className="logo" src={icon} alt={name} />
-      <div ref={slider} className="slider" />
-      <div className="children-bar">{children}</div>
+      <div className="children-bar">
+        <div ref={slider} className="slider" />
+        {children}
+      </div>
     </NavigationEaveStyled>
   );
 };

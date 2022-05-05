@@ -12,7 +12,7 @@ const [mobile2, setMobile2] = React.useState('');
 const [mobile3, setMobile3] = React.useState('');
 const [mobile4, setMobile4] = React.useState('');
 const [mobile5, setMobile5] = React.useState('320885');
-const [error, setError] = React.useState('Error message');
+const [error, setError] = React.useState('Error message, escribe un numero valido');
 
 const onChangeMobile1 = useCallback((code, mobile) => {
   setMobile1(mobile);

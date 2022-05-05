@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { isEmpty, isNil, path } from 'ramda';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
@@ -21,11 +21,12 @@ const ArrowDownIcon = styled.span`
   margin-top: -8px;
 `;
 
-const Select = ({
+// eslint-disable-next-line react/display-name
+const Select = forwardRef(({
   children, value, onChange, onBlur, defaultValue,
   disabled, error, className, color, icon,
   borderSize, placeholder, name, ...restProps
-}) => {
+}, ref) => {
   const [isFocused, setIsFocused] = useState(false);
   const [hasValue, setHasValue] = useState(false);
   // eslint-disable-next-line no-shadow
@@ -58,6 +59,7 @@ const Select = ({
         name={name}
         color={color}
         icon={icon}
+        ref={ref}
         {...restProps}
       >
         { children }
@@ -67,7 +69,7 @@ const Select = ({
       { error && <span className="select-error-message">{ error }</span>}
     </SelectWrapper>
   );
-};
+});
 
 Select.defaultProps = {
   onChange: () => {},
