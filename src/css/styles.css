@@ -494,6 +494,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.ap-block {
+  display: block;
+}
+
 .ap-flex {
   display: flex;
 }
@@ -508,6 +512,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-flex-grow {
   flex-grow: 1;
+}
+
+.ap-flex-row {
+  flex-direction: row;
 }
 
 .ap-flex-wrap {
