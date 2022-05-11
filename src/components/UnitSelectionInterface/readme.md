@@ -16,6 +16,7 @@ const [value, setValue] = useState(10);
       note={note}
       noteSetter={setNote}
       transactionsArray={[]}
+      setTransactionsArray={() => console.log('cambio de estado')}
       units={units}
       unitsSetter={setUnits}
       value={value}

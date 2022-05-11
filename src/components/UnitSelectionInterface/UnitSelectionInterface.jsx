@@ -23,6 +23,7 @@ const UnitSelectionInterface = ({
   postExpensesArray,
   productInfo,
   transactionsArray,
+  setTransactionsArray,
   units,
   unitsSetter,
   value,
@@ -42,7 +43,7 @@ const UnitSelectionInterface = ({
       message: interfaceShowing === 1 ? 'Escan. Cód. Barras' : 'Ingreso Manual',
     };
 
-    transactionsArray.push(newTransaction);
+    setTransactionsArray([...transactionsArray, newTransaction]);
 
     if (mode === 'expense') {
       postExpensesArray(transactionsArray);
@@ -183,6 +184,8 @@ UnitSelectionInterface.propTypes = {
       note: PropTypes.string,
     }),
   ).isRequired,
+  /** Función para cambiar el estado transactionsArray. */
+  setTransactionsArray: PropTypes.func.isRequired,
   /**
    * Variable que almacena el número de unidades en la transacción.
    */

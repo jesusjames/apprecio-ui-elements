@@ -46,10 +46,10 @@ const TransactionStatus = ({
       onClick={() => setShowReceiptDrawer(true)}
     >
       <span className="header">
-        <p className="item-count-container">
+        <div className="item-count-container">
           <img src={ItemCountContainer} alt="Counter" />
-          <span>{itemCount}</span>
-        </p>
+          <p>{itemCount}</p>
+        </div>
         <p className="header-container">{header}</p>
       </span>
       <span className="body">

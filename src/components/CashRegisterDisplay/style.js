@@ -93,6 +93,7 @@ export const CashRegisterDisplayStyled = styled.div`
 
     #scanner-icon {
       max-height: 100%;
+      margin: auto;
     }
 
     #calculator-icon {
