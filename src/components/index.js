@@ -3,13 +3,13 @@ export { default as Input } from './Input/Input';
 export { default as Select } from './Select/Select';
 export { default as SelectMobile } from './SelectMobile/SelectMobile';
 export { default as Text } from './Text/Text';
+export { default as ChangeCalculator } from './ChangeCalculator/ChangeCalculator';
+export { default as BackArrow } from './BackArrow/BackArrow';
 
 // Legacy components
 
 export { default as Autocomplete } from './Autocomplete/Autocomplete';
-export { default as BackArrow } from './BackArrow/BackArrow';
 export { default as CashRegisterDisplay } from './CashRegisterDisplay/CashRegisterDisplay';
-export { default as ChangeCalculator } from './ChangeCalculator/ChangeCalculator';
 export { default as CopyOnSelect } from './CopyOnSelect/CopyOnSelect';
 export { default as DateInput } from './DateInput/DateInput';
 export { default as Dialog } from './Dialog/Dialog';

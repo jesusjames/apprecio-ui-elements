@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const ReceiptItemStyled = styled.li`
-  border-bottom-style: solid;
-  border-bottom-color: var(--grayColorOne);
-  border-bottom-width: 2px;
-
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -49,25 +45,35 @@ export const ReceiptItemStyled = styled.li`
 
   .title {
     color: var(--grayColorOne);
-    font: normal normal bold 18px/27px 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1rem;
     letter-spacing: 0px;
     display: inline-block;
-    height: 27px;
   }
 
   .message {
-    color: var(--);
-    font: normal normal 500 14px/21px 'Poppins', sans-serif;
+    color: var(--grayColorOne);
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1rem;
     letter-spacing: 0px;
     display: inline-block;
-    height: 21px;
   }
 
   .units-and-value {
     color: ${(props) => (props.mode === 'expense'
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
-    font: normal normal 600 20px/30px 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
     letter-spacing: -0.2px;
   }
 

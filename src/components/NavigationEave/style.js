@@ -39,6 +39,14 @@ export const NavigationEaveStyled = styled.div`
   top: 0;
 
   z-index: 30;
+  
+  button {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 20;
+    padding: 1.5rem;
+  }
 
   .logo {
     margin-top: ${(props) => (props.shortened ? '12px' : '0')};

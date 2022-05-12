@@ -35,7 +35,6 @@ const NavigationEave = ({
   return (
     <NavigationEaveStyled variant={variant} mode={mode} shortened={shortened}>
       <BackArrow
-        white={variant === 'primary' || mode === 'scanner'}
         onClick={goBackFunction}
       />
       <img className="logo" src={icon} alt={name} />

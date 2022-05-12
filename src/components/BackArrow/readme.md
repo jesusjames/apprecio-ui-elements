@@ -9,6 +9,13 @@ Una botón con posición absoluta utilizado para la navegación dentro de la app
       <BackArrow onClick={() => alert('Estarías yendo hacia atrás.')} />
     </div>
   </div>
-  <div className="ap-w-full md:ap-w-2/3" />
+  <div className="ap-w-full md:ap-w-2/3" >
+    <div style={{ position: 'relative', height: '60px' }}>
+        <BackArrow 
+          onClick={() => alert('Estarías yendo hacia atrás.')} 
+          text="Volver"
+          fontSize="20px"/>
+    </div>
+  </div>
 </div>
 ```

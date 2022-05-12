@@ -15,6 +15,7 @@ import ReceiptItem from '../ReceiptItem/ReceiptItem';
 // Assets
 import GreyArrowDown from '../image/GreyArrowDown.svg';
 import GreyArrowUp from '../image/GreyArrowUp.svg';
+import Receipt from '../image/Receipt.svg';
 
 const ReceiptDrawerContent = ({
   mode,
@@ -103,8 +104,9 @@ const ReceiptDrawerContent = ({
             });
           }}
         >
+          <img className="ap-inline-block ap-mr-2" src={Receipt} alt="receipt" />
           {mode === 'income' ? 'Resumen de la venta' : 'Listado de gastos'}
-          <img src={GreyArrowDown} alt="v" />
+          <img className="ap-inline-block" src={GreyArrowDown} alt="v" />
         </button>
         <p className="date-info-1">
           {daysofTheWeek[time.getDay()]}
@@ -169,8 +171,9 @@ const ReceiptDrawerContent = ({
           className="scroll-up-message"
           onClick={() => smoothScroll(scrollToTopScrollsTo)}
         >
+          <img className="ap-inline-block ap-mr-2" src={Receipt} alt="receipt" />
           Volver arriba
-          <img src={GreyArrowUp} alt="^" />
+          <img className="ap-inline-block" src={GreyArrowUp} alt="^" />
         </button>
       </div>
     </ReceiptDrawerContentStyled>

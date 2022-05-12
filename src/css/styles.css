@@ -466,6 +466,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.ap-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ap-my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .ap-mb-0\.5 {
   margin-bottom: 0.125rem;
 }
@@ -490,12 +500,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
+.ap-mt-4 {
+  margin-top: 1rem;
+}
+
+.ap-mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.ap-mr-2 {
+  margin-right: 0.5rem;
+}
+
 .ap-mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .ap-block {
   display: block;
+}
+
+.ap-inline-block {
+  display: inline-block;
 }
 
 .ap-flex {
@@ -506,12 +532,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.ap-w-2\/3 {
+  width: 66.666667%;
+}
+
 .ap-flex-none {
   flex: none;
 }
 
 .ap-flex-grow {
   flex-grow: 1;
+}
+
+.ap-basis-4\/5 {
+  flex-basis: 80%;
+}
+
+.ap-basis-1\/5 {
+  flex-basis: 20%;
+}
+
+.ap-basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.ap-flex-row {
+  flex-direction: row;
+}
+
+.ap-flex-col {
+  flex-direction: column;
 }
 
 .ap-flex-wrap {
@@ -522,10 +572,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.ap-space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .ap-space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.ap-border-t-\[3px\] {
+  border-top-width: 3px;
+}
+
+.ap-border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
 .ap-px-1 {
@@ -539,6 +604,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-pt-0 {
   padding-top: 0px;
+}
+
+.ap-text-center {
+  text-align: center;
 }
 
 @media (min-width: 768px) {

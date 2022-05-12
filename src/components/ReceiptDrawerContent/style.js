@@ -15,7 +15,6 @@ export const ReceiptDrawerContentStyled = styled.div`
     text-align: center;
     font: normal normal bold 16px/14px 'Poppins', sans-serif;
     letter-spacing: -0.16px;
-    text-transform: uppercase;
     margin-top: 1rem;
     margin-bottom: .25rem;
   }
@@ -33,9 +32,13 @@ export const ReceiptDrawerContentStyled = styled.div`
     ? 'var(--mainColor)'
     : 'var(--lightColor)')};
     text-align: center;
-    font: normal normal bold 62px/93px 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 40px;
     letter-spacing: -0.62px;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 
   .checkout-button {
@@ -60,7 +63,6 @@ export const ReceiptDrawerContentStyled = styled.div`
       color: var(--whiteColorPure);
       font: normal normal bold 16px/14px 'Poppins', sans-serif;
       letter-spacing: -0.16px;
-      text-transform: uppercase;
     }
 
     .dollar-sign {
@@ -132,7 +134,6 @@ export const ReceiptDrawerContentStyled = styled.div`
     text-align: center;
     font: normal normal bold 27px/20px 'Poppins', sans-serif;
     letter-spacing: 0px;
-    text-transform: uppercase;
 
     margin-bottom: 2rem;
   }

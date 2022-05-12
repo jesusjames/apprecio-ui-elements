@@ -1,121 +1,145 @@
-/**
- *
- * ChangeCalculator
- *
- */
-
-import React, { useState, useRef } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { ChangeCalculatorStyled } from './style';
+import Text from '../Text/Text';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
 
-// Component
-import NoteTakingDone from '../image/NoteTakingDone.svg';
-import NoteTakingDoneActive from '../image/NoteTakingDoneActive.svg';
-import Close from '../image/Close.svg';
+import UnionSVG from '../image/Union.svg';
+import BackArrow from '../BackArrow/BackArrow';
 
-const ChangeCalculator = ({ checkoutValue }) => {
-  const [value, setValue] = useState('');
+const ChangeCalculator = ({
+  className, title, totalAmount, totalItems, description,
+  label, buttonText, onFinalize, ...rest
+}) => {
+  const [changeAmount, setChangeAmount] = useState('');
+  const [moneyReceived, setMoneyReceived] = useState('');
   const [showResult, setShowResult] = useState(false);
 
-  const inputRef = useRef(null);
-  const doneButtonRef = useRef(null);
-  const closeButtonRef = useRef(null);
+  const calculateChangeAmount = () => {
+    if (parseFloat(moneyReceived) > parseFloat(totalAmount)) {
+      const change = parseFloat(moneyReceived) - parseFloat(totalAmount);
+      setChangeAmount(change.toString());
+      setShowResult(true);
+    }
+  };
+
+  const calculateButtonDisabled = useMemo(
+    () => ((parseFloat(moneyReceived) <= parseFloat(totalAmount)) || !moneyReceived),
+    [moneyReceived, totalAmount],
+  );
+
+  const handleChangeInput = (e) => {
+    const { value } = e.target;
+    const regExp = /^[0-9\b]+$/;
+    if (value === '' || regExp.test(value)) {
+      setMoneyReceived(value);
+    }
+  };
 
   return (
-    <ChangeCalculatorStyled>
-      {showResult ? (
-        <div className="change-display">
-          <button
-            ref={closeButtonRef}
-            type="button"
-            className="close-button"
-            onTouchStart={() => {
-              closeButtonRef.current.style.transform = 'scale(0.9)';
-            }}
-            onTouchEnd={() => {
-              closeButtonRef.current.style.transform = 'scale(1)';
-              window.navigator.vibrate(50);
-            }}
-            onClick={() => setShowResult(false)}
-          >
-            <img src={Close} alt="X" />
-          </button>
-          <div className="change-display-left-side">
-            <div className="checkout-value-display">
-              <p>Cobrando</p>
-              <h2>{checkoutValue}</h2>
+    <ChangeCalculatorStyled className={className} {...rest}>
+      <div className="ap-flex ap-flex-col ap-items-center">
+        {showResult && (
+          <>
+            <div className="ap-w-full">
+              <BackArrow onClick={() => setShowResult(false)} text="Volver" />
             </div>
-            <div className="value-display">
-              <p>Recibido</p>
-              <h2>{parseFloat(value).toFixed(2)}</h2>
+            <div className="ap-flex ap-flex-row ap-w-full ap-mt-4">
+              <div className="ap-basis-1/2">
+                <Text tag="h5" fontWeight="500" className="ap-text-center" color="secondary">Cobrado:</Text>
+                <Text tag="h2" className="ap-text-center" color="secondary" margin="8px 0 1rem 0">{`$${totalAmount}`}</Text>
+              </div>
+              <div className="ap-basis-1/2">
+                <Text tag="h5" fontWeight="500" className="ap-text-center" color="secondary">Recibido:</Text>
+                <Text tag="h2" className="ap-text-center" color="secondary" margin="8px 0 1rem 0">{`$${parseFloat(moneyReceived).toFixed(2)}`}</Text>
+              </div>
             </div>
-          </div>
-          <div className="change-display-right-side">
-            <h1>
-              $
-              {(parseFloat(value) - checkoutValue).toFixed(2)}
-            </h1>
-            <p>Cambio</p>
-          </div>
+            <div className="ap-w-2/3 ap-border-t-[3px] ap-border-gray-400" style={{ borderColor: 'var(--mainColor)' }} />
+            <div className="ap-w-full ap-mb-10">
+              <Text tag="h5" fontWeight="500" className="ap-text-center">Cambio:</Text>
+              <Text tag="h1" className="ap-text-center" margin="8px 0 1rem 0">{`$${parseFloat(changeAmount).toFixed(2)}`}</Text>
+            </div>
+          </>
+        )}
+        {!showResult && (
+          <>
+            <div className="ap-w-full ap-text-center">
+              <Text tag="h5" margin="0" color="secondary">{title}</Text>
+              <Text tag="h1" margin="0" color="secondary">{`$${totalAmount}`}</Text>
+              <Text
+                tag="h5"
+                margin="0"
+                color="secondary"
+                fontWeight="500"
+                style={{ color: 'var(--grayColorOne)' }}
+              >
+                {`${totalItems} productos`}
+              </Text>
+            </div>
+            <div className="ap-w-full ap-text-center ap-my-6">
+              <Text fontWeight="500" color="tertiary">{description}</Text>
+            </div>
+            <div className="ap-w-full">
+              <Text tag="h6" fontWeight="500" color="tertiary">{label}</Text>
+            </div>
+            <div className="ap-flex ap-flex-row ap-w-full ap-space-x-2">
+              <div className="ap-basis-4/5">
+                <Input
+                  placeholder="$0.00"
+                  block
+                  value={moneyReceived}
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <div className="ap-basis-1/5">
+                <Button
+                  iconLeft={UnionSVG}
+                  color="tertiary"
+                  style={{ minWidth: 'auto', height: '48px', borderColor: 'transparent' }}
+                  onClick={calculateChangeAmount}
+                  disabled={calculateButtonDisabled}
+                />
+              </div>
+            </div>
+          </>
+        )}
+        <div className="ap-w-full">
+          <Button block color="secondary" onClick={onFinalize}>{buttonText}</Button>
         </div>
-      ) : (
-        <>
-          {' '}
-          <p className="change-calculator-message">
-            Conoce cuánto cambio debes regresar
-            {' '}
-            <span>(Opcional)</span>
-          </p>
-          <div className="input-container">
-            <input
-              ref={inputRef}
-              className="change-calculator-input"
-              type="number"
-              placeholder="¿Cuánto dinero recibes?"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            />
-            <button
-              ref={doneButtonRef}
-              id="done-button"
-              type="button"
-              onTouchStart={() => {
-                if (value) {
-                  doneButtonRef.current.style.transform = 'scale(0.9)';
-                }
-              }}
-              onTouchEnd={() => {
-                if (value) {
-                  doneButtonRef.current.style.transform = 'scale(1)';
-                  window.navigator.vibrate(50);
-                }
-              }}
-              onClick={() => {
-                if (value) {
-                  setShowResult(true);
-                } else {
-                  inputRef.current.focus();
-                }
-              }}
-            >
-              <img
-                src={!value ? NoteTakingDone : NoteTakingDoneActive}
-                alt="Done"
-              />
-            </button>
-          </div>
-        </>
-      )}
+      </div>
     </ChangeCalculatorStyled>
   );
 };
 
+ChangeCalculator.defaultProps = {
+  title: 'Total a cobrar',
+  totalAmount: '',
+  totalItems: 0,
+  description: 'Conoce cuánto cambio debes regresar (Opcional)',
+  label: '¿Cuánto dinero recibes?',
+  buttonText: 'Omitir y finalizar',
+  onFinalize: () => {},
+};
+
 ChangeCalculator.propTypes = {
-  /**
-   * Cuánto se le va a cobrar al cliente.
-   */
-  checkoutValue: PropTypes.number.isRequired,
+  /** Titulo header del componente */
+  title: PropTypes.string,
+  /** Clases extras para el componente */
+  className: PropTypes.string,
+  /** Monto total a mostrar */
+  totalAmount: PropTypes.string,
+  /** numero total de productos */
+  totalItems: PropTypes.number,
+  /** Descripción del componente */
+  description: PropTypes.string,
+  /** Tlabel del input */
+  label: PropTypes.string,
+  /** Texto del botón */
+  buttonText: PropTypes.string,
+  /** función callback para finalizar */
+  onFinalize: PropTypes.func,
 };
 
 export default ChangeCalculator;
