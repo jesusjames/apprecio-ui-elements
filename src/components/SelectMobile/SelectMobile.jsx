@@ -16,7 +16,8 @@ import {
 
 // eslint-disable-next-line react/display-name
 const SelectMobile = forwardRef(({
-  countrysCodes, countryCodeDefaultValue, color, onChange, value, error, ...rest
+  countriesCodes, countryCodeDefaultValue, color, onChange, value, error,
+  placeholder, ...rest
 }, ref) => {
   const parentElement = useRef();
   const [countryCode, setCountryCode] = useState(countryCodeDefaultValue);
@@ -63,11 +64,11 @@ const SelectMobile = forwardRef(({
               </div>
             </Option>
           );
-        }, countrysCodes)}
+        }, countriesCodes)}
       </SelectStyled>
       <InputContainer>
         <InputStyled
-          placeholder="Input text"
+          placeholder={placeholder}
           value={value}
           onChange={handleChangeMobile}
           block
@@ -80,7 +81,7 @@ const SelectMobile = forwardRef(({
   );
 });
 
-const countrys = [
+const countries = [
   { code: '+52', name: 'México', icon: MexicoSVG },
   { code: '+57', name: 'Colombia', icon: ColombiaSVG },
   { code: '+55', name: 'Ecuador', icon: EcuadorSVG },
@@ -88,18 +89,19 @@ const countrys = [
 ];
 
 SelectMobile.defaultProps = {
-  countrysCodes: countrys,
+  countriesCodes: countries,
   countryCodeDefaultValue: '+52',
   color: 'secondary',
   onChange: () => {},
   value: '',
   error: '',
+  placeholder: '',
 };
 
 SelectMobile.propTypes = {
   /** Array of country code */
   // eslint-disable-next-line react/forbid-prop-types
-  countrysCodes: PropTypes.array,
+  countriesCodes: PropTypes.array,
   /** Value default of country code */
   countryCodeDefaultValue: PropTypes.string,
   /** Theme color */
@@ -110,6 +112,8 @@ SelectMobile.propTypes = {
   value: PropTypes.string,
   /** Error message */
   error: PropTypes.string,
+  /** mensaje para el placeholder */
+  placeholder: PropTypes.string,
 };
 
 export default memo(SelectMobile);

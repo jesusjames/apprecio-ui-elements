@@ -11,6 +11,7 @@ export const UnitSelectionInterfaceStyled = styled.div`
   }
 
   #inputs-container {
+    height: 42px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,6 +20,9 @@ export const UnitSelectionInterfaceStyled = styled.div`
     position: relative;
 
     padding: 0 1px;
+    div:last-child {
+      position: absolute;
+    }
   }
 
   #checkout-container {

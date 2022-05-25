@@ -1,5 +1,3 @@
-Based from <a href="https://www.npmjs.com/package/rc-select" style="color: #4d24cc;">rc-select</a><br>
-
 
 #### Ejemplos
 
@@ -44,6 +42,7 @@ const onChangeMobile5 = useCallback((code, mobile) => {
       onChange={onChangeMobile1}
       color={'primary'}
       value={mobile1}
+      placeholder={'ingresa numero'}
     />
   </div>
   <div className="ap-w-full md:ap-w-1/4 ap-px-1 ap-mb-2">
@@ -52,6 +51,7 @@ const onChangeMobile5 = useCallback((code, mobile) => {
       onChange={onChangeMobile2}
       color={'secondary'}
       value={mobile2}
+      placeholder={'123 456 7890'}
     />
   </div>
   <div className="ap-w-full md:ap-w-1/4 ap-px-1 ap-mb-2">

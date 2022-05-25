@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1] - 11/05/2022
+### delete
+- Automplete component
+### update
+- Updated theme color BackArrow
+- Renamed prop countrysCodes for countriesCodes in SelectMobile component
+- Added placeholder prop in SelectMobile component
+- design updated in UnitSelectionInterface
+### fixed
+- fixed content overflow in HalfDrawer
+
 ## [0.5.0] - 11/05/2022
 ### update
 - Update component: ChangeCalculator

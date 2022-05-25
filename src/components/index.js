@@ -7,8 +7,6 @@ export { default as ChangeCalculator } from './ChangeCalculator/ChangeCalculator
 export { default as BackArrow } from './BackArrow/BackArrow';
 
 // Legacy components
-
-export { default as Autocomplete } from './Autocomplete/Autocomplete';
 export { default as CashRegisterDisplay } from './CashRegisterDisplay/CashRegisterDisplay';
 export { default as CopyOnSelect } from './CopyOnSelect/CopyOnSelect';
 export { default as DateInput } from './DateInput/DateInput';
