@@ -6,6 +6,32 @@ export const apprecioTheme = {
       body: {
         background: 'var(--whiteColorApprecio)',
       },
+      color: {
+        primary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
+      },
       button: {
         primary: {
           color: 'var(--whiteColorPure)',
@@ -145,6 +171,32 @@ export const apprecioTheme = {
       name: 'dark',
       body: {
         background: 'var(--darkColor)',
+      },
+      color: {
+        primary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--mainColor)',
+          activeColor: 'var(--mainColorActive)',
+          activeColorOutline: 'var(--mainColorActiveOutline)',
+        },
+        secondary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--lightColor)',
+          activeColor: 'var(--lightColorActive)',
+          activeColorOutline: 'var(--lightColorActiveOutline)',
+        },
+        tertiary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--darkColor)',
+          activeColor: 'var(--darkColorActive)',
+          activeColorOutline: 'var(--darkColorActiveOutline)',
+        },
+        quaternary: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--blueColor)',
+          activeColor: 'var(--blueColorActive)',
+          activeColorOutline: 'var(--blueColorActiveOutline)',
+        },
       },
       button: {
         primary: {

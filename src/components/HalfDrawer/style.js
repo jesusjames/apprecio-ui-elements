@@ -25,6 +25,9 @@ export const HalfDrawerStyled = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
+  
+  display: flex;
+  flex-direction: column;
 
   overflow-y: hidden;
 

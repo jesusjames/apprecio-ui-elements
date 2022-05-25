@@ -67,7 +67,9 @@ const UnitSelectionInterface = ({
 
   return (
     <UnitSelectionInterfaceStyled mode={mode}>
-      <span className="header">{header}</span>
+      <div className="ap-w-full ap-text-center">
+        <span className="header">{header}</span>
+      </div>
       {productInfo.id ? (
         <>
           <h1 className="product-name">
@@ -83,6 +85,7 @@ const UnitSelectionInterface = ({
         </>
       ) : null}
       <div id="inputs-container">
+        {mode !== 'expense' && (
         <UnitCounter
           units={units}
           unitsSetter={unitsSetter}
@@ -90,6 +93,7 @@ const UnitSelectionInterface = ({
           valueSetter={valueSetter}
           drawerSetter={drawerSetter}
         />
+        )}
         <NoteTakingInput
           note={note}
           noteSetter={noteSetter}
