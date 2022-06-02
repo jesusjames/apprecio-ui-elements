@@ -5,6 +5,8 @@ export { default as SelectMobile } from './SelectMobile/SelectMobile';
 export { default as Text } from './Text/Text';
 export { default as ChangeCalculator } from './ChangeCalculator/ChangeCalculator';
 export { default as BackArrow } from './BackArrow/BackArrow';
+export { default as TransactionDetail } from './TransactionDetail/TransactionDetail';
+export { default as Collapse } from './Collapse/Collapse';
 
 // Legacy components
 export { default as CashRegisterDisplay } from './CashRegisterDisplay/CashRegisterDisplay';
@@ -14,7 +16,6 @@ export { default as Dialog } from './Dialog/Dialog';
 export { default as Drawer } from './Drawer/Drawer';
 export { default as Footer } from './Footer/Footer';
 export { default as HalfDrawer } from './HalfDrawer/HalfDrawer';
-export { default as Header } from './Header/Header';
 export { default as Hero } from './Hero/Hero';
 export { default as ImagePicker } from './ImagePicker/ImagePicker';
 export { default as MemberPicture } from './MemberPicture/MemberPicture';

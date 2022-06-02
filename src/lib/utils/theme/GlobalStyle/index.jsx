@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import 'animate.css';
 import '../style/css/variables.css';
-import '../style/css/fonts.css';
 import '../style/css/global.css';
 
 import { useTheme } from '../customization/useTheme';

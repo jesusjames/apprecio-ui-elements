@@ -47,7 +47,7 @@ Button.propTypes = {
   /** Recibe un elemento o componente como children */
   children: PropTypes.node,
   /** Indica el color del boton (primary, secondary, tertiary, quaternary, facebook ) */
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'facebook']),
   /** Cambia el estilo del boton por uno de contorno, sin fondo  */
   outline: PropTypes.bool,
   /** Indica el tamaño del boton */
