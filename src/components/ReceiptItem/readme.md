@@ -25,6 +25,7 @@ const [counter, setCounter] = useState(1);
     <p>Eliminar item Desactivado</p>
     <div style={{ width: 325 }}>
       <ReceiptItem
+        className="!ap-p-0"
         deleteItemDisabled
         deleteItem={() => {}}
         message="Ingreso manual"
