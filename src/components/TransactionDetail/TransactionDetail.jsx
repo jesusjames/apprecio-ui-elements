@@ -15,8 +15,13 @@ const TransactionDetail = ({
   const isIncome = equals(type, 'income');
 
   return (
-    <ContainerStyled className={classNames('ap-bg-white ap-mx-auto ap-rounded-lg ap-p-3', className)} onClick={onClick} {...rest}>
-      <div className="ap-flex ap-flex-row">
+    <ContainerStyled className={classNames('ap-bg-white ap-mx-auto ap-rounded-lg ap-p-3', className)}>
+      <button
+        type="button"
+        className="ap-flex ap-flex-row ap-w-full"
+        onClick={onClick}
+        {...rest}
+      >
         <ReactSVG className="ap-basis-1/12" src={isIncome ? IncomeSVG : ExpenseSVG} alt="detalle transacción" />
         <Text className="ap-basis-4/12 ap-text-right" color="tertiary" fontSize="14px">{hour}</Text>
         <div className="ap-basis-7/12 ap-flex ap-flex-row">
@@ -27,7 +32,7 @@ const TransactionDetail = ({
             className="ap-flex-initial"
           />
         </div>
-      </div>
+      </button>
       {children}
     </ContainerStyled>
   );

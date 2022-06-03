@@ -21,11 +21,18 @@ const ReceiptItem = ({
   units,
   unitsSetter,
   value,
+  className,
+  ...rest
 }) => {
   const [showUnitCounter, setShowUnitCounter] = useState(false);
 
   return (
-    <ReceiptItemStyled showUnitCounter={showUnitCounter} mode={mode}>
+    <ReceiptItemStyled
+      showUnitCounter={showUnitCounter}
+      mode={mode}
+      className={className}
+      {...rest}
+    >
       <button
         type="button"
         className="info-container"
@@ -66,6 +73,7 @@ ReceiptItem.defaultProps = {
 };
 
 ReceiptItem.propTypes = {
+  className: PropTypes.string,
   /**
    * Función que elimina el item cuando se encuentra dentro de ReceiptDrawerContent.
    */

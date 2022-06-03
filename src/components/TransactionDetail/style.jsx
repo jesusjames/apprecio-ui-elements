@@ -3,7 +3,6 @@ import { path } from 'ramda';
 
 export const ContainerStyled = styled.div`
   width: 311px;
-  cursor: pointer;
 `;
 
 export const ArrowStyled = styled.span`
