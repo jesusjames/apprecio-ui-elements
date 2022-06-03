@@ -1,6 +1,7 @@
 ```jsx
 import TransactionDetail from './TransactionDetail';
 import { useState } from 'react';
+import Collapse from '../Collapse/Collapse';
 
 const [open1, setOpen1] = useState();
 
@@ -10,16 +11,25 @@ const [open1, setOpen1] = useState();
       open={open1}
       hour="08:05Am"
       amount="$4.05"
-      onClick={() => {setOpen1(prevOpen => !prevOpen)}}/>
+      onClick={() => {
+        setOpen1(prevOpen => !prevOpen)
+      }}
+    >
+      <Collapse isOpen={open1}>
+        <p>items</p>
+        <p>items</p>
+        <p>items</p>
+      </Collapse>
+    </TransactionDetail>
   </div>
   <div className="ap-w-full md:ap-w-1/4">
-    <TransactionDetail type="expense" amount="-$5.00" />
+    <TransactionDetail type="expense" amount="-$5.00"/>
   </div>
   <div className="ap-w-full md:ap-w-1/4">
     <TransactionDetail hour="04:12PM"/>
   </div>
   <div className="ap-w-full md:ap-w-1/4">
-    <TransactionDetail type="expense" />
+    <TransactionDetail type="expense"/>
   </div>
 </div>
 ```

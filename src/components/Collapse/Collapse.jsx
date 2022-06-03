@@ -40,7 +40,9 @@ const Collapse = (props) => {
 
   return (
     <div className={className} ref={slideRef} {...rest}>
-      {children}
+      <div className="ap-w-full">
+        {children}
+      </div>
     </div>
   );
 };

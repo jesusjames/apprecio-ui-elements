@@ -14,6 +14,7 @@ import UnitCounter from '../UnitCounter/UnitCounter';
 
 const ReceiptItem = ({
   deleteItem,
+  deleteItemDisabled,
   message,
   mode,
   title,
@@ -28,7 +29,8 @@ const ReceiptItem = ({
       <button
         type="button"
         className="info-container"
-        onClick={() => setShowUnitCounter(!showUnitCounter)}
+        onClick={() => !deleteItemDisabled && setShowUnitCounter(!showUnitCounter)}
+        style={{ cursor: deleteItemDisabled && 'default' }}
       >
         <p className="title">{title}</p>
         <p className="message">{message}</p>
@@ -36,7 +38,8 @@ const ReceiptItem = ({
       <button
         type="button"
         className="value-container"
-        onClick={() => setShowUnitCounter(!showUnitCounter)}
+        onClick={() => !deleteItemDisabled && setShowUnitCounter(!showUnitCounter)}
+        style={{ cursor: deleteItemDisabled && 'default' }}
       >
         <p className="units-and-value">
           $
@@ -59,6 +62,7 @@ const ReceiptItem = ({
 
 ReceiptItem.defaultProps = {
   mode: 'income',
+  deleteItemDisabled: false,
 };
 
 ReceiptItem.propTypes = {
@@ -66,6 +70,8 @@ ReceiptItem.propTypes = {
    * Función que elimina el item cuando se encuentra dentro de ReceiptDrawerContent.
    */
   deleteItem: PropTypes.func.isRequired,
+  /** Desactiva la funcion de eliminar item */
+  deleteItemDisabled: PropTypes.bool,
   /**
    * Mensaje de la transacción.
    */

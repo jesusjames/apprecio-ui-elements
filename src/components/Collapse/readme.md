@@ -51,11 +51,9 @@ const onOpened = (value) => {
         onClosing={onClosing}
         onClosed={onClosed}
       >
-        <div>
           <p>otro componente button1</p>
           <p>otro componente button1</p>
           <p>otro componente button1</p>
-        </div>
       </Collapse>
     </div>
     <div className="ap-w-full md:ap-w-1/4">
@@ -67,11 +65,9 @@ const onOpened = (value) => {
         onClosing={onClosing}
         onClosed={onClosed}
       >
-        <div>
           <p>otro componente button2</p>
           <p>otro componente button2</p>
           <p>otro componente button2</p>
-        </div>
       </Collapse>
     </div>
     <div className="ap-w-full md:ap-w-1/4"/>
