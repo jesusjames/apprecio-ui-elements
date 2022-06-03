@@ -35,14 +35,11 @@ export const NavigationEaveStyled = styled.div`
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
-  position: absolute;
-  top: 0;
-
-  z-index: 30;
+  position: relative;
   
   button {
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     position: absolute;
     z-index: 20;
     padding: 1.5rem;

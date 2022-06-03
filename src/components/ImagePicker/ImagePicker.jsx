@@ -10,11 +10,11 @@ import PropTypes from 'prop-types';
 import { ImagePickerStyled } from './style';
 
 // Components
-import Header from '../Header/Header';
 import Message from '../Message/Message';
 
 // Assets
 import Camera from '../image/Camera.svg';
+import Text from '../Text/Text';
 
 const ImagePicker = ({
   setter,
@@ -46,7 +46,7 @@ const ImagePicker = ({
           Cambiar mi foto de perfil
         </Message>
       ) : (
-        <Header message="Tu foto de perfil *" variant="h4" textAlign="center" />
+        <Text tag="h4" className="ap-items-center">Tu foto de perfil *</Text>
       )}
     </ImagePickerStyled>
   );
