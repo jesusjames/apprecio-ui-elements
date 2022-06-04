@@ -14,7 +14,6 @@ import DateContainer from './components/DateContainer';
 import './react-datepicker.css';
 import {
   Container,
-  LabelStyled,
   ErrorMessageStyled,
   StyledSelect,
   WrapperIconStyled,
@@ -33,7 +32,7 @@ registerLocale('es', es);
  */
 const DateInput = (props) => {
   const {
-    id, className, disabled, date, label, name, dateFormat, placeholder,
+    id, className, disabled, date, name, dateFormat, placeholder,
     minDate, maxDate, onChange, onFocus, onBlur, theme, error, errorMessage,
     style, fontSizeValue, color, ...rest
   } = props;
@@ -111,14 +110,6 @@ const DateInput = (props) => {
       error={error}
       color={color}
     >
-      <LabelStyled
-        isSelected={isSelected}
-        error={error}
-        hasValue={!isEmpty(date)}
-        color={color}
-      >
-        {label}
-      </LabelStyled>
       <DatePicker
         ref={datePickerRef}
         renderCustomHeader={customHeader}
@@ -162,7 +153,6 @@ DateInput.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   date: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
-  label: PropTypes.string,
   name: PropTypes.string,
   dateFormat: PropTypes.string,
   placeholder: PropTypes.string,
@@ -171,8 +161,6 @@ DateInput.propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  /** change the theme of the component to "orange" or "green". (optional prop) */
-  theme: PropTypes.string,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   /** Custom style only in DateImput Container */

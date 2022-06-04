@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { paths } from 'ramda';
+import { path } from 'ramda';
 import Select from '../Select/Select';
 
 export const Container = styled.div`
@@ -27,7 +27,7 @@ export const Container = styled.div`
             font-weight: normal;
 
             :focus{
-                border: 2px solid ${({ theme, color }) => paths(['color', color, 'mainColor'], theme)};
+                border: 2px solid ${({ theme, color }) => path(['color', color, 'mainColor'], theme)};
                 border-radius: 8px;
             }
 
@@ -90,8 +90,8 @@ export const Container = styled.div`
                         margin: 0;
                         .react-datepicker__week {                           
                             .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
-                                border-radius: 8px;
-                                background-color: ${({ theme, color }) => paths(['color', color, 'mainColor'], theme)};
+                                border-radius: 50%;
+                                background-color: ${({ theme, color }) => path(['color', color, 'mainColor'], theme)};
                                 color: #ffffff !important;
                             }
                         }
@@ -108,7 +108,7 @@ export const Container = styled.div`
                         .react-datepicker__year-text--selected, 
                         .react-datepicker__year-text--in-selecting-range, 
                         .react-datepicker__year-text--in-range {
-                            background-color: ${({ theme, color }) => paths(['color', color, 'mainColor'], theme)};
+                            background-color: ${({ theme, color }) => path(['color', color, 'mainColor'], theme)};
                         }
                     }
                 }
@@ -120,7 +120,7 @@ export const Container = styled.div`
             }
         }
         .react-datepicker__triangle {
-            border-bottom-color: ${({ theme, color }) => paths(['color', color, 'mainColor'], theme)};
+            border-bottom-color: ${({ theme, color }) => path(['color', color, 'mainColor'], theme)};
         }
 
         .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
@@ -135,34 +135,6 @@ export const Container = styled.div`
             color: #ccc;
         }
     }
-`;
-
-export const LabelStyled = styled.span`
-    position: absolute;
-    font-family: Poppins, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: ${({ isSelected, hasValue }) => (isSelected || hasValue ? '14px' : '1rem')};
-    line-height: 16px;
-    height: 15px;
-    z-index: 1;
-    top: ${({ isSelected, hasValue }) => (isSelected || hasValue ? '0px' : '32px')};
-    left: 0px;
-    color: ${({
-    isSelected, theme, error, hasValue, color,
-  }) => {
-    if (isSelected) return paths(['color', color, 'mainColor'], theme);
-    if (error && hasValue) return '#FF4646';
-    return 'var(--grayColor200)';
-  }
-};
-    padding: 0 10px;
-    pointer-events: none;
-
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
-    -o-transition: all ease-in-out 0.2s;
 `;
 
 export const ErrorMessageStyled = styled.div`
@@ -189,7 +161,7 @@ export const WrapperIconStyled = styled.div`
     theme, error, hasValue, isSelected, disabled, color,
   }) => {
     if (disabled) return '#696158';
-    if (isSelected) return paths(['color', color, 'mainColor'], theme);
+    if (isSelected) return path(['color', color, 'mainColor'], theme);
     if (error && hasValue) return '#FF4646';
     return '';
   }
