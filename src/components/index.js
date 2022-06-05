@@ -7,11 +7,11 @@ export { default as ChangeCalculator } from './ChangeCalculator/ChangeCalculator
 export { default as BackArrow } from './BackArrow/BackArrow';
 export { default as TransactionDetail } from './TransactionDetail/TransactionDetail';
 export { default as Collapse } from './Collapse/Collapse';
+export { default as DateInput } from './DateInput/DateInput';
 
 // Legacy components
 export { default as CashRegisterDisplay } from './CashRegisterDisplay/CashRegisterDisplay';
 export { default as CopyOnSelect } from './CopyOnSelect/CopyOnSelect';
-export { default as DateInput } from './DateInput/DateInput';
 export { default as Dialog } from './Dialog/Dialog';
 export { default as Drawer } from './Drawer/Drawer';
 export { default as Footer } from './Footer/Footer';

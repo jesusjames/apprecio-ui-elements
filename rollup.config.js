@@ -65,10 +65,6 @@ export default [
               src: 'src/lib/utils/theme/style/css',
               dest: 'dist/utils/style',
             },
-            {
-              src: 'src/lib/utils/theme/style/fonts/',
-              dest: 'dist/utils',
-            },
           ],
         }),
       ],

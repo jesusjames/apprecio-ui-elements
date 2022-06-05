@@ -1,6 +1,6 @@
 {
   "name": "@apprecio/apprecio-ui-elements",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "private": false,
   "files": [
     "dist"
@@ -28,8 +28,10 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "moment": "^2.29.3",
     "ramda": "^0.28.0",
     "rc-select": "^14.0.6",
+    "react-datepicker": "^4.8.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^2.1.4"
   },
