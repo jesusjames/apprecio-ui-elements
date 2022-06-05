@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { PropTypes } from 'prop-types';
 import { isEmpty } from 'ramda';
 import { ReactSVG } from 'react-svg';
-import calendarIcon from './images/calendar.svg';
+import calendarIcon from './images/Calendar.svg';
 import DateContainer from './components/DateContainer';
 
 // styles
@@ -34,7 +34,7 @@ const DateInput = (props) => {
   const {
     id, className, disabled, date, name, dateFormat, placeholder,
     minDate, maxDate, onChange, onFocus, onBlur, theme, error, errorMessage,
-    style, fontSizeValue, color, ...rest
+    style, fontSizeValue, color, borderWidth, borderRadius, ...rest
   } = props;
 
   const [isSelected, setIsSelected] = useState(false);
@@ -109,6 +109,8 @@ const DateInput = (props) => {
       isSelected={isSelected}
       error={error}
       color={color}
+      borderWidth={borderWidth}
+      borderRadius={borderRadius}
     >
       <DatePicker
         ref={datePickerRef}
@@ -170,6 +172,8 @@ DateInput.propTypes = {
   fontSizeValue: PropTypes.string,
   autoComplete: PropTypes.string,
   popperClassName: PropTypes.string,
+  borderWidth: PropTypes.string,
+  borderRadius: PropTypes.string,
 };
 
 DateInput.defaultProps = {
@@ -181,6 +185,8 @@ DateInput.defaultProps = {
   fontSizeValue: '1rem',
   autoComplete: 'off',
   popperClassName: '!ap-z-10 !ap-pt-2',
+  borderWidth: '2px',
+  borderRadius: '8px',
 };
 
 export default DateInput;

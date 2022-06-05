@@ -466,6 +466,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.ap-relative {
+  position: relative;
+}
+
 .\!ap-z-10 {
   z-index: 10 !important;
 }

@@ -10,7 +10,7 @@ const DateContainer = (props) => {
 
   return (
     <CalendarContainer className={className}>
-      <ChildrenStyled className="relative">{children}</ChildrenStyled>
+      <ChildrenStyled className="ap-relative">{children}</ChildrenStyled>
     </CalendarContainer>
   );
 };
