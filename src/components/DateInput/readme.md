@@ -99,6 +99,7 @@ const [startDate, endDate] = dateRange;
       borderRadius="12px"
       fontSizeValue="14px"
       withPortal
+      disabledKeyboardNavigation
     />
   </div>
 </div>

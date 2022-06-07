@@ -17,7 +17,7 @@ import {
 // eslint-disable-next-line react/display-name
 const SelectMobile = forwardRef(({
   countriesCodes, countryCodeDefaultValue, color, onChange, value, error,
-  placeholder, ...rest
+  placeholder, type, ...rest
 }, ref) => {
   const parentElement = useRef();
   const [countryCode, setCountryCode] = useState(countryCodeDefaultValue);
@@ -75,6 +75,7 @@ const SelectMobile = forwardRef(({
           color={color}
           error={!isEmpty(error)}
           ref={ref}
+          type={type}
         />
       </InputContainer>
     </SelectMobileStyled>
@@ -96,6 +97,7 @@ SelectMobile.defaultProps = {
   value: '',
   error: '',
   placeholder: '',
+  type: 'number',
 };
 
 SelectMobile.propTypes = {
@@ -114,6 +116,8 @@ SelectMobile.propTypes = {
   error: PropTypes.string,
   /** mensaje para el placeholder */
   placeholder: PropTypes.string,
+  /** tipo de input */
+  type: PropTypes.string,
 };
 
 export default memo(SelectMobile);

@@ -21,7 +21,7 @@ export const Container = styled.div`
           padding: 7px 15px;
           border-radius: ${({ borderRadius }) => borderRadius};
           outline: none;
-          background: #FFFFFF;
+          background: transparent;
           color: var(--grayColorOne);
           border: ${({ error, borderWidth }) => (error ? `${borderWidth} solid #FF4646;` : `${borderWidth} solid var(--grayColorOne);;`)};
           font-family: Poppins, sans-serif;
@@ -30,7 +30,7 @@ export const Container = styled.div`
 
           :focus{
               border: 2px solid ${({ theme, color }) => path(['color', color, 'mainColor'], theme)};
-              border-radius: 8px;
+              border-radius: ${({ borderRadius }) => borderRadius};
           }
 
           ::placeholder {
