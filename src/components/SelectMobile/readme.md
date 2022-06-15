@@ -10,6 +10,7 @@ const [mobile2, setMobile2] = React.useState('');
 const [mobile3, setMobile3] = React.useState('');
 const [mobile4, setMobile4] = React.useState('');
 const [mobile5, setMobile5] = React.useState('320885');
+const [mobile6, setMobile6] = React.useState('');
 const [error, setError] = React.useState('Error message, escribe un numero valido');
 
 const onChangeMobile1 = useCallback((code, mobile) => {
@@ -78,6 +79,15 @@ const onChangeMobile5 = useCallback((code, mobile) => {
       value={mobile5}
       countryCodeDefaultValue={'+57'}
       error={error}
+    />
+  </div>
+  <div className="ap-w-full md:ap-w-1/4 ap-px-1 ap-mb-2">
+    <p className={'ap-mb-2'}>Disabled</p>
+    <SelectMobile
+      color={'quaternary'}
+      value={mobile6}
+      countryCodeDefaultValue={'+57'}
+      disabled
     />
   </div>
 </div>

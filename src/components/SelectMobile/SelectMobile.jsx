@@ -17,7 +17,7 @@ import {
 // eslint-disable-next-line react/display-name
 const SelectMobile = forwardRef(({
   countriesCodes, countryCodeDefaultValue, color, onChange, value, error,
-  placeholder, type, ...rest
+  placeholder, type, disabled, ...rest
 }, ref) => {
   const parentElement = useRef();
   const [countryCode, setCountryCode] = useState(countryCodeDefaultValue);
@@ -52,6 +52,7 @@ const SelectMobile = forwardRef(({
         dropdownMatchSelectWidth={widthDropdown}
         color={color}
         error={error}
+        disabled={disabled}
       >
         {map((country) => {
           const { code, icon, name } = country;
@@ -76,6 +77,7 @@ const SelectMobile = forwardRef(({
           error={!isEmpty(error)}
           ref={ref}
           type={type}
+          disabled={disabled}
         />
       </InputContainer>
     </SelectMobileStyled>
@@ -98,6 +100,7 @@ SelectMobile.defaultProps = {
   error: '',
   placeholder: '',
   type: 'number',
+  disabled: false,
 };
 
 SelectMobile.propTypes = {
@@ -118,6 +121,8 @@ SelectMobile.propTypes = {
   placeholder: PropTypes.string,
   /** tipo de input */
   type: PropTypes.string,
+  /** disabled component */
+  disabled: PropTypes.bool,
 };
 
 export default memo(SelectMobile);

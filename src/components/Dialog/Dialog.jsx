@@ -29,37 +29,39 @@ const Dialog = ({
   const dialogRef = useRef(null);
 
   return (
-    <DialogStyled
-      ref={dialogRef}
-      showOn={showOn}
-      onClick={(e) => {
-        if (e.target === dialogRef.current) {
-          showSetter(false);
-        }
-      }}
-      variant={variant}
-    >
-      <div className="messageContainer">
-        {type === 'success' ? <img src={Success} alt="Success" /> : null}
-        <h1>{header}</h1>
-        <p>{body}</p>
-      </div>
-      {action ? (
-        <Footer p5 fixed>
-          <Button
-            color={variant}
-            onClick={() => {
-              showSetter(false);
-              if (onClickAction) {
-                onClickAction();
-              }
-            }}
-          >
-            {action}
-          </Button>
-        </Footer>
-      ) : null}
-    </DialogStyled>
+    showOn && (
+      <DialogStyled
+        ref={dialogRef}
+        showOn={showOn}
+        onClick={(e) => {
+          if (e.target === dialogRef.current) {
+            showSetter(false);
+          }
+        }}
+        variant={variant}
+      >
+        <div className="messageContainer">
+          {type === 'success' ? <img src={Success} alt="Success" /> : null}
+          <h1>{header}</h1>
+          <p>{body}</p>
+        </div>
+        {action ? (
+          <Footer p5 fixed>
+            <Button
+              color={variant}
+              onClick={() => {
+                showSetter(false);
+                if (onClickAction) {
+                  onClickAction();
+                }
+              }}
+            >
+              {action}
+            </Button>
+          </Footer>
+        ) : null}
+      </DialogStyled>
+    )
   );
 };
 
