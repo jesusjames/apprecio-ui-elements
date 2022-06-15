@@ -36,6 +36,7 @@ const NavigationEave = ({
     <NavigationEaveStyled variant={variant} mode={mode} shortened={shortened}>
       <BackArrow
         onClick={goBackFunction}
+        color={mode === 'scanner' ? 'white' : 'primary'}
       />
       <img className="logo" src={icon} alt={name} />
       <div className="children-bar">

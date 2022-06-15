@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.6.5] - 07/06/2022
 ### fixed
-- Animate components fixed with framer-motion: Drawer, 
+- Animate components fixed with framer-motion: Drawer, Dialog.
+- Changed padding in the CashRegisterDisplay component
+### update
+- Added a disabled prop in the SelectMobile component
+- Added a white color in the ArrowBack component
+- Added white color BackArrow when mode is scanner in the NavigationEave component
 
 ## [0.6.4] - 07/06/2022
 ### fixed

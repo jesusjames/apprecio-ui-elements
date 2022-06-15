@@ -34,7 +34,7 @@ BackArrow.propTypes = {
    */
   onClick: PropTypes.func,
   text: PropTypes.string,
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'white']),
 };
 
 export default BackArrow;

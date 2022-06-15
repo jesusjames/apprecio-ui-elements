@@ -31,6 +31,9 @@ export const apprecioTheme = {
           activeColor: 'var(--blueColorActive)',
           activeColorOutline: 'var(--blueColorActiveOutline)',
         },
+        white: {
+          mainColor: 'var(--whiteColorPure)',
+        },
       },
       button: {
         primary: {
