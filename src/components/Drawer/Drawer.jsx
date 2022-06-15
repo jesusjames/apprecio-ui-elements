@@ -5,7 +5,7 @@
  */
 import PropTypes from 'prop-types';
 
-import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { DrawerStyled } from './style';
 

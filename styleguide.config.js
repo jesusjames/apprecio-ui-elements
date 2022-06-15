@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 // eslint-disable-next-line import/extensions
 const { version } = require('./package');
 
@@ -65,6 +66,23 @@ module.exports = {
       },
     },
   },
-  // eslint-disable-next-line global-require
-  webpackConfig: require('react-scripts/config/webpack.config'),
+  dangerouslyUpdateWebpackConfig(config) {
+    config.module.rules.push({
+      test: /.\.md$/,
+      type: 'javascript/auto',
+    });
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /react-styleguidist\/lib\/loaders\/utils\/client\/requireInRuntime$/,
+        'react-styleguidist/lib/loaders/utils/client/requireInRuntime',
+      ),
+    );
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /react-styleguidist\/lib\/loaders\/utils\/client\/evalInContext$/,
+        'react-styleguidist/lib/loaders/utils/client/evalInContext',
+      ),
+    );
+    return config;
+  },
 };

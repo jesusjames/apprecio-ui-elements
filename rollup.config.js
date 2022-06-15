@@ -40,7 +40,7 @@ const getCommonConfig = ({ target = '', plugins = [] }) => ({
   },
 });
 
-const extensions = ['.js', '.jsx', '.css'];
+const extensions = ['.js', '.jsx', 'mjs', '.css'];
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
