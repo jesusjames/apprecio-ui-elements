@@ -49,6 +49,7 @@ export const NavigationEaveStyled = styled.div`
     margin-top: ${(props) => (props.shortened ? '12px' : '0')};
     width: 25px;
     height: 25px;
+    z-index: 2;
   }
 
   .slider {

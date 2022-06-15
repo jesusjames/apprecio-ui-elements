@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Animate components fixed with framer-motion: Drawer, Dialog.
 ### update
 - Added a disabled prop in the SelectMobile component
+- Added a white color in the ArrowBack component
+- Added white color BackArrow when mode is scanner in the NavigationEave component
 
 ## [0.6.4] - 07/06/2022
 ### fixed
