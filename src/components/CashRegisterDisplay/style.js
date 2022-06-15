@@ -89,7 +89,7 @@ export const CashRegisterDisplayStyled = styled.div`
     max-height: 60px;
     width: 60px;
 
-    margin: .25rem 1rem;
+    margin: .25rem;
 
     #scanner-icon {
       max-height: 100%;
