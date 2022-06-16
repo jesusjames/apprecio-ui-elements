@@ -66,6 +66,12 @@ export const apprecioTheme = {
           activeColor: 'var(--facebookColorActive)',
           activeColorOutline: 'var(--facebookColorActiveOutline)',
         },
+        gray: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--grayColorOne)',
+          activeColor: 'var(--grayColorOne)',
+          activeColorOutline: 'var(--grayColorOne)',
+        },
       },
       input: {
         primary: {
@@ -231,6 +237,12 @@ export const apprecioTheme = {
           mainColor: 'var(--facebookColor)',
           activeColor: 'var(--facebookColorActive)',
           activeColorOutline: 'var(--facebookColorActiveOutline)',
+        },
+        gray: {
+          color: 'var(--whiteColorPure)',
+          mainColor: 'var(--grayColorOne)',
+          activeColor: 'var(--grayColorOne)',
+          activeColorOutline: 'var(--grayColorOne)',
         },
       },
       input: {

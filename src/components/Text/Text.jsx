@@ -33,7 +33,7 @@ Text.propTypes = {
   /** Text content */
   children: PropTypes.node.isRequired,
   /** theme color */
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'gray']),
   fontSize: PropTypes.string,
   fontSizeSm: PropTypes.string,
   fontFamily: PropTypes.string,
