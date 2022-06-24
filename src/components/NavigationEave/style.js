@@ -26,7 +26,15 @@ export const NavigationEaveStyled = styled.div`
   justify-content: space-around;
 
   width: 100%;
-  height: ${(props) => (props.shortened ? '50px' : '150px')};
+  height: ${(props) => {
+    if (props.shortened) {
+      if (props.showName) {
+        return '75px';
+      }
+      return '50px';
+    }
+    return '150px';
+  }};
 
   transition: height 0.2s ease-in-out;
 
@@ -52,6 +60,16 @@ export const NavigationEaveStyled = styled.div`
     z-index: 2;
   }
 
+  .name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--mainColor);
+  }
+
   .slider {
     background-color: var(--mainColor);
 
@@ -62,7 +80,7 @@ export const NavigationEaveStyled = styled.div`
 
     position: absolute;
     left: calc((100% - 325px) / 2);
-    top: 78px;
+    top: ${(props) => (props.showName ? '88px' : '78px')};
 
     z-index: 10;
 

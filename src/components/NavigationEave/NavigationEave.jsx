@@ -20,7 +20,9 @@ const NavigationEave = ({
   name,
   page,
   shortened,
+  showName,
   variant,
+  ...rest
 }) => {
   const slider = useRef(null);
 
@@ -33,12 +35,19 @@ const NavigationEave = ({
   }, [page]);
 
   return (
-    <NavigationEaveStyled variant={variant} mode={mode} shortened={shortened}>
+    <NavigationEaveStyled
+      mode={mode}
+      shortened={shortened}
+      showName={showName}
+      variant={variant}
+      {...rest}
+    >
       <BackArrow
         onClick={goBackFunction}
         color={mode === 'scanner' ? 'white' : 'primary'}
       />
       <img className="logo" src={icon} alt={name} />
+      {showName && <p className="name">{name}</p>}
       <div className="children-bar">
         <div ref={slider} className="slider" />
         {children}
@@ -89,6 +98,10 @@ NavigationEave.propTypes = {
    * Determina si la pestaña de navegación está reducida.
    */
   shortened: PropTypes.bool,
+  /**
+   * Determina si se miestra el nombre.
+   */
+  showName: PropTypes.bool,
   /**
    * El color usado en la pestaña de navegación.
    */
