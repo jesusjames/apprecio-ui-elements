@@ -26,6 +26,7 @@ const [page, setPage] = useState(0);
         mode="calculator"
         name="Caja registradora"
         page={page}
+        showName
       >
         <NavigationEaveButton
           active={page === 0}
