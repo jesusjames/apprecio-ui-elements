@@ -479,11 +479,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.ap-my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .ap-mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -522,24 +517,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
-.ap-mt-4 {
-  margin-top: 1rem;
-}
-
-.ap-mb-10 {
-  margin-bottom: 2.5rem;
+.ap-mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .ap-mb-1 {
   margin-bottom: 0.25rem;
 }
 
-.ap-mr-2 {
-  margin-right: 0.5rem;
+.ap-mt-4 {
+  margin-top: 1rem;
 }
 
-.ap-mb-2 {
-  margin-bottom: 0.5rem;
+.ap-mr-2 {
+  margin-right: 0.5rem;
 }
 
 .ap-mr-3 {
@@ -560,10 +551,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-w-full {
   width: 100%;
-}
-
-.ap-w-2\/3 {
-  width: 66.666667%;
 }
 
 .ap-w-3\/5 {
@@ -588,10 +575,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-flex-grow {
   flex-grow: 1;
-}
-
-.ap-basis-1\/2 {
-  flex-basis: 50%;
 }
 
 .ap-basis-4\/5 {
@@ -644,15 +627,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ap-rounded-lg {
   border-radius: 0.5rem;
-}
-
-.ap-border-t-\[3px\] {
-  border-top-width: 3px;
-}
-
-.ap-border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
 .ap-bg-gray-200 {
