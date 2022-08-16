@@ -35,6 +35,8 @@ BackArrow.propTypes = {
   onClick: PropTypes.func,
   text: PropTypes.string,
   color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'white']),
+  /** Tamaño de fuente */
+  fontSize: PropTypes.string,
 };
 
 export default BackArrow;

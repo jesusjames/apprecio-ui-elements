@@ -4,7 +4,7 @@ Antes de instalar la librería es necesario instalar estas dependencias en el pr
 npm install classnames styled-components prop-types
 ```
 
-Una vez instalado lo anterior instalaremos la librería prima UI KIT
+Una vez instalado lo anterior instalaremos la librería apprecio UI KIT
 
 ```shell
 npm install @apprecio/apprecio-ui-elements
@@ -12,12 +12,23 @@ npm install @apprecio/apprecio-ui-elements
 <br>
 ## Apprecio UI Kit - Modo de uso
 
-Deberás instalar los helpers de tailwind:
+Deberás ejecutar los siguientes comandos para desarrollar:
 ```shell
-npm install @apprecio/apprecio-tailwindcss-utils
+npm run tailwind:dev
+npm run styleguide
 ```
 
-Con con esta dependencias podrás incluirlo en tu archivo principal.
+Para compilar una nueva version de apprecio-ui-element, se debe modificar la version
+del package.json con el versionamiento semver y todos los cambios deben estar registrados
+en el CHANGELOG.md, una vez tengamos todo listo ejecutaremos los siguientes comandos:
+```shell
+npm run build:module
+npm publish
+```
+Esto generará una nueva version en el registry package del github de la organización.
+
+Con con esta dependencias podrás incluirlo en los demas proyectos principales de la 
+organización.
 
 Luego se requiere colocar el GlobalStyle en el nivel más alto para aplicar todos los estilos, colores, efectos y fuentes. Por lo que se recomienda ponerlo dentro de App.js/jsx/tsx
 
